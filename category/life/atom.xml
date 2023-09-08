@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://Vereatorm.github.io</id>
+    <title>Luk&#39;s Blog • Posts by &#34;life&#34; category</title>
+    <link href="https://Vereatorm.github.io" />
+    <updated>2023-07-28T16:00:00.000Z</updated>
+    <category term="JAVA" />
+    <category term="JAVASE" />
+    <category term="Spring" />
+    <category term="mybatis" />
+    <category term="Vue" />
+    <category term="web" />
+    <category term="事务" />
+    <entry>
+        <id>https://vereatorm.github.io/2023/07/29/Life/%E6%9A%91%E5%81%87%E7%94%9F%E6%B4%BB/</id>
+        <title>暑假生活记录</title>
+        <link rel="alternate" href="https://vereatorm.github.io/2023/07/29/Life/%E6%9A%91%E5%81%87%E7%94%9F%E6%B4%BB/"/>
+        <content type="html">&lt;h1 id=&#34;7-29&#34;&gt;&lt;a href=&#34;#7-29&#34; class=&#34;headerlink&#34; title=&#34;7.29&#34;&gt;&lt;/a&gt;7.29&lt;/h1&gt;&lt;p&gt;学习mybatis&lt;/p&gt;
+</content>
+        <updated>2023-07-28T16:00:00.000Z</updated>
+    </entry>
+</feed>

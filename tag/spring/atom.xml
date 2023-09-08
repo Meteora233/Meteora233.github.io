@@ -7,6 +7,10 @@
     <category term="JAVA" />
     <category term="JAVASE" />
     <category term="Spring" />
+    <category term="mybatis" />
+    <category term="Vue" />
+    <category term="web" />
+    <category term="事务" />
     <entry>
         <id>https://vereatorm.github.io/2023/07/18/computer-science/java/spring/SpringDay2/</id>
         <title>Spring</title>

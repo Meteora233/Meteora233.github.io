@@ -1,0 +1,16 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Luk's Blog • All posts by \"life\" category",
+    "description": "",
+    "home_page_url": "https://Vereatorm.github.io",
+    "items": [
+        {
+            "id": "https://vereatorm.github.io/2023/07/29/Life/%E6%9A%91%E5%81%87%E7%94%9F%E6%B4%BB/",
+            "url": "https://vereatorm.github.io/2023/07/29/Life/%E6%9A%91%E5%81%87%E7%94%9F%E6%B4%BB/",
+            "title": "暑假生活记录",
+            "date_published": "2023-07-28T16:00:00.000Z",
+            "content_html": "<h1 id=\"7-29\"><a href=\"#7-29\" class=\"headerlink\" title=\"7.29\"></a>7.29</h1><p>学习mybatis</p>\n",
+            "tags": []
+        }
+    ]
+}

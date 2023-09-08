@@ -10,6 +10,10 @@
         <category>JAVA</category>
         <category>JAVASE</category>
         <category>Spring</category>
+        <category>mybatis</category>
+        <category>Vue</category>
+        <category>web</category>
+        <category>事务</category>
         <item>
             <guid isPermalink="true">https://vereatorm.github.io/2023/07/09/computer-science/java/javase/JavaSE_Day5/</guid>
             <title>java网络通信、测试</title>
