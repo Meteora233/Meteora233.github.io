@@ -3,7 +3,7 @@
     <id>https://Vereatorm.github.io</id>
     <title>Luk&#39;s Blog • Posts by &#34;spring&#34; category</title>
     <link href="https://Vereatorm.github.io" />
-    <updated>2023-07-17T16:00:00.000Z</updated>
+    <updated>2023-08-21T16:00:00.000Z</updated>
     <category term="JAVA" />
     <category term="JAVASE" />
     <category term="Spring" />
@@ -11,6 +11,31 @@
     <category term="Vue" />
     <category term="web" />
     <category term="事务" />
+    <category term="javaScript" />
+    <entry>
+        <id>https://vereatorm.github.io/2023/08/22/computer-science/java/rouyi/Day1/</id>
+        <title>RuoYi框架</title>
+        <link rel="alternate" href="https://vereatorm.github.io/2023/08/22/computer-science/java/rouyi/Day1/"/>
+        <content type="html">&lt;p&gt;note info:&lt;br&gt;第一天 课程：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMUhUNHkxZDdvQT9wPTImdmRfc291cmNlPWVlNzYwYmY3YTRkODlkM2VlOTJmNGY4M2YzYTY4MmM5&#34;&gt;若依&lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&#34;登录&#34;&gt;&lt;a href=&#34;#登录&#34; class=&#34;headerlink&#34; title=&#34;登录&#34;&gt;&lt;/a&gt;登录&lt;/h1&gt;&lt;h2 id=&#34;生成验证码&#34;&gt;&lt;a href=&#34;#生成验证码&#34; class=&#34;headerlink&#34; title=&#34;生成验证码&#34;&gt;&lt;/a&gt;生成验证码&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;后端生成一个表达式，1+1&amp;#x3D;2&lt;/li&gt;
+&lt;li&gt;1+1&amp;#x3D;？转成图片，传到前端进行展示&lt;/li&gt;
+&lt;li&gt;把结果存到redis&lt;/li&gt;
+&lt;li&gt;做了一个反向代理，url请求前端，映射到后端，解决跨域问题&lt;br&gt;&lt;img data-src=&#34;/.%5Cassets/poxy.jpg&#34;&gt;&lt;br&gt;&amp;#x2F;dev-api 替换为’’ 在映射到’&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2xvY2FsaG9zdDo4MDgwLw==&#34;&gt;http://localhost:8080&lt;/span&gt;‘&lt;br&gt;&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cDovL2xvY2FsaG9zdDo4MDgwL2NhcHRjaGFJbWFnZQ==&#34;&gt;http://localhost:8080/captchaImage&lt;/span&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;登录的具体流程&#34;&gt;&lt;a href=&#34;#登录的具体流程&#34; class=&#34;headerlink&#34; title=&#34;登录的具体流程&#34;&gt;&lt;/a&gt;登录的具体流程&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;校验验证码&lt;/li&gt;
+&lt;li&gt;校验用户名密码&lt;/li&gt;
+&lt;li&gt;生成token&lt;br&gt;使用异步任务管理器，结合线程池，实现了异步的操作日志记录，和业务逻辑实现异步解耦合&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;getInfo&#34;&gt;&lt;a href=&#34;#getInfo&#34; class=&#34;headerlink&#34; title=&#34;getInfo&#34;&gt;&lt;/a&gt;getInfo&lt;/h2&gt;&lt;p&gt;获取当前用户的角色和权限信息，存储到Vuex中&lt;/p&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;//所有权限&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;*:*:*&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;getRouters&#34;&gt;&lt;a href=&#34;#getRouters&#34; class=&#34;headerlink&#34; title=&#34;getRouters&#34;&gt;&lt;/a&gt;getRouters&lt;/h2&gt;&lt;p&gt;根据当前用户的去那先获取动态路由&lt;/p&gt;
+</content>
+        <category term="Vue" />
+        <category term="web" />
+        <updated>2023-08-21T16:00:00.000Z</updated>
+    </entry>
     <entry>
         <id>https://vereatorm.github.io/2023/07/18/computer-science/java/spring/SpringDay2/</id>
         <title>Spring</title>
