@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://Vereatorm.github.io</id>
+    <title>Luk&#39;s Blog • Posts by &#34;中间件&#34; category</title>
+    <link href="https://Vereatorm.github.io" />
+    <updated>2023-11-16T16:00:00.000Z</updated>
+    <category term="JAVA" />
+    <category term="JAVASE" />
+    <category term="Spring" />
+    <category term="mybatis" />
+    <category term="Vue" />
+    <category term="web" />
+    <category term="事务" />
+    <category term="javaScript" />
+    <entry>
+        <id>https://vereatorm.github.io/2023/11/17/computer-science/%E4%B8%AD%E9%97%B4%E4%BB%B6/redis%E5%AD%A6%E4%B9%A0/Day1/</id>
+        <title>redis</title>
+        <link rel="alternate" href="https://vereatorm.github.io/2023/11/17/computer-science/%E4%B8%AD%E9%97%B4%E4%BB%B6/redis%E5%AD%A6%E4%B9%A0/Day1/"/>
+        <content type="html">&lt;p&gt;note info:&lt;br&gt;第一天学习 课程：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMVM1NHkxUjdTQj9wPTExJnZkX3NvdXJjZT1lZTc2MGJmN2E0ZDg5ZDNlZTkyZjRmODNmM2E2ODJjOQ==&#34;&gt;Redis&lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&#34;redis-基础操作&#34;&gt;&lt;a href=&#34;#redis-基础操作&#34; class=&#34;headerlink&#34; title=&#34;redis 基础操作&#34;&gt;&lt;/a&gt;redis 基础操作&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;存入内容&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;24&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;25&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;26&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;27&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;127.0.0.1:6379[15]&amp;gt; select 0 #选择0号数据库&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;OK&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;127.0.0.1:6379&amp;gt; dbsize #当前数据库的大小&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;(integer) 17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;127.0.0.1:6379&amp;gt; get name #按照键寻找值&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;quot;flower&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;127.0.0.1:6379&amp;gt; set password 123 #存放值&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;OK&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;127.0.0.1:6379&amp;gt; keys *  #查看数据库所有的key&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;1) &amp;quot;sys_dict:sys_notice_type&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2) &amp;quot;sys_dict:sys_user_sex&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3) &amp;quot;sys_dict:sys_show_hide&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4) &amp;quot;sys_dict:sys_job_group&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5) &amp;quot;sys_config:sys.index.sideTheme&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6) &amp;quot;sys_dict:sys_normal_disable&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7) &amp;quot;sys_dict:sys_common_status&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8) &amp;quot;password&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9) &amp;quot;sys_config:sys.index.skinName&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10) &amp;quot;sys_dict:sys_job_status&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11) &amp;quot;name&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12) &amp;quot;sys_dict:sys_notice_status&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13) &amp;quot;sys_config:sys.user.initPassword&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14) &amp;quot;sys_dict:sys_oper_type&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15) &amp;quot;sys_config:sys.account.captchaEnabled&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16) &amp;quot;sys_config:sys.account.registerUser&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17) &amp;quot;sys_dict:sys_yes_no&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18) &amp;quot;sys_config:sys.login.blackIPList&amp;quot;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;清除数据库&lt;/li&gt;
+&lt;/ol&gt;
+&lt;figure class=&#34;highlight plaintext&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;127.0.0.1:6379&amp;gt; flushdb #清除当前数据库&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;OK&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;127.0.0.1:6379&amp;gt; keys *&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;(empty list or set)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+        <updated>2023-11-16T16:00:00.000Z</updated>
+    </entry>
+</feed>

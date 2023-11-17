@@ -30,7 +30,7 @@
 
 
   <title>
-redis - Life |
+redis - 中间件 - Redis - 计算机科学 |
 BLOG = Luk's Blog</title>
 <meta name="generator" content="Hexo 6.3.0"></head>
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -74,7 +74,7 @@ BLOG = Luk's Blog</title>
       <i class="ic i-pen"></i>
     </span>
     <span class="text">Symbols count in article</span>
-    <span>22</span>
+    <span>1.1k</span>
     <span class="text">words</span>
   </span>
   <span class="item" title="Reading time">
@@ -139,8 +139,14 @@ BLOG = Luk's Blog</title>
 <div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
 <i class="ic i-home"></i>
 <span><a href="/">Home</a></span><i class="ic i-angle-right"></i>
-<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/Life/" itemprop="item" rel="index" title="In Life"><span itemprop="name">Life</span></a>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/computer-science/" itemprop="item" rel="index" title="In 计算机科学"><span itemprop="name">计算机科学</span></a>
 <meta itemprop="position" content="1" /></span>
+<i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/computer-science/Redis/" itemprop="item" rel="index" title="In Redis"><span itemprop="name">Redis</span></a>
+<meta itemprop="position" content="2" /></span>
+<i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/computer-science/Redis/%E4%B8%AD%E9%97%B4%E4%BB%B6/" itemprop="item" rel="index" title="In 中间件"><span itemprop="name">中间件</span></a>
+<meta itemprop="position" content="3" /></span>
 </div>
 
     <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
@@ -160,6 +166,19 @@ BLOG = Luk's Blog</title>
     
 
     <p>note info:<br>第一天学习 课程：<span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMVM1NHkxUjdTQj9wPTExJnZkX3NvdXJjZT1lZTc2MGJmN2E0ZDg5ZDNlZTkyZjRmODNmM2E2ODJjOQ==">Redis</span></p>
+<h1 id="redis-基础操作"><a href="#redis-基础操作" class="headerlink" title="redis 基础操作"></a>redis 基础操作</h1><ol>
+<li>存入内容</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379[15]&gt; select 0 #选择0号数据库</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; dbsize #当前数据库的大小</span><br><span class="line">(integer) 17</span><br><span class="line">127.0.0.1:6379&gt; get name #按照键寻找值</span><br><span class="line">&quot;flower&quot;</span><br><span class="line">127.0.0.1:6379&gt; set password 123 #存放值</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; keys *  #查看数据库所有的key</span><br><span class="line">1) &quot;sys_dict:sys_notice_type&quot;</span><br><span class="line">2) &quot;sys_dict:sys_user_sex&quot;</span><br><span class="line">3) &quot;sys_dict:sys_show_hide&quot;</span><br><span class="line">4) &quot;sys_dict:sys_job_group&quot;</span><br><span class="line">5) &quot;sys_config:sys.index.sideTheme&quot;</span><br><span class="line">6) &quot;sys_dict:sys_normal_disable&quot;</span><br><span class="line">7) &quot;sys_dict:sys_common_status&quot;</span><br><span class="line">8) &quot;password&quot;</span><br><span class="line">9) &quot;sys_config:sys.index.skinName&quot;</span><br><span class="line">10) &quot;sys_dict:sys_job_status&quot;</span><br><span class="line">11) &quot;name&quot;</span><br><span class="line">12) &quot;sys_dict:sys_notice_status&quot;</span><br><span class="line">13) &quot;sys_config:sys.user.initPassword&quot;</span><br><span class="line">14) &quot;sys_dict:sys_oper_type&quot;</span><br><span class="line">15) &quot;sys_config:sys.account.captchaEnabled&quot;</span><br><span class="line">16) &quot;sys_config:sys.account.registerUser&quot;</span><br><span class="line">17) &quot;sys_dict:sys_yes_no&quot;</span><br><span class="line">18) &quot;sys_config:sys.login.blackIPList&quot;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>清除数据库</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">127.0.0.1:6379&gt; flushdb #清除当前数据库</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; keys *</span><br><span class="line">(empty list or set)</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li></li>
+</ol>
 
   </div>
 
@@ -171,7 +190,7 @@ BLOG = Luk's Blog</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">Edited on</span>
-    <time title="Modified: 2023-11-17 12:09:07" itemprop="dateModified" datetime="2023-11-17T12:09:07+08:00">2023-11-17</time>
+    <time title="Modified: 2023-11-17 13:38:46" itemprop="dateModified" datetime="2023-11-17T13:38:46+08:00">2023-11-17</time>
   </span>
 </div>
 
@@ -226,22 +245,14 @@ BLOG = Luk's Blog</title>
     <div class="item left">
       
 
-  <a href="/2023/10/06/computer-science/java/springboot/SpringbootSecurity/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;img.win3000.com&#x2F;m00&#x2F;ff&#x2F;18&#x2F;b346b3d86cafe5bee8be826289fdef2f.jpg" title="SpringBoot Security">
+  <a href="/2023/11/17/Life/%E5%AE%9E%E4%B9%A0%E6%97%A5%E8%AE%B0/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;upload-bbs.miyoushe.com&#x2F;upload&#x2F;2023&#x2F;11&#x2F;04&#x2F;162545492&#x2F;dbefda5dc93d6bcd0301174a473e6ef0_4098819015835278317.jpg?x-oss-process&#x3D;image&#x2F;&#x2F;resize,s_600&#x2F;quality,q_80&#x2F;auto-orient,0&#x2F;interlace,1&#x2F;format,jpg" title="实习日记">
   <span class="type">Previous Post</span>
-  <span class="category"><i class="ic i-flag"></i> SpringBoot</span>
-  <h3>SpringBoot Security</h3>
-  </a>
-
-    </div>
-    <div class="item right">
-      
-
-  <a href="/2023/11/17/Life/%E6%9A%91%E5%81%87%E7%94%9F%E6%B4%BB/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;upload-bbs.miyoushe.com&#x2F;upload&#x2F;2023&#x2F;11&#x2F;04&#x2F;162545492&#x2F;dbefda5dc93d6bcd0301174a473e6ef0_4098819015835278317.jpg?x-oss-process&#x3D;image&#x2F;&#x2F;resize,s_600&#x2F;quality,q_80&#x2F;auto-orient,0&#x2F;interlace,1&#x2F;format,jpg" title="实习日记">
-  <span class="type">Next Post</span>
   <span class="category"><i class="ic i-flag"></i> Life</span>
   <h3>实习日记</h3>
   </a>
 
+    </div>
+    <div class="item right">
     </div>
 </div>
 
@@ -258,10 +269,11 @@ BLOG = Luk's Blog</title>
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="Contents">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#redis-%E5%9F%BA%E7%A1%80%E6%93%8D%E4%BD%9C"><span class="toc-number">1.</span> <span class="toc-text">redis 基础操作</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="Related">
         <ul>
-          <li><a href="/2023/11/17/Life/%E6%9A%91%E5%81%87%E7%94%9F%E6%B4%BB/" rel="bookmark" title="实习日记">实习日记</a></li><li class="active"><a href="/2023/11/17/computer-science/%E4%B8%AD%E9%97%B4%E4%BB%B6/redis%E5%AD%A6%E4%B9%A0/Day1/" rel="bookmark" title="redis">redis</a></li>
+          <li class="active"><a href="/2023/11/17/computer-science/%E4%B8%AD%E9%97%B4%E4%BB%B6/redis%E5%AD%A6%E4%B9%A0/Day1/" rel="bookmark" title="redis">redis</a></li>
         </ul>
       </div>
       <div class="overview panel" data-title="Overview">
@@ -281,7 +293,7 @@ BLOG = Luk's Blog</title>
     </div>
     <div class="item categories">
       <a href="/categories/">
-        <span class="count">11</span>
+        <span class="count">13</span>
         <span class="name">categories</span>
       </a>
     </div>
@@ -343,12 +355,10 @@ BLOG = Luk's Blog</title>
 
   <ul id="quick">
     <li class="prev pjax">
-        <a href="/2023/10/06/computer-science/java/springboot/SpringbootSecurity/" rel="prev" title="Previous Post"><i class="ic i-chevron-left"></i></a>
     </li>
     <li class="up"><i class="ic i-arrow-up"></i></li>
     <li class="down"><i class="ic i-arrow-down"></i></li>
     <li class="next pjax">
-        <a href="/2023/11/17/Life/%E6%9A%91%E5%81%87%E7%94%9F%E6%B4%BB/" rel="next" title="Next Post"><i class="ic i-chevron-right"></i></a>
     </li>
     <li class="percent"></li>
   </ul>
@@ -372,12 +382,26 @@ BLOG = Luk's Blog</title>
 <div class="breadcrumb">
 <a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/web/" title="In web">web</a>
+<a href="/categories/computer-science/java/" title="In java">java</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/web/vue/" title="In vue">vue</a>
+<a href="/categories/computer-science/java/SpringBoot/" title="In SpringBoot">SpringBoot</a>
 </div>
 
-    <span><a href="/2023/08/18/computer-science/webLearning/vue/Day1/" title="VUE">VUE</a></span>
+    <span><a href="/2023/10/06/computer-science/java/springboot/SpringbootSecurity/" title="SpringBoot Security">SpringBoot Security</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/" title="In java">java</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/Spring/" title="In Spring">Spring</a>
+</div>
+
+    <span><a href="/2023/07/18/computer-science/java/spring/SpringDay2/" title="Spring">Spring</a></span>
   </li>
 
       
@@ -402,20 +426,24 @@ BLOG = Luk's Blog</title>
 <i class="ic i-angle-right"></i>
 <a href="/categories/computer-science/java/" title="In java">java</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/java/javase/" title="In javase">javase</a>
+<a href="/categories/computer-science/java/SpringBoot/" title="In SpringBoot">SpringBoot</a>
 </div>
 
-    <span><a href="/2023/07/07/computer-science/java/javase/JavaSE_Day3/" title="javaIO流">javaIO流</a></span>
+    <span><a href="/2023/07/14/computer-science/java/springboot/Day2/" title="SpringBoot">SpringBoot</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/Life/" title="In Life">Life</a>
+<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/web/" title="In web">web</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/web/javaScript/" title="In javaScript">javaScript</a>
 </div>
 
-    <span><a href="/2023/11/17/computer-science/%E4%B8%AD%E9%97%B4%E4%BB%B6/redis%E5%AD%A6%E4%B9%A0/Day1/" title="redis">redis</a></span>
+    <span><a href="/2023/08/18/computer-science/webLearning/javascript/Day1/" title="JavaSrcipt">JavaSrcipt</a></span>
   </li>
 
       
@@ -426,20 +454,24 @@ BLOG = Luk's Blog</title>
 <i class="ic i-angle-right"></i>
 <a href="/categories/computer-science/java/" title="In java">java</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/java/Spring/" title="In Spring">Spring</a>
+<a href="/categories/computer-science/java/javase/" title="In javase">javase</a>
 </div>
 
-    <span><a href="/2023/07/18/computer-science/java/spring/SpringDay2/" title="Spring">Spring</a></span>
+    <span><a href="/2023/07/05/computer-science/java/javase/JavaSE_Day1/" title="java面向对象">java面向对象</a></span>
   </li>
 
       
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/Life/" title="In Life">Life</a>
+<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/" title="In java">java</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/javase/" title="In javase">javase</a>
 </div>
 
-    <span><a href="/2023/11/17/Life/%E6%9A%91%E5%81%87%E7%94%9F%E6%B4%BB/" title="实习日记">实习日记</a></span>
+    <span><a href="/2023/07/09/computer-science/java/javase/JavaSE_Day5/" title="java网络通信、测试">java网络通信、测试</a></span>
   </li>
 
       
@@ -464,10 +496,10 @@ BLOG = Luk's Blog</title>
 <i class="ic i-angle-right"></i>
 <a href="/categories/computer-science/java/" title="In java">java</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/java/Spring/" title="In Spring">Spring</a>
+<a href="/categories/computer-science/java/javase/" title="In javase">javase</a>
 </div>
 
-    <span><a href="/2023/07/17/computer-science/java/spring/SpringDay1/" title="Spring">Spring</a></span>
+    <span><a href="/2023/07/07/computer-science/java/javase/JavaSE_Day3/" title="javaIO流">javaIO流</a></span>
   </li>
 
       
@@ -476,26 +508,12 @@ BLOG = Luk's Blog</title>
 <div class="breadcrumb">
 <a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/java/" title="In java">java</a>
+<a href="/categories/computer-science/web/" title="In web">web</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/java/SpringBoot/" title="In SpringBoot">SpringBoot</a>
+<a href="/categories/computer-science/web/vue/" title="In vue">vue</a>
 </div>
 
-    <span><a href="/2023/08/01/computer-science/java/springboot/Day3/" title="SpringBoot">SpringBoot</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/spring/" title="In spring">spring</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/spring/ruoyi%E6%A1%86%E6%9E%B6/" title="In ruoyi框架">ruoyi框架</a>
-</div>
-
-    <span><a href="/2023/08/22/computer-science/java/rouyi/Day1/" title="RuoYi框架">RuoYi框架</a></span>
+    <span><a href="/2023/08/18/computer-science/webLearning/vue/Day1/" title="VUE">VUE</a></span>
   </li>
 
   </ul>
@@ -520,13 +538,13 @@ BLOG = Luk's Blog</title>
     <span class="post-meta-item-icon">
       <i class="ic i-chart-area"></i>
     </span>
-    <span title="Symbols count total">93k words</span>
+    <span title="Symbols count total">94k words</span>
 
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="ic i-coffee"></i>
     </span>
-    <span title="Reading time total">1:24</span>
+    <span title="Reading time total">1:25</span>
   </div>
   <div class="powered-by">
     Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
