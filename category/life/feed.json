@@ -5,11 +5,19 @@
     "home_page_url": "https://Vereatorm.github.io",
     "items": [
         {
-            "id": "https://vereatorm.github.io/2023/07/29/Life/%E6%9A%91%E5%81%87%E7%94%9F%E6%B4%BB/",
-            "url": "https://vereatorm.github.io/2023/07/29/Life/%E6%9A%91%E5%81%87%E7%94%9F%E6%B4%BB/",
-            "title": "暑假生活记录",
-            "date_published": "2023-07-28T16:00:00.000Z",
-            "content_html": "<h1 id=\"7-29\"><a href=\"#7-29\" class=\"headerlink\" title=\"7.29\"></a>7.29</h1><p>学习mybatis</p>\n",
+            "id": "https://vereatorm.github.io/2023/11/17/Life/%E6%9A%91%E5%81%87%E7%94%9F%E6%B4%BB/",
+            "url": "https://vereatorm.github.io/2023/11/17/Life/%E6%9A%91%E5%81%87%E7%94%9F%E6%B4%BB/",
+            "title": "实习日记",
+            "date_published": "2023-11-16T16:00:00.000Z",
+            "content_html": "<h1 id=\"11-17\"><a href=\"#11-17\" class=\"headerlink\" title=\"11.17\"></a>11.17</h1><p>学习 redis,</p>\n",
+            "tags": []
+        },
+        {
+            "id": "https://vereatorm.github.io/2023/11/17/computer-science/%E4%B8%AD%E9%97%B4%E4%BB%B6/redis%E5%AD%A6%E4%B9%A0/Day1/",
+            "url": "https://vereatorm.github.io/2023/11/17/computer-science/%E4%B8%AD%E9%97%B4%E4%BB%B6/redis%E5%AD%A6%E4%B9%A0/Day1/",
+            "title": "redis",
+            "date_published": "2023-11-16T16:00:00.000Z",
+            "content_html": "<p>note info:<br>第一天学习 课程：<span class=\"exturl\" data-url=\"aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMVM1NHkxUjdTQj9wPTExJnZkX3NvdXJjZT1lZTc2MGJmN2E0ZDg5ZDNlZTkyZjRmODNmM2E2ODJjOQ==\">Redis</span></p>\n",
             "tags": []
         }
     ]

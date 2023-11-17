@@ -5,8 +5,8 @@
         <link>https://Vereatorm.github.io</link>
         <description></description>
         <language>en</language>
-        <pubDate>Sat, 29 Jul 2023 00:00:00 +0800</pubDate>
-        <lastBuildDate>Sat, 29 Jul 2023 00:00:00 +0800</lastBuildDate>
+        <pubDate>Fri, 17 Nov 2023 00:00:00 +0800</pubDate>
+        <lastBuildDate>Fri, 17 Nov 2023 00:00:00 +0800</lastBuildDate>
         <category>JAVA</category>
         <category>JAVASE</category>
         <category>Spring</category>
@@ -16,11 +16,19 @@
         <category>事务</category>
         <category>javaScript</category>
         <item>
-            <guid isPermalink="true">https://vereatorm.github.io/2023/07/29/Life/%E6%9A%91%E5%81%87%E7%94%9F%E6%B4%BB/</guid>
-            <title>暑假生活记录</title>
-            <link>https://vereatorm.github.io/2023/07/29/Life/%E6%9A%91%E5%81%87%E7%94%9F%E6%B4%BB/</link>
-            <pubDate>Sat, 29 Jul 2023 00:00:00 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;7-29&#34;&gt;&lt;a href=&#34;#7-29&#34; class=&#34;headerlink&#34; title=&#34;7.29&#34;&gt;&lt;/a&gt;7.29&lt;/h1&gt;&lt;p&gt;学习mybatis&lt;/p&gt;
+            <guid isPermalink="true">https://vereatorm.github.io/2023/11/17/Life/%E6%9A%91%E5%81%87%E7%94%9F%E6%B4%BB/</guid>
+            <title>实习日记</title>
+            <link>https://vereatorm.github.io/2023/11/17/Life/%E6%9A%91%E5%81%87%E7%94%9F%E6%B4%BB/</link>
+            <pubDate>Fri, 17 Nov 2023 00:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;11-17&#34;&gt;&lt;a href=&#34;#11-17&#34; class=&#34;headerlink&#34; title=&#34;11.17&#34;&gt;&lt;/a&gt;11.17&lt;/h1&gt;&lt;p&gt;学习 redis,&lt;/p&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://vereatorm.github.io/2023/11/17/computer-science/%E4%B8%AD%E9%97%B4%E4%BB%B6/redis%E5%AD%A6%E4%B9%A0/Day1/</guid>
+            <title>redis</title>
+            <link>https://vereatorm.github.io/2023/11/17/computer-science/%E4%B8%AD%E9%97%B4%E4%BB%B6/redis%E5%AD%A6%E4%B9%A0/Day1/</link>
+            <pubDate>Fri, 17 Nov 2023 00:00:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;note info:&lt;br&gt;第一天学习 课程：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMVM1NHkxUjdTQj9wPTExJnZkX3NvdXJjZT1lZTc2MGJmN2E0ZDg5ZDNlZTkyZjRmODNmM2E2ODJjOQ==&#34;&gt;Redis&lt;/span&gt;&lt;/p&gt;
  ]]></description>
         </item>
     </channel>
