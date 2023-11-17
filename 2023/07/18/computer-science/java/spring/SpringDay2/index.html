@@ -19,7 +19,7 @@
 <link rel="alternate" type="application/atom+xml" title="Luk's Blog" href="https://vereatorm.github.io/atom.xml" />
 <link rel="alternate" type="application/json" title="Luk's Blog" href="https://vereatorm.github.io/feed.json" />
 
-<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Fredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
 <link rel="stylesheet" href="/css/app.css?v=0.2.5">
 
@@ -116,7 +116,7 @@ BLOG = Luk's Blog</title>
 
       </div>
       <div id="imgs" class="pjax">
-          <img src="https://i0.hdslb.com/bfs/archive/b411fd5c8114e7dba1bb5950de077b0b8ce53fcb.jpg">
+          <img src="https://upload-bbs.miyoushe.com/upload/2023/08/04/471895/45150fd2dfcfe39cc2e6131df7d4f814_824761616537441484.png?x-oss-process=image//resize,s_600/quality,q_80/auto-orient,0/interlace,1/format,png">
       </div>
     </header>
     <div id="waves">
@@ -167,13 +167,17 @@ BLOG = Luk's Blog</title>
   <div class="body md" itemprop="articleBody">
     
 
-    <p>note info:<br>第二天学习 课程：<span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMUZpNHkxUzdpeD9wPTYmdmRfc291cmNlPWVlNzYwYmY3YTRkODlkM2VlOTJmNGY4M2YzYTY4MmM5">SSM三件套</span>  </p>
+    <p>note info:<br>第二天学习 课程：<span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMUZpNHkxUzdpeD9wPTYmdmRfc291cmNlPWVlNzYwYmY3YTRkODlkM2VlOTJmNGY4M2YzYTY4MmM5">SSM 三件套</span></p>
 <h1 id="注解开发"><a href="#注解开发" class="headerlink" title="注解开发"></a>注解开发</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//配置类</span></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="meta">@ComponentScan(&quot;com.demo&quot;)</span></span><br><span class="line"><span class="meta">@PropertySource(&quot;jdbc.properties&quot;)</span>  <span class="comment">//加载配置</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">SpringConfig</span> &#123;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//给service层添加注解</span></span><br><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">BookServiceImpl</span> <span class="keyword">implements</span> <span class="title class_">BookService</span>, InitializingBean, DisposableBean &#123;&#125;</span><br><span class="line"><span class="comment">//给dao层添加注解</span></span><br><span class="line"><span class="meta">@Repository(&quot;bookDao&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">BookDaoImpl</span> <span class="keyword">implements</span> <span class="title class_">BookDao</span> &#123;&#125;</span><br><span class="line"><span class="comment">//main</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">( String[] args )</span></span><br><span class="line">&#123;</span><br><span class="line">    ApplicationContext ctx=<span class="keyword">new</span> <span class="title class_">AnnotationConfigApplicationContext</span>(SpringConfig.class);</span><br><span class="line">    <span class="type">BookDaoImpl</span> <span class="variable">bookDao</span> <span class="operator">=</span> ctx.getBean(BookDaoImpl.class);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="bean作用范围"><a href="#bean作用范围" class="headerlink" title="bean作用范围"></a>bean作用范围</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Repository(&quot;bookDao&quot;)</span></span><br><span class="line"><span class="comment">//@Scope(&quot;singleton&quot;)</span></span><br><span class="line"><span class="meta">@Scope(&quot;prototype&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">BookDaoImpl</span> <span class="keyword">implements</span> <span class="title class_">BookDao</span> &#123;</span><br><span class="line">    <span class="comment">//自动装配值</span></span><br><span class="line">    <span class="meta">@Value(&quot;aaaa&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="meta">@PostConstruct</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">init</span><span class="params">()</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;init....&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@PreDestroy</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">destroy</span><span class="params">()</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;destroy....&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setName</span><span class="params">(String name)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">save</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;your name is&quot;</span>+name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="bean-作用范围"><a href="#bean-作用范围" class="headerlink" title="bean 作用范围"></a>bean 作用范围</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Repository(&quot;bookDao&quot;)</span></span><br><span class="line"><span class="comment">//@Scope(&quot;singleton&quot;)</span></span><br><span class="line"><span class="meta">@Scope(&quot;prototype&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">BookDaoImpl</span> <span class="keyword">implements</span> <span class="title class_">BookDao</span> &#123;</span><br><span class="line">    <span class="comment">//自动装配值</span></span><br><span class="line">    <span class="meta">@Value(&quot;aaaa&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">    <span class="meta">@PostConstruct</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">init</span><span class="params">()</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;init....&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@PreDestroy</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">destroy</span><span class="params">()</span>&#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;destroy....&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">setName</span><span class="params">(String name)</span> &#123;</span><br><span class="line">        <span class="built_in">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">save</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;your name is&quot;</span>+name);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <h1 id="依赖注入"><a href="#依赖注入" class="headerlink" title="依赖注入"></a>依赖注入</h1><h2 id="自动装配"><a href="#自动装配" class="headerlink" title="自动装配"></a>自动装配</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Repository(&quot;bookDao&quot;)</span></span><br><span class="line"><span class="comment">//@Scope(&quot;singleton&quot;)</span></span><br><span class="line"><span class="meta">@Scope(&quot;prototype&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">BookDaoImpl</span> <span class="keyword">implements</span> <span class="title class_">BookDao</span> &#123;</span><br><span class="line">    <span class="meta">@Value(&quot;$&#123;username&#125;&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> String name;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">@Service</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">BookServiceImpl</span> <span class="keyword">implements</span> <span class="title class_">BookService</span> &#123;</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="meta">@Qualifier(&quot;bookDao&quot;)</span></span><br><span class="line">    <span class="keyword">private</span> BookDao bookDao;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">save</span><span class="params">()</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;book service save ....&quot;</span>);</span><br><span class="line">        bookDao.save();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="第三方bean管理"><a href="#第三方bean管理" class="headerlink" title="第三方bean管理"></a>第三方bean管理</h2><ol>
-<li>导入式<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span>  <span class="comment">//设置配置的注解，可以直接通过ComponentScan扫描导入配置</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">JdbcConfig</span> &#123;</span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="keyword">public</span> DataSource <span class="title function_">dataSource</span><span class="params">()</span>&#123;</span><br><span class="line">        DruidDataSource ds=<span class="keyword">new</span> <span class="title class_">DruidDataSource</span>();</span><br><span class="line">        ds.setDriverClassName(<span class="string">&quot;$&#123;jdbc.driver&#125;&quot;</span>);</span><br><span class="line">        ds.setUsername(<span class="string">&quot;$&#123;jdbc.username&#125;&quot;</span>);</span><br><span class="line">        ds.setUrl(<span class="string">&quot;$&#123;jdbc.url&#125;&quot;</span>);</span><br><span class="line">        ds.setPassword(<span class="string">&quot;$&#123;jdbc.password&#125;&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span>  ds;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//使用@improt注解手动添加配置</span></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="meta">@ComponentScan(&quot;com.demo&quot;)</span></span><br><span class="line"><span class="meta">@PropertySource(&#123;&quot;jdbc.properties&quot;&#125;)</span></span><br><span class="line"><span class="meta">@Import(&#123;JdbcConfig.class&#125;)</span> </span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">SpringConfig</span> &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+
+<h2 id="第三方-bean-管理"><a href="#第三方-bean-管理" class="headerlink" title="第三方 bean 管理"></a>第三方 bean 管理</h2><ol>
+<li>导入式</li>
 </ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Configuration</span>  <span class="comment">//设置配置的注解，可以直接通过ComponentScan扫描导入配置</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">JdbcConfig</span> &#123;</span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="keyword">public</span> DataSource <span class="title function_">dataSource</span><span class="params">()</span>&#123;</span><br><span class="line">        DruidDataSource ds=<span class="keyword">new</span> <span class="title class_">DruidDataSource</span>();</span><br><span class="line">        ds.setDriverClassName(<span class="string">&quot;$&#123;jdbc.driver&#125;&quot;</span>);</span><br><span class="line">        ds.setUsername(<span class="string">&quot;$&#123;jdbc.username&#125;&quot;</span>);</span><br><span class="line">        ds.setUrl(<span class="string">&quot;$&#123;jdbc.url&#125;&quot;</span>);</span><br><span class="line">        ds.setPassword(<span class="string">&quot;$&#123;jdbc.password&#125;&quot;</span>);</span><br><span class="line">        <span class="keyword">return</span>  ds;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//使用@improt注解手动添加配置</span></span><br><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="meta">@ComponentScan(&quot;com.demo&quot;)</span></span><br><span class="line"><span class="meta">@PropertySource(&#123;&quot;jdbc.properties&quot;&#125;)</span></span><br><span class="line"><span class="meta">@Import(&#123;JdbcConfig.class&#125;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">SpringConfig</span> &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       <div class="tags">
           <a href="/tags/JAVA/" rel="tag"><i class="ic i-tag"></i> JAVA</a>
@@ -189,7 +193,7 @@ BLOG = Luk's Blog</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">Edited on</span>
-    <time title="Modified: 2023-08-23 14:16:55" itemprop="dateModified" datetime="2023-08-23T14:16:55+08:00">2023-08-23</time>
+    <time title="Modified: 2023-11-17 12:28:40" itemprop="dateModified" datetime="2023-11-17T12:28:40+08:00">2023-11-17</time>
   </span>
 </div>
 
@@ -254,7 +258,7 @@ BLOG = Luk's Blog</title>
     <div class="item right">
       
 
-  <a href="/2023/08/01/computer-science/java/springboot/Day3/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;img.win3000.com&#x2F;m00&#x2F;ff&#x2F;18&#x2F;b346b3d86cafe5bee8be826289fdef2f.jpg" title="SpringBoot">
+  <a href="/2023/08/01/computer-science/java/springboot/Day3/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;upload-bbs.miyoushe.com&#x2F;upload&#x2F;2023&#x2F;07&#x2F;27&#x2F;347219499&#x2F;5f59ae3bf1f7d18ca0ce0252b0bbc00f_4611168256045426580.jpg?x-oss-process&#x3D;image&#x2F;&#x2F;resize,s_500&#x2F;quality,q_80&#x2F;auto-orient,0&#x2F;interlace,1&#x2F;format,jpg" title="SpringBoot">
   <span class="type">Next Post</span>
   <span class="category"><i class="ic i-flag"></i> SpringBoot</span>
   <h3>SpringBoot</h3>
@@ -276,7 +280,7 @@ BLOG = Luk's Blog</title>
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="Contents">
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91"><span class="toc-number">1.</span> <span class="toc-text">注解开发</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#bean%E4%BD%9C%E7%94%A8%E8%8C%83%E5%9B%B4"><span class="toc-number">2.</span> <span class="toc-text">bean作用范围</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5"><span class="toc-number">3.</span> <span class="toc-text">依赖注入</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D"><span class="toc-number">3.1.</span> <span class="toc-text">自动装配</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E6%96%B9bean%E7%AE%A1%E7%90%86"><span class="toc-number">3.2.</span> <span class="toc-text">第三方bean管理</span></a></li></ol></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B3%A8%E8%A7%A3%E5%BC%80%E5%8F%91"><span class="toc-number">1.</span> <span class="toc-text">注解开发</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#bean-%E4%BD%9C%E7%94%A8%E8%8C%83%E5%9B%B4"><span class="toc-number">2.</span> <span class="toc-text">bean 作用范围</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5"><span class="toc-number">3.</span> <span class="toc-text">依赖注入</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D"><span class="toc-number">3.1.</span> <span class="toc-text">自动装配</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E6%96%B9-bean-%E7%AE%A1%E7%90%86"><span class="toc-number">3.2.</span> <span class="toc-text">第三方 bean 管理</span></a></li></ol></li></ol>
       </div>
       <div class="related panel pjax" data-title="Related">
         <ul>
@@ -393,104 +397,10 @@ BLOG = Luk's Blog</title>
 <i class="ic i-angle-right"></i>
 <a href="/categories/computer-science/java/" title="In java">java</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/java/SpringBoot/" title="In SpringBoot">SpringBoot</a>
-</div>
-
-    <span><a href="/2023/10/06/computer-science/java/springboot/SpringbootSecurity/" title="SpringBoot Security">SpringBoot Security</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/java/" title="In java">java</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/java/SpringBoot/" title="In SpringBoot">SpringBoot</a>
-</div>
-
-    <span><a href="/2023/07/14/computer-science/java/springboot/Day1/" title="SpringBoot">SpringBoot</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/java/" title="In java">java</a>
-<i class="ic i-angle-right"></i>
 <a href="/categories/computer-science/java/Spring/" title="In Spring">Spring</a>
 </div>
 
     <span><a href="/2023/07/17/computer-science/java/spring/SpringDay1/" title="Spring">Spring</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/java/" title="In java">java</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/java/javase/" title="In javase">javase</a>
-</div>
-
-    <span><a href="/2023/07/07/computer-science/java/javase/JavaSE_Day4/" title="java多线程">java多线程</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/java/" title="In java">java</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/java/javase/" title="In javase">javase</a>
-</div>
-
-    <span><a href="/2023/07/07/computer-science/java/javase/JavaSE_Day3/" title="javaIO流">javaIO流</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/java/" title="In java">java</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/java/javase/" title="In javase">javase</a>
-</div>
-
-    <span><a href="/2023/07/09/computer-science/java/javase/JavaSE_Day5/" title="java网络通信、测试">java网络通信、测试</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/spring/" title="In spring">spring</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/spring/ruoyi%E6%A1%86%E6%9E%B6/" title="In ruoyi框架">ruoyi框架</a>
-</div>
-
-    <span><a href="/2023/08/22/computer-science/java/rouyi/Day1/" title="RuoYi框架">RuoYi框架</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/Life/" title="In Life">Life</a>
-</div>
-
-    <span><a href="/2023/11/17/Life/%E6%9A%91%E5%81%87%E7%94%9F%E6%B4%BB/" title="实习日记">实习日记</a></span>
   </li>
 
       
@@ -515,10 +425,100 @@ BLOG = Luk's Blog</title>
 <i class="ic i-angle-right"></i>
 <a href="/categories/computer-science/java/" title="In java">java</a>
 <i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/javase/" title="In javase">javase</a>
+</div>
+
+    <span><a href="/2023/07/07/computer-science/java/javase/JavaSE_Day4/" title="java多线程">java多线程</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/web/" title="In web">web</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/web/javaScript/" title="In javaScript">javaScript</a>
+</div>
+
+    <span><a href="/2023/08/18/computer-science/webLearning/javascript/Day1/" title="JavaSrcipt">JavaSrcipt</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Life/" title="In Life">Life</a>
+</div>
+
+    <span><a href="/2023/11/17/computer-science/%E4%B8%AD%E9%97%B4%E4%BB%B6/redis%E5%AD%A6%E4%B9%A0/Day1/" title="redis">redis</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/" title="In java">java</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/SpringBoot/" title="In SpringBoot">SpringBoot</a>
+</div>
+
+    <span><a href="/2023/10/06/computer-science/java/springboot/SpringbootSecurity/" title="SpringBoot Security">SpringBoot Security</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/" title="In java">java</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/javase/" title="In javase">javase</a>
+</div>
+
+    <span><a href="/2023/07/05/computer-science/java/javase/JavaSE_Day1/" title="java面向对象">java面向对象</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/" title="In java">java</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/SpringBoot/" title="In SpringBoot">SpringBoot</a>
+</div>
+
+    <span><a href="/2023/07/14/computer-science/java/springboot/Day2/" title="SpringBoot">SpringBoot</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/" title="In java">java</a>
+<i class="ic i-angle-right"></i>
 <a href="/categories/computer-science/java/SpringBoot/" title="In SpringBoot">SpringBoot</a>
 </div>
 
     <span><a href="/2023/08/01/computer-science/java/springboot/Day3/" title="SpringBoot">SpringBoot</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Life/" title="In Life">Life</a>
+</div>
+
+    <span><a href="/2023/11/17/Life/%E6%9A%91%E5%81%87%E7%94%9F%E6%B4%BB/" title="实习日记">实习日记</a></span>
   </li>
 
   </ul>
