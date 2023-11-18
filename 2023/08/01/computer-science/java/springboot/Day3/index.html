@@ -19,7 +19,7 @@
 <link rel="alternate" type="application/atom+xml" title="Luk's Blog" href="https://vereatorm.github.io/atom.xml" />
 <link rel="alternate" type="application/json" title="Luk's Blog" href="https://vereatorm.github.io/feed.json" />
 
-<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Fredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
 <link rel="stylesheet" href="/css/app.css?v=0.2.5">
 
@@ -297,7 +297,7 @@ BLOG = Luk's Blog</title>
 </ol>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">parent</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.itheima<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>tlias-parent<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">relativePath</span>&gt;</span>../tlias-parent/pom.xml<span class="tag">&lt;/<span class="name">relativePath</span>&gt;</span>     <span class="comment">&lt;!-- 父工程的相对位置 --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">parent</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.itheima<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>tlias-pojo<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<h3 id="版本锁定"><a href="#版本锁定" class="headerlink" title="版本锁定"></a>版本锁定</h3><p>在 maven 中，可以在父工程的 pom 文件中，通过<dependencyManagement>来统一管理依赖版本</p>
+<h3 id="版本锁定"><a href="#版本锁定" class="headerlink" title="版本锁定"></a>版本锁定</h3><p>在 maven 中，可以在父工程的 pom 文件中，通过<dependencyManagement>来统一管理依赖版本</dependencyManagement></p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">lombok.version</span>&gt;</span>1.18.28<span class="tag">&lt;/<span class="name">lombok.version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">jwt.version</span>&gt;</span>0.9.1<span class="tag">&lt;/<span class="name">jwt.version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">dependencyManagement</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>io.jsonwebtoken<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>jjwt<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;jwt.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependencyManagement</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="聚合"><a href="#聚合" class="headerlink" title="聚合"></a>聚合</h2><p>添加一个标签</p>
@@ -384,10 +384,10 @@ BLOG = Luk's Blog</title>
     <div class="item right">
       
 
-  <a href="/2023/08/18/computer-science/webLearning/javascript/Day1/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;imgs.aixifan.com&#x2F;content&#x2F;2020_8_28&#x2F;1.5986274719333217E9.jpeg" title="JavaSrcipt">
+  <a href="/2023/08/18/computer-science/webLearning/vue/Day1/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;upload-bbs.miyoushe.com&#x2F;upload&#x2F;2023&#x2F;08&#x2F;04&#x2F;471895&#x2F;25ea2704a1a219a8805c96195a7444d4_2227184008531018920.png?x-oss-process&#x3D;image&#x2F;&#x2F;resize,s_600&#x2F;quality,q_80&#x2F;auto-orient,0&#x2F;interlace,1&#x2F;format,png" title="VUE">
   <span class="type">Next Post</span>
-  <span class="category"><i class="ic i-flag"></i> javaScript</span>
-  <h3>JavaSrcipt</h3>
+  <span class="category"><i class="ic i-flag"></i> vue</span>
+  <h3>VUE</h3>
   </a>
 
     </div>
@@ -424,7 +424,7 @@ BLOG = Luk's Blog</title>
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">16</span>
+        <span class="count">18</span>
         <span class="name">posts</span>
       </a>
     </div>
@@ -497,7 +497,7 @@ BLOG = Luk's Blog</title>
     <li class="up"><i class="ic i-arrow-up"></i></li>
     <li class="down"><i class="ic i-arrow-down"></i></li>
     <li class="next pjax">
-        <a href="/2023/08/18/computer-science/webLearning/javascript/Day1/" rel="next" title="Next Post"><i class="ic i-chevron-right"></i></a>
+        <a href="/2023/08/18/computer-science/webLearning/vue/Day1/" rel="next" title="Next Post"><i class="ic i-chevron-right"></i></a>
     </li>
     <li class="percent"></li>
   </ul>
@@ -519,6 +519,16 @@ BLOG = Luk's Blog</title>
   <li class="item">
     
 <div class="breadcrumb">
+<a href="/categories/Life/" title="In Life">Life</a>
+</div>
+
+    <span><a href="/2023/11/17/Life/%E5%AE%9E%E4%B9%A0%E6%97%A5%E8%AE%B0/" title="实习日记">实习日记</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
 <a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
 <i class="ic i-angle-right"></i>
 <a href="/categories/computer-science/java/" title="In java">java</a>
@@ -526,7 +536,77 @@ BLOG = Luk's Blog</title>
 <a href="/categories/computer-science/java/javase/" title="In javase">javase</a>
 </div>
 
-    <span><a href="/2023/07/05/computer-science/java/javase/JavaSE_Day1/" title="java面向对象">java面向对象</a></span>
+    <span><a href="/2023/07/07/computer-science/java/javase/JavaSE_Day3/" title="javaIO流">javaIO流</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/" title="In java">java</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/javase/" title="In javase">javase</a>
+</div>
+
+    <span><a href="/2023/07/09/computer-science/java/javase/JavaSE_Day5/" title="java网络通信、测试">java网络通信、测试</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/" title="In java">java</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/SpringBoot/" title="In SpringBoot">SpringBoot</a>
+</div>
+
+    <span><a href="/2023/10/06/computer-science/java/springboot/SpringbootSecurity/" title="SpringBoot Security">SpringBoot Security</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/spring/" title="In spring">spring</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/spring/ruoyi%E6%A1%86%E6%9E%B6/" title="In ruoyi框架">ruoyi框架</a>
+</div>
+
+    <span><a href="/2023/08/22/computer-science/java/rouyi/Day1/" title="RuoYi框架">RuoYi框架</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/Redis/" title="In Redis">Redis</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/Redis/%E4%B8%AD%E9%97%B4%E4%BB%B6/" title="In 中间件">中间件</a>
+</div>
+
+    <span><a href="/2023/11/17/computer-science/%E4%B8%AD%E9%97%B4%E4%BB%B6/redis%E5%AD%A6%E4%B9%A0/redis%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81/" title="redis">redis</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/Redis/" title="In Redis">Redis</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/Redis/%E4%B8%AD%E9%97%B4%E4%BB%B6/" title="In 中间件">中间件</a>
+</div>
+
+    <span><a href="/2023/11/17/computer-science/%E4%B8%AD%E9%97%B4%E4%BB%B6/redis%E5%AD%A6%E4%B9%A0/redisAPI%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/" title="redisAPI基本使用">redisAPI基本使用</a></span>
   </li>
 
       
@@ -549,78 +629,12 @@ BLOG = Luk's Blog</title>
 <div class="breadcrumb">
 <a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/java/" title="In java">java</a>
+<a href="/categories/computer-science/web/" title="In web">web</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/java/SpringBoot/" title="In SpringBoot">SpringBoot</a>
+<a href="/categories/computer-science/web/vue/" title="In vue">vue</a>
 </div>
 
-    <span><a href="/2023/07/14/computer-science/java/springboot/Day2/" title="SpringBoot">SpringBoot</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/java/" title="In java">java</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/java/javase/" title="In javase">javase</a>
-</div>
-
-    <span><a href="/2023/07/06/computer-science/java/javase/JavaSE_Day2/" title="java泛型">java泛型</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/java/" title="In java">java</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/java/SpringBoot/" title="In SpringBoot">SpringBoot</a>
-</div>
-
-    <span><a href="/2023/08/01/computer-science/java/springboot/Day3/" title="SpringBoot">SpringBoot</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/java/" title="In java">java</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/java/javase/" title="In javase">javase</a>
-</div>
-
-    <span><a href="/2023/07/07/computer-science/java/javase/JavaSE_Day3/" title="javaIO流">javaIO流</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/Life/" title="In Life">Life</a>
-</div>
-
-    <span><a href="/2023/11/17/Life/%E5%AE%9E%E4%B9%A0%E6%97%A5%E8%AE%B0/" title="实习日记">实习日记</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/java/" title="In java">java</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/java/javase/" title="In javase">javase</a>
-</div>
-
-    <span><a href="/2023/07/07/computer-science/java/javase/JavaSE_Day4/" title="java多线程">java多线程</a></span>
+    <span><a href="/2023/08/18/computer-science/webLearning/vue/Day1/" title="VUE">VUE</a></span>
   </li>
 
       
@@ -634,21 +648,7 @@ BLOG = Luk's Blog</title>
 <a href="/categories/computer-science/java/Spring/" title="In Spring">Spring</a>
 </div>
 
-    <span><a href="/2023/07/18/computer-science/java/spring/SpringDay2/" title="Spring">Spring</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/Redis/" title="In Redis">Redis</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/Redis/%E4%B8%AD%E9%97%B4%E4%BB%B6/" title="In 中间件">中间件</a>
-</div>
-
-    <span><a href="/2023/11/17/computer-science/%E4%B8%AD%E9%97%B4%E4%BB%B6/redis%E5%AD%A6%E4%B9%A0/Day1/" title="redis">redis</a></span>
+    <span><a href="/2023/07/17/computer-science/java/spring/SpringDay1/" title="Spring">Spring</a></span>
   </li>
 
   </ul>
@@ -673,13 +673,13 @@ BLOG = Luk's Blog</title>
     <span class="post-meta-item-icon">
       <i class="ic i-chart-area"></i>
     </span>
-    <span title="Symbols count total">94k words</span>
+    <span title="Symbols count total">107k words</span>
 
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="ic i-coffee"></i>
     </span>
-    <span title="Reading time total">1:25</span>
+    <span title="Reading time total">1:37</span>
   </div>
   <div class="powered-by">
     Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>

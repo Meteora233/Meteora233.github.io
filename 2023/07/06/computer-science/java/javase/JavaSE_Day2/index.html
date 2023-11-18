@@ -19,7 +19,7 @@
 <link rel="alternate" type="application/atom+xml" title="Luk's Blog" href="https://vereatorm.github.io/atom.xml" />
 <link rel="alternate" type="application/json" title="Luk's Blog" href="https://vereatorm.github.io/feed.json" />
 
-<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Fredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
 <link rel="stylesheet" href="/css/app.css?v=0.2.5">
 
@@ -181,19 +181,19 @@ BLOG = Luk's Blog</title>
 <h3 id="Arrays排序"><a href="#Arrays排序" class="headerlink" title="Arrays排序"></a>Arrays排序</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span>  &#123;</span><br><span class="line">        <span class="comment">//数组排序</span></span><br><span class="line">        <span class="type">double</span>[] prices = &#123;<span class="number">98.2</span>, <span class="number">120</span>, <span class="number">100</span>&#125;;</span><br><span class="line">        Arrays.sort(prices);</span><br><span class="line">        System.out.println(Arrays.toString(prices));</span><br><span class="line"></span><br><span class="line">        <span class="comment">//对对象排序</span></span><br><span class="line">        student[] students = <span class="keyword">new</span> <span class="title class_">student</span>[]&#123;</span><br><span class="line">                <span class="keyword">new</span> <span class="title class_">student</span>(<span class="number">3</span>, <span class="string">&quot;zhangsan&quot;</span>, <span class="number">32</span>),</span><br><span class="line">                <span class="keyword">new</span> <span class="title class_">student</span>(<span class="number">4</span>, <span class="string">&quot;lisi&quot;</span>, <span class="number">28</span>),</span><br><span class="line">                <span class="keyword">new</span> <span class="title class_">student</span>(<span class="number">1</span>, <span class="string">&quot;wy&quot;</span>, <span class="number">12</span>),</span><br><span class="line">                <span class="keyword">new</span> <span class="title class_">student</span>(<span class="number">5</span>, <span class="string">&quot;aadasjdas&quot;</span>, <span class="number">43</span>)</span><br><span class="line">        &#125;;</span><br><span class="line">        Arrays.sort(students);</span><br><span class="line">        System.out.println(Arrays.toString(students));</span><br><span class="line">        Arrays.sort(students, <span class="keyword">new</span> <span class="title class_">Comparator</span>&lt;student&gt;() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">compare</span><span class="params">(student student, student t1)</span> &#123;</span><br><span class="line">                <span class="comment">// 约定1：认为左边对象 &gt; 右边对象 返回一个正整数</span></span><br><span class="line">                <span class="comment">// 约定2：认为左边对象 &lt; 右边对象 返回一个负整数</span></span><br><span class="line">                <span class="comment">// 约定3：认为左边对象 = 右边对象 返回一个负整数</span></span><br><span class="line">                <span class="keyword">if</span> (student.age &gt; t1.age) &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">                &#125; <span class="keyword">else</span> <span class="keyword">if</span> (student.age &lt; t1.age) &#123;</span><br><span class="line">                    <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">                <span class="comment">//return  student.age-t1.age; 升序</span></span><br><span class="line">                <span class="comment">//return  student.age-this.age;   降序</span></span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="comment">//Arrays.sort(students, (student,t1)-&gt;student.age-t1.age); 缩略写法</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h1 id="Lambda表达式"><a href="#Lambda表达式" class="headerlink" title="Lambda表达式"></a>Lambda表达式</h1><p>只能简化函数式接口(<strong>是接口，且只有一个抽象方法</strong>)的匿名内部类</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">demo</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span> &#123;</span><br><span class="line">        go(()-&gt;&#123;</span><br><span class="line">            System.out.println(<span class="string">&quot;游泳ing&quot;</span>);</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span>  <span class="keyword">static</span>  <span class="keyword">void</span> <span class="title function_">go</span><span class="params">(Swimming sw)</span>&#123;</span><br><span class="line">        sw.swin();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">interface</span>  <span class="title class_">Swimming</span>&#123;</span><br><span class="line">    <span class="keyword">void</span> <span class="title function_">swin</span><span class="params">()</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="方法引用"><a href="#方法引用" class="headerlink" title="方法引用"></a>方法引用</h1><h2 id="静态-x2F-实例方法"><a href="#静态-x2F-实例方法" class="headerlink" title="静态&#x2F;实例方法"></a>静态&#x2F;实例方法</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span>&#123;</span><br><span class="line">        student[] students = <span class="keyword">new</span> <span class="title class_">student</span>[]&#123;</span><br><span class="line">            <span class="keyword">new</span> <span class="title class_">student</span>(<span class="number">3</span>, <span class="string">&quot;zhangsan&quot;</span>, <span class="number">32</span>),</span><br><span class="line">            <span class="keyword">new</span> <span class="title class_">student</span>(<span class="number">4</span>, <span class="string">&quot;lisi&quot;</span>, <span class="number">28</span>),</span><br><span class="line">            <span class="keyword">new</span> <span class="title class_">student</span>(<span class="number">1</span>, <span class="string">&quot;wy&quot;</span>, <span class="number">12</span>),</span><br><span class="line">            <span class="keyword">new</span> <span class="title class_">student</span>(<span class="number">5</span>, <span class="string">&quot;aadasjdas&quot;</span>, <span class="number">43</span>)</span><br><span class="line">        &#125;;</span><br><span class="line"><span class="comment">//      Arrays.sort(students, (student,t1)-&gt;student.age-t1.age);</span></span><br><span class="line">        <span class="comment">//静态方法引用</span></span><br><span class="line">        Arrays.sort(students,CompareByData::compareByAge);</span><br><span class="line">        <span class="comment">//实例方法引用</span></span><br><span class="line">        CompareByData compare=<span class="keyword">new</span> <span class="title class_">CompareByData</span>();</span><br><span class="line">        Arrays.sort(students,compare::compareByAgeDesc);</span><br><span class="line">        System.out.println(Arrays.toString(students));</span><br><span class="line">    &#125;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">CompareByData</span> &#123;</span><br><span class="line">    <span class="keyword">public</span>  <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">compareByAge</span><span class="params">(student stu1,student stu2&#123;</span></span><br><span class="line"><span class="params">        return  stu1.age-stu2.age;</span></span><br><span class="line"><span class="params">    &#125;</span></span><br><span class="line"><span class="params">    <span class="keyword">public</span>  <span class="type">int</span> compareByAgeDesc(student stu1,student stu2)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span>  stu2.age-stu1.age;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="方法引用"><a href="#方法引用" class="headerlink" title="方法引用"></a>方法引用</h1><h2 id="静态-实例方法"><a href="#静态-实例方法" class="headerlink" title="静态&#x2F;实例方法"></a>静态&#x2F;实例方法</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span>&#123;</span><br><span class="line">        student[] students = <span class="keyword">new</span> <span class="title class_">student</span>[]&#123;</span><br><span class="line">            <span class="keyword">new</span> <span class="title class_">student</span>(<span class="number">3</span>, <span class="string">&quot;zhangsan&quot;</span>, <span class="number">32</span>),</span><br><span class="line">            <span class="keyword">new</span> <span class="title class_">student</span>(<span class="number">4</span>, <span class="string">&quot;lisi&quot;</span>, <span class="number">28</span>),</span><br><span class="line">            <span class="keyword">new</span> <span class="title class_">student</span>(<span class="number">1</span>, <span class="string">&quot;wy&quot;</span>, <span class="number">12</span>),</span><br><span class="line">            <span class="keyword">new</span> <span class="title class_">student</span>(<span class="number">5</span>, <span class="string">&quot;aadasjdas&quot;</span>, <span class="number">43</span>)</span><br><span class="line">        &#125;;</span><br><span class="line"><span class="comment">//      Arrays.sort(students, (student,t1)-&gt;student.age-t1.age);</span></span><br><span class="line">        <span class="comment">//静态方法引用</span></span><br><span class="line">        Arrays.sort(students,CompareByData::compareByAge);</span><br><span class="line">        <span class="comment">//实例方法引用</span></span><br><span class="line">        CompareByData compare=<span class="keyword">new</span> <span class="title class_">CompareByData</span>();</span><br><span class="line">        Arrays.sort(students,compare::compareByAgeDesc);</span><br><span class="line">        System.out.println(Arrays.toString(students));</span><br><span class="line">    &#125;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">CompareByData</span> &#123;</span><br><span class="line">    <span class="keyword">public</span>  <span class="keyword">static</span> <span class="type">int</span> <span class="title function_">compareByAge</span><span class="params">(student stu1,student stu2&#123;</span></span><br><span class="line"><span class="params">        return  stu1.age-stu2.age;</span></span><br><span class="line"><span class="params">    &#125;</span></span><br><span class="line"><span class="params">    <span class="keyword">public</span>  <span class="type">int</span> compareByAgeDesc(student stu1,student stu2)</span>&#123;</span><br><span class="line">        <span class="keyword">return</span>  stu2.age-stu1.age;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <h2 id="特例类型方法引用"><a href="#特例类型方法引用" class="headerlink" title="特例类型方法引用"></a>特例类型方法引用</h2><p>如果某个lambda表达式中只是调用一个实例方法，并且参数列表的第一个参数是作为方法的主调，后面的参数是作为该实例方法入参的，则此时可以使用特定的类型方法引用</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span>&#123;</span><br><span class="line">        String[] name=&#123;<span class="string">&quot;ahasd&quot;</span>,<span class="string">&quot;aaasd&quot;</span>,<span class="string">&quot;pppadas&quot;</span>,<span class="string">&quot;Zasdas&quot;</span>,<span class="string">&quot;Asdsa&quot;</span>,<span class="string">&quot;TUasd&quot;</span>&#125;;</span><br><span class="line">        Arrays.sort(name);</span><br><span class="line">        <span class="comment">//忽略首字符大小写进行排序</span></span><br><span class="line">        <span class="comment">//Arrays.sort(name, (s,t1)-&gt; s.compareToIgnoreCase(t1));</span></span><br><span class="line">        <span class="comment">//特定类型方法引用</span></span><br><span class="line">        Arrays.sort(name, String::compareToIgnoreCase);</span><br><span class="line">        System.out.println(Arrays.toString(name));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="构造器引用"><a href="#构造器引用" class="headerlink" title="构造器引用"></a>构造器引用</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span>&#123;</span><br><span class="line">    <span class="comment">//CreateStu cstu=(num,name,age)-&gt;new student(num,name,age);</span></span><br><span class="line">    CreateStu cstu1=student::<span class="keyword">new</span>;</span><br><span class="line">    <span class="type">student</span> <span class="variable">student</span> <span class="operator">=</span> cstu1.create(<span class="number">1</span>, <span class="string">&quot;zhangsan&quot;</span>, <span class="number">89</span>);</span><br><span class="line">    System.out.println(student);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h1 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h1><h2 id="Collectioon-接口-单列集合"><a href="#Collectioon-接口-单列集合" class="headerlink" title="Collectioon(接口)单列集合"></a>Collectioon(接口)单列集合</h2><ul>
 <li>List<E> 有序、可重复、有索引<blockquote>
-<p>ArrayList<E>、LinkedList<E>:有序、可重复、有索引<br>ArrayList 查询快、删除慢，添加效率低</p>
+<p>ArrayList<E>、LinkedList<E>:有序、可重复、有索引<br>ArrayList 查询快、删除慢，添加效率低</E></E></p>
 </blockquote>
-</li>
+</E></li>
 <li>Set<E> 无序、不重复、无索引<blockquote>
 <p>HashSet: 无序(<strong>添加的顺序喝读取的顺序不一致</strong>)、不重复、无索引<br>LinkHashSet: <strong>有序</strong>、不重复、无索引<br>TreeSet:按照大小默认升序排列、不重复、无索引</p>
 </blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//遍历</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span>&#123;</span><br><span class="line">    List&lt;String&gt; res=<span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">    Iterator&lt;String&gt; iterator = res.iterator();</span><br><span class="line">    <span class="keyword">while</span> (iterator.hasNext())&#123;</span><br><span class="line">        System.out.println(iterator.next());</span><br><span class="line">    &#125;</span><br><span class="line">    res.forEach(s-&gt; System.out.println(s));</span><br><span class="line">    res.forEach(System.out::println);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//遍历</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[] args)</span>&#123;</span><br><span class="line">    List&lt;String&gt; res=<span class="keyword">new</span> <span class="title class_">ArrayList</span>&lt;&gt;();</span><br><span class="line">    Iterator&lt;String&gt; iterator = res.iterator();</span><br><span class="line">    <span class="keyword">while</span> (iterator.hasNext())&#123;</span><br><span class="line">        System.out.println(iterator.next());</span><br><span class="line">    &#125;</span><br><span class="line">    res.forEach(s-&gt; System.out.println(s));</span><br><span class="line">    res.forEach(System.out::println);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></E></li>
 </ul>
 <h2 id="HashSet特点"><a href="#HashSet特点" class="headerlink" title="HashSet特点"></a>HashSet特点</h2><ul>
 <li>哈希值<blockquote>
@@ -323,7 +323,7 @@ BLOG = Luk's Blog</title>
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="Contents">
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B3%9B%E5%9E%8B"><span class="toc-number">1.</span> <span class="toc-text">泛型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%9B%E5%9E%8B%E6%8E%A5%E5%8F%A3"><span class="toc-number">1.1.</span> <span class="toc-text">泛型接口</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8API"><span class="toc-number">2.</span> <span class="toc-text">常用API</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Object%E7%B1%BB"><span class="toc-number">2.1.</span> <span class="toc-text">Object类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Array%E7%B1%BB"><span class="toc-number">2.2.</span> <span class="toc-text">Array类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Arrays%E6%8E%92%E5%BA%8F"><span class="toc-number">2.2.1.</span> <span class="toc-text">Arrays排序</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-number">3.</span> <span class="toc-text">Lambda表达式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8"><span class="toc-number">4.</span> <span class="toc-text">方法引用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%99%E6%80%81-x2F-%E5%AE%9E%E4%BE%8B%E6%96%B9%E6%B3%95"><span class="toc-number">4.1.</span> <span class="toc-text">静态&#x2F;实例方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%89%B9%E4%BE%8B%E7%B1%BB%E5%9E%8B%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8"><span class="toc-number">4.2.</span> <span class="toc-text">特例类型方法引用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9E%84%E9%80%A0%E5%99%A8%E5%BC%95%E7%94%A8"><span class="toc-number">4.3.</span> <span class="toc-text">构造器引用</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9B%86%E5%90%88"><span class="toc-number">5.</span> <span class="toc-text">集合</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Collectioon-%E6%8E%A5%E5%8F%A3-%E5%8D%95%E5%88%97%E9%9B%86%E5%90%88"><span class="toc-number">5.1.</span> <span class="toc-text">Collectioon(接口)单列集合</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HashSet%E7%89%B9%E7%82%B9"><span class="toc-number">5.2.</span> <span class="toc-text">HashSet特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Conllections%E5%B7%A5%E5%85%B7%E7%B1%BB"><span class="toc-number">5.3.</span> <span class="toc-text">Conllections工具类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Map%E9%9B%86%E5%90%88-%E5%8F%8C%E5%88%97%E9%9B%86%E5%90%88"><span class="toc-number">5.4.</span> <span class="toc-text">Map集合 双列集合</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Stream%E6%B5%81"><span class="toc-number">6.</span> <span class="toc-text">Stream流</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B3%9B%E5%9E%8B"><span class="toc-number">1.</span> <span class="toc-text">泛型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%9B%E5%9E%8B%E6%8E%A5%E5%8F%A3"><span class="toc-number">1.1.</span> <span class="toc-text">泛型接口</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8API"><span class="toc-number">2.</span> <span class="toc-text">常用API</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Object%E7%B1%BB"><span class="toc-number">2.1.</span> <span class="toc-text">Object类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Array%E7%B1%BB"><span class="toc-number">2.2.</span> <span class="toc-text">Array类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Arrays%E6%8E%92%E5%BA%8F"><span class="toc-number">2.2.1.</span> <span class="toc-text">Arrays排序</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F"><span class="toc-number">3.</span> <span class="toc-text">Lambda表达式</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8"><span class="toc-number">4.</span> <span class="toc-text">方法引用</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9D%99%E6%80%81-%E5%AE%9E%E4%BE%8B%E6%96%B9%E6%B3%95"><span class="toc-number">4.1.</span> <span class="toc-text">静态&#x2F;实例方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%89%B9%E4%BE%8B%E7%B1%BB%E5%9E%8B%E6%96%B9%E6%B3%95%E5%BC%95%E7%94%A8"><span class="toc-number">4.2.</span> <span class="toc-text">特例类型方法引用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9E%84%E9%80%A0%E5%99%A8%E5%BC%95%E7%94%A8"><span class="toc-number">4.3.</span> <span class="toc-text">构造器引用</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9B%86%E5%90%88"><span class="toc-number">5.</span> <span class="toc-text">集合</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Collectioon-%E6%8E%A5%E5%8F%A3-%E5%8D%95%E5%88%97%E9%9B%86%E5%90%88"><span class="toc-number">5.1.</span> <span class="toc-text">Collectioon(接口)单列集合</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#HashSet%E7%89%B9%E7%82%B9"><span class="toc-number">5.2.</span> <span class="toc-text">HashSet特点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Conllections%E5%B7%A5%E5%85%B7%E7%B1%BB"><span class="toc-number">5.3.</span> <span class="toc-text">Conllections工具类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Map%E9%9B%86%E5%90%88-%E5%8F%8C%E5%88%97%E9%9B%86%E5%90%88"><span class="toc-number">5.4.</span> <span class="toc-text">Map集合 双列集合</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Stream%E6%B5%81"><span class="toc-number">6.</span> <span class="toc-text">Stream流</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="Related">
         <ul>
@@ -341,7 +341,7 @@ BLOG = Luk's Blog</title>
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">16</span>
+        <span class="count">18</span>
         <span class="name">posts</span>
       </a>
     </div>
@@ -436,58 +436,6 @@ BLOG = Luk's Blog</title>
   <li class="item">
     
 <div class="breadcrumb">
-<a href="/categories/Life/" title="In Life">Life</a>
-</div>
-
-    <span><a href="/2023/11/17/Life/%E5%AE%9E%E4%B9%A0%E6%97%A5%E8%AE%B0/" title="实习日记">实习日记</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/java/" title="In java">java</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/java/SpringBoot/" title="In SpringBoot">SpringBoot</a>
-</div>
-
-    <span><a href="/2023/10/06/computer-science/java/springboot/SpringbootSecurity/" title="SpringBoot Security">SpringBoot Security</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/Redis/" title="In Redis">Redis</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/Redis/%E4%B8%AD%E9%97%B4%E4%BB%B6/" title="In 中间件">中间件</a>
-</div>
-
-    <span><a href="/2023/11/17/computer-science/%E4%B8%AD%E9%97%B4%E4%BB%B6/redis%E5%AD%A6%E4%B9%A0/Day1/" title="redis">redis</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/java/" title="In java">java</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/java/javase/" title="In javase">javase</a>
-</div>
-
-    <span><a href="/2023/07/05/computer-science/java/javase/JavaSE_Day1/" title="java面向对象">java面向对象</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
 <a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
 <i class="ic i-angle-right"></i>
 <a href="/categories/computer-science/java/" title="In java">java</a>
@@ -502,42 +450,24 @@ BLOG = Luk's Blog</title>
   <li class="item">
     
 <div class="breadcrumb">
+<a href="/categories/Life/" title="In Life">Life</a>
+</div>
+
+    <span><a href="/2023/11/17/Life/%E5%AE%9E%E4%B9%A0%E6%97%A5%E8%AE%B0/" title="实习日记">实习日记</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
 <a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
 <i class="ic i-angle-right"></i>
 <a href="/categories/computer-science/web/" title="In web">web</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/web/vue/" title="In vue">vue</a>
+<a href="/categories/computer-science/web/javaScript/" title="In javaScript">javaScript</a>
 </div>
 
-    <span><a href="/2023/08/18/computer-science/webLearning/vue/Day1/" title="VUE">VUE</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/java/" title="In java">java</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/java/SpringBoot/" title="In SpringBoot">SpringBoot</a>
-</div>
-
-    <span><a href="/2023/07/14/computer-science/java/springboot/Day1/" title="SpringBoot">SpringBoot</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/java/" title="In java">java</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/java/Spring/" title="In Spring">Spring</a>
-</div>
-
-    <span><a href="/2023/07/17/computer-science/java/spring/SpringDay1/" title="Spring">Spring</a></span>
+    <span><a href="/2023/08/18/computer-science/webLearning/javascript/Day1/" title="JavaSrcipt">JavaSrcipt</a></span>
   </li>
 
       
@@ -565,7 +495,77 @@ BLOG = Luk's Blog</title>
 <a href="/categories/computer-science/java/javase/" title="In javase">javase</a>
 </div>
 
-    <span><a href="/2023/07/06/computer-science/java/javase/JavaSE_Day2/" title="java泛型">java泛型</a></span>
+    <span><a href="/2023/07/07/computer-science/java/javase/JavaSE_Day4/" title="java多线程">java多线程</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/web/" title="In web">web</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/web/vue/" title="In vue">vue</a>
+</div>
+
+    <span><a href="/2023/08/18/computer-science/webLearning/vue/Day1/" title="VUE">VUE</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/" title="In java">java</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/Spring/" title="In Spring">Spring</a>
+</div>
+
+    <span><a href="/2023/07/17/computer-science/java/spring/SpringDay1/" title="Spring">Spring</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/" title="In java">java</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/javase/" title="In javase">javase</a>
+</div>
+
+    <span><a href="/2023/07/05/computer-science/java/javase/JavaSE_Day1/" title="java面向对象">java面向对象</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/" title="In java">java</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/SpringBoot/" title="In SpringBoot">SpringBoot</a>
+</div>
+
+    <span><a href="/2023/10/06/computer-science/java/springboot/SpringbootSecurity/" title="SpringBoot Security">SpringBoot Security</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/" title="In java">java</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/Spring/" title="In Spring">Spring</a>
+</div>
+
+    <span><a href="/2023/07/18/computer-science/java/spring/SpringDay2/" title="Spring">Spring</a></span>
   </li>
 
   </ul>
@@ -590,13 +590,13 @@ BLOG = Luk's Blog</title>
     <span class="post-meta-item-icon">
       <i class="ic i-chart-area"></i>
     </span>
-    <span title="Symbols count total">94k words</span>
+    <span title="Symbols count total">107k words</span>
 
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="ic i-coffee"></i>
     </span>
-    <span title="Reading time total">1:25</span>
+    <span title="Reading time total">1:37</span>
   </div>
   <div class="powered-by">
     Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>

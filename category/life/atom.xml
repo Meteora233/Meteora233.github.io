@@ -6,10 +6,10 @@
     <updated>2023-11-16T16:00:00.000Z</updated>
     <category term="JAVA" />
     <category term="JAVASE" />
-    <category term="Spring" />
-    <category term="mybatis" />
     <category term="Vue" />
     <category term="web" />
+    <category term="Spring" />
+    <category term="mybatis" />
     <category term="事务" />
     <category term="javaScript" />
     <entry>
@@ -18,8 +18,8 @@
         <link rel="alternate" href="https://vereatorm.github.io/2023/11/17/Life/%E5%AE%9E%E4%B9%A0%E6%97%A5%E8%AE%B0/"/>
         <content type="html">&lt;h1 id=&#34;11-14&#34;&gt;&lt;a href=&#34;#11-14&#34; class=&#34;headerlink&#34; title=&#34;11.14&#34;&gt;&lt;/a&gt;11.14&lt;/h1&gt;&lt;p&gt;创建奖品，抽奖记录实体类，创建增删改查接口&lt;/p&gt;
 &lt;h1 id=&#34;11-15-11-16&#34;&gt;&lt;a href=&#34;#11-15-11-16&#34; class=&#34;headerlink&#34; title=&#34;11.15-11.16&#34;&gt;&lt;/a&gt;11.15-11.16&lt;/h1&gt;&lt;p&gt;实现使用了 java 的 lock 完成了避免并发的问题&lt;br&gt;完成了增删改查功能&lt;/p&gt;
-&lt;h1 id=&#34;11-17&#34;&gt;&lt;a href=&#34;#11-17&#34; class=&#34;headerlink&#34; title=&#34;11.17&#34;&gt;&lt;/a&gt;11.17&lt;/h1&gt;&lt;p&gt;问题:&lt;br&gt;你研究下 redis 锁，把现在抽奖的锁换成 redis 锁&lt;br&gt;然后项目里面加上全局异常&lt;/p&gt;
-&lt;p&gt;学习 redis,&lt;/p&gt;
+&lt;h1 id=&#34;11-17&#34;&gt;&lt;a href=&#34;#11-17&#34; class=&#34;headerlink&#34; title=&#34;11.17&#34;&gt;&lt;/a&gt;11.17&lt;/h1&gt;&lt;p&gt;问题:&lt;br&gt;你研究下 redis 锁，把现在抽奖的锁换成 redis 锁&lt;br&gt;然后项目里面加上全局异常&lt;br&gt;实际：学习 redis，String 类型&lt;/p&gt;
+&lt;h1 id=&#34;11-18&#34;&gt;&lt;a href=&#34;#11-18&#34; class=&#34;headerlink&#34; title=&#34;11.18&#34;&gt;&lt;/a&gt;11.18&lt;/h1&gt;&lt;p&gt;预期：看完 redis 基础的网课&lt;br&gt;实际：看完基于 redis 本身的操作&lt;br&gt;目标：明天看完关于 spring 和 java 关联的操作，以及 redis 的分布式锁&lt;/p&gt;
 </content>
         <updated>2023-11-16T16:00:00.000Z</updated>
     </entry>
