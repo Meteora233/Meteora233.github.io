@@ -15,9 +15,9 @@
   <meta http-equiv="Cache-Control" content="no-siteapp">
 
 
-<link rel="alternate" type="application/rss+xml" title="Luk's Blog" href="https://vereatorm.github.io/rss.xml" />
-<link rel="alternate" type="application/atom+xml" title="Luk's Blog" href="https://vereatorm.github.io/atom.xml" />
-<link rel="alternate" type="application/json" title="Luk's Blog" href="https://vereatorm.github.io/feed.json" />
+<link rel="alternate" type="application/rss+xml" title="Luk's Blog" href="https://meteora233.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Luk's Blog" href="https://meteora233.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="Luk's Blog" href="https://meteora233.github.io/feed.json" />
 
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 
@@ -25,7 +25,7 @@
 
   
 
-<link rel="canonical" href="https://vereatorm.github.io/2023/11/18/computer-science/%E4%B8%AD%E9%97%B4%E4%BB%B6/redis%E5%AD%A6%E4%B9%A0/redis%E5%AE%9E%E8%B7%B5%E4%BD%BF%E7%94%A8/">
+<link rel="canonical" href="https://meteora233.github.io/2023/11/18/computer-science/%E4%B8%AD%E9%97%B4%E4%BB%B6/redis%E5%AD%A6%E4%B9%A0/redis%E5%AE%9E%E8%B7%B5%E4%BD%BF%E7%94%A8/">
 
 
 
@@ -74,7 +74,7 @@ BLOG = Luk's Blog</title>
       <i class="ic i-pen"></i>
     </span>
     <span class="text">Symbols count in article</span>
-    <span>3k</span>
+    <span>4.7k</span>
     <span class="text">words</span>
   </span>
   <span class="item" title="Reading time">
@@ -82,7 +82,7 @@ BLOG = Luk's Blog</title>
       <i class="ic i-clock"></i>
     </span>
     <span class="text">Reading time</span>
-    <span>3 mins.</span>
+    <span>4 mins.</span>
   </span>
 </div>
 
@@ -150,7 +150,7 @@ BLOG = Luk's Blog</title>
 </div>
 
     <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
-  <link itemprop="mainEntityOfPage" href="https://vereatorm.github.io/2023/11/18/computer-science/%E4%B8%AD%E9%97%B4%E4%BB%B6/redis%E5%AD%A6%E4%B9%A0/redis%E5%AE%9E%E8%B7%B5%E4%BD%BF%E7%94%A8/">
+  <link itemprop="mainEntityOfPage" href="https://meteora233.github.io/2023/11/18/computer-science/%E4%B8%AD%E9%97%B4%E4%BB%B6/redis%E5%AD%A6%E4%B9%A0/redis%E5%AE%9E%E8%B7%B5%E4%BD%BF%E7%94%A8/">
 
   <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
     <meta itemprop="image" content="/images/avatar.jpg">
@@ -243,6 +243,11 @@ BLOG = Luk's Blog</title>
 
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"> 127.0.0.1:6379&gt; unwatch <span class="comment"># 发现事务执行失败就先解锁</span></span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; watch money <span class="comment"># 获取最新的值，再次监视，select version</span></span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; multi</span><br><span class="line">OK</span><br><span class="line">127.0.0.1:6379&gt; decrby money 1</span><br><span class="line">QUEUED</span><br><span class="line">127.0.0.1:6379&gt; incrby out 1</span><br><span class="line">QUEUED</span><br><span class="line">127.0.0.1:6379&gt; <span class="built_in">exec</span> <span class="comment"># 比对监视的值是否发生变化，如果没有发生变化，那么可以执行成功，如果变了就执行失败</span></span><br><span class="line">1) (<span class="built_in">integer</span>) 989</span><br><span class="line">2) (<span class="built_in">integer</span>) 991</span><br><span class="line">127.0.0.1:6379&gt;</span><br></pre></td></tr></table></figure>
 
+<h1 id="SpringBoot-整合"><a href="#SpringBoot-整合" class="headerlink" title="SpringBoot 整合"></a>SpringBoot 整合</h1><p>springboot 操作数据: spring-data jpa jdbc mongodb redis<br>jedis:采用的直连，多个线程操作的话，是不安全的，如果想要避免不安全，使用 Jedi 是 pool 连接池！ 更像 BIO 模式<br>lettuce：采用 netty，实例可以再多个线程进行共享，不存在线程不安全的情况！可以减少线程数量，NIO 模式</p>
+<h2 id="源码分析"><a href="#源码分析" class="headerlink" title="源码分析"></a>源码分析</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 自动配置类</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">RedisAutoConfiguration</span> &#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">RedisAutoConfiguration</span><span class="params">()</span> &#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="meta">@ConditionalOnMissingBean( name = &#123;&quot;redisTemplate&quot;&#125;)</span> <span class="comment">//可以定义一个redistemplate来替换</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> RedisTemplate&lt;Object, Object&gt; <span class="title function_">redisTemplate</span><span class="params">(RedisConnectionFactory redisConnectionFactory)</span> <span class="keyword">throws</span> UnknownHostException &#123;</span><br><span class="line">      <span class="comment">// 默认的redisTemplate 没有过多的设置，redis对象保存需要序列化</span></span><br><span class="line">      <span class="comment">// 两个泛型都是object类型，后面使用需要强制转换&lt;String,Object&gt;</span></span><br><span class="line">        RedisTemplate&lt;Object, Object&gt; template = <span class="keyword">new</span> <span class="title class_">RedisTemplate</span>();</span><br><span class="line">        template.setConnectionFactory(redisConnectionFactory);</span><br><span class="line">        <span class="keyword">return</span> template;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="meta">@ConditionalOnMissingBean</span></span><br><span class="line">    <span class="comment">// 由于String类型是redis最常用的类型，所以单独提出来使用</span></span><br><span class="line">    <span class="keyword">public</span> StringRedisTemplate <span class="title function_">stringRedisTemplate</span><span class="params">(RedisConnectionFactory redisConnectionFactory)</span> <span class="keyword">throws</span> UnknownHostException &#123;</span><br><span class="line">        <span class="type">StringRedisTemplate</span> <span class="variable">template</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringRedisTemplate</span>();</span><br><span class="line">        template.setConnectionFactory(redisConnectionFactory);</span><br><span class="line">        <span class="keyword">return</span> template;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">```</span><br><span class="line"></span><br><span class="line">``java</span><br><span class="line"> <span class="meta">@Autowired</span></span><br><span class="line"> <span class="keyword">private</span> RedisTemplate redisTemplate;</span><br><span class="line"></span><br><span class="line"> <span class="meta">@Test</span></span><br><span class="line"> <span class="keyword">void</span> <span class="title function_">contextLoads</span><span class="params">()</span>&#123;</span><br><span class="line">     <span class="comment">//操作不同的数据类型</span></span><br><span class="line">     <span class="comment">// opsForValue 类String</span></span><br><span class="line">     redisTemplate.opsForValue().set(<span class="string">&quot;mykey&quot;</span>,<span class="string">&quot;aaa&quot;</span>);</span><br><span class="line">     System.out.println(redisTemplate.opsForValue().get(<span class="string">&quot;mykey&quot;</span>));</span><br><span class="line">     redisTemplate.opsForHash();</span><br><span class="line">     redisTemplate.opsForList();</span><br><span class="line">     <span class="comment">// 获取连接对象</span></span><br><span class="line">     <span class="type">RedisConnection</span> <span class="variable">connection</span> <span class="operator">=</span> redisTemplate.getConnectionFactory().getConnection();</span><br><span class="line">     connection.flushDb();</span><br><span class="line">     connection.flushAll();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"> &#125;</span><br><span class="line">```</span><br><span class="line">``` yml</span><br><span class="line">  redis:</span><br><span class="line">    database: <span class="number">1</span></span><br><span class="line">    host: <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span></span><br><span class="line">    port: <span class="number">6379</span></span><br><span class="line">    timeout: <span class="number">6000</span>  # 连接超时时长（毫秒）</span><br><span class="line"></span><br><span class="line">redis-lock:</span><br><span class="line">  config:</span><br><span class="line">    # 锁过期时间，单位：秒</span><br><span class="line">    expireTime: <span class="number">10</span></span><br><span class="line">    # 获取自旋锁失败时等待超时时间，单位：秒</span><br><span class="line">    waitTime: <span class="number">3</span></span><br><span class="line">    # 获取自旋锁失败时休眠等待时间，单位：毫秒</span><br><span class="line">    sleepTime: <span class="number">500</span></span><br><span class="line"></span><br><span class="line">```</span><br></pre></td></tr></table></figure>
+
+<p><img data-src="/image.png" alt="序列化配置"></p>
+<h2 id="编写自己的-config"><a href="#编写自己的-config" class="headerlink" title="编写自己的 config"></a>编写自己的 config</h2>
   </div>
 
    <footer>
@@ -253,7 +258,7 @@ BLOG = Luk's Blog</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">Edited on</span>
-    <time title="Modified: 2023-11-18 23:38:29" itemprop="dateModified" datetime="2023-11-18T23:38:29+08:00">2023-11-18</time>
+    <time title="Modified: 2023-11-19 22:30:41" itemprop="dateModified" datetime="2023-11-19T22:30:41+08:00">2023-11-19</time>
   </span>
 </div>
 
@@ -289,7 +294,7 @@ BLOG = Luk's Blog</title>
   </li>
   <li class="link">
     <strong>Post link: </strong>
-    <a href="https://vereatorm.github.io/2023/11/18/computer-science/%E4%B8%AD%E9%97%B4%E4%BB%B6/redis%E5%AD%A6%E4%B9%A0/redis%E5%AE%9E%E8%B7%B5%E4%BD%BF%E7%94%A8/" title="redis实践使用">https://vereatorm.github.io/2023/11/18/computer-science/中间件/redis学习/redis实践使用/</a>
+    <a href="https://meteora233.github.io/2023/11/18/computer-science/%E4%B8%AD%E9%97%B4%E4%BB%B6/redis%E5%AD%A6%E4%B9%A0/redis%E5%AE%9E%E8%B7%B5%E4%BD%BF%E7%94%A8/" title="redis实践使用">https://meteora233.github.io/2023/11/18/computer-science/中间件/redis学习/redis实践使用/</a>
   </li>
   <li class="license">
     <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
@@ -316,6 +321,14 @@ BLOG = Luk's Blog</title>
 
     </div>
     <div class="item right">
+      
+
+  <a href="/2023/11/30/computer-science/java/springboot/SpringSecurity%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;img.win3000.com&#x2F;m00&#x2F;ff&#x2F;18&#x2F;b346b3d86cafe5bee8be826289fdef2f.jpg" title="SpringBoot Security">
+  <span class="type">Next Post</span>
+  <span class="category"><i class="ic i-flag"></i> SpringBoot</span>
+  <h3>SpringBoot Security</h3>
+  </a>
+
     </div>
 </div>
 
@@ -332,7 +345,7 @@ BLOG = Luk's Blog</title>
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="Contents">
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89%E7%A7%8D%E7%89%B9%E6%AE%8A%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.</span> <span class="toc-text">三种特殊数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#geospatial-%E5%9C%B0%E7%90%86%E4%BD%8D%E7%BD%AE"><span class="toc-number">1.1.</span> <span class="toc-text">geospatial 地理位置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Bitmap"><span class="toc-number">1.2.</span> <span class="toc-text">Bitmap</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BE%8B%E5%AD%90"><span class="toc-number">1.3.</span> <span class="toc-text">例子</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8B%E5%8A%A1"><span class="toc-number">2.</span> <span class="toc-text">事务</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%94%81"><span class="toc-number">3.</span> <span class="toc-text">锁</span></a></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%89%E7%A7%8D%E7%89%B9%E6%AE%8A%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.</span> <span class="toc-text">三种特殊数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#geospatial-%E5%9C%B0%E7%90%86%E4%BD%8D%E7%BD%AE"><span class="toc-number">1.1.</span> <span class="toc-text">geospatial 地理位置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Bitmap"><span class="toc-number">1.2.</span> <span class="toc-text">Bitmap</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BE%8B%E5%AD%90"><span class="toc-number">1.3.</span> <span class="toc-text">例子</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8B%E5%8A%A1"><span class="toc-number">2.</span> <span class="toc-text">事务</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%94%81"><span class="toc-number">3.</span> <span class="toc-text">锁</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#SpringBoot-%E6%95%B4%E5%90%88"><span class="toc-number">4.</span> <span class="toc-text">SpringBoot 整合</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%BA%90%E7%A0%81%E5%88%86%E6%9E%90"><span class="toc-number">4.1.</span> <span class="toc-text">源码分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E5%86%99%E8%87%AA%E5%B7%B1%E7%9A%84-config"><span class="toc-number">4.2.</span> <span class="toc-text">编写自己的 config</span></a></li></ol></li></ol>
       </div>
       <div class="related panel pjax" data-title="Related">
         <ul>
@@ -350,19 +363,19 @@ BLOG = Luk's Blog</title>
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">18</span>
+        <span class="count">26</span>
         <span class="name">posts</span>
       </a>
     </div>
     <div class="item categories">
       <a href="/categories/">
-        <span class="count">13</span>
+        <span class="count">17</span>
         <span class="name">categories</span>
       </a>
     </div>
     <div class="item tags">
       <a href="/tags/">
-        <span class="count">8</span>
+        <span class="count">11</span>
         <span class="name">tags</span>
       </a>
     </div>
@@ -418,10 +431,12 @@ BLOG = Luk's Blog</title>
 
   <ul id="quick">
     <li class="prev pjax">
+        <a href="/2023/11/17/Life/%E5%AE%9E%E4%B9%A0%E6%97%A5%E8%AE%B0/" rel="prev" title="Previous Post"><i class="ic i-chevron-left"></i></a>
     </li>
     <li class="up"><i class="ic i-arrow-up"></i></li>
     <li class="down"><i class="ic i-arrow-down"></i></li>
     <li class="next pjax">
+        <a href="/2023/11/30/computer-science/java/springboot/SpringSecurity%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB/" rel="next" title="Next Post"><i class="ic i-chevron-right"></i></a>
     </li>
     <li class="percent"></li>
   </ul>
@@ -445,20 +460,6 @@ BLOG = Luk's Blog</title>
 <div class="breadcrumb">
 <a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/Redis/" title="In Redis">Redis</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/Redis/%E4%B8%AD%E9%97%B4%E4%BB%B6/" title="In 中间件">中间件</a>
-</div>
-
-    <span><a href="/2023/11/18/computer-science/%E4%B8%AD%E9%97%B4%E4%BB%B6/redis%E5%AD%A6%E4%B9%A0/redis%E5%AE%9E%E8%B7%B5%E4%BD%BF%E7%94%A8/" title="redis实践使用">redis实践使用</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
-<i class="ic i-angle-right"></i>
 <a href="/categories/computer-science/web/" title="In web">web</a>
 <i class="ic i-angle-right"></i>
 <a href="/categories/computer-science/web/vue/" title="In vue">vue</a>
@@ -473,12 +474,26 @@ BLOG = Luk's Blog</title>
 <div class="breadcrumb">
 <a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
 <i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/" title="In java">java</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/SpringBoot/" title="In SpringBoot">SpringBoot</a>
+</div>
+
+    <span><a href="/2023/07/14/computer-science/java/springboot/Day1/" title="SpringBoot">SpringBoot</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
 <a href="/categories/computer-science/Redis/" title="In Redis">Redis</a>
 <i class="ic i-angle-right"></i>
 <a href="/categories/computer-science/Redis/%E4%B8%AD%E9%97%B4%E4%BB%B6/" title="In 中间件">中间件</a>
 </div>
 
-    <span><a href="/2023/11/17/computer-science/%E4%B8%AD%E9%97%B4%E4%BB%B6/redis%E5%AD%A6%E4%B9%A0/redisAPI%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/" title="redisAPI基本使用">redisAPI基本使用</a></span>
+    <span><a href="/2023/11/18/computer-science/%E4%B8%AD%E9%97%B4%E4%BB%B6/redis%E5%AD%A6%E4%B9%A0/redis%E5%AE%9E%E8%B7%B5%E4%BD%BF%E7%94%A8/" title="redis实践使用">redis实践使用</a></span>
   </li>
 
       
@@ -492,7 +507,49 @@ BLOG = Luk's Blog</title>
 <a href="/categories/computer-science/java/SpringBoot/" title="In SpringBoot">SpringBoot</a>
 </div>
 
-    <span><a href="/2023/10/06/computer-science/java/springboot/SpringbootSecurity/" title="SpringBoot Security">SpringBoot Security</a></span>
+    <span><a href="/2023/11/30/computer-science/java/springboot/SpringSecurity%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB/" title="SpringBoot Security">SpringBoot Security</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/" title="In java">java</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/javase/" title="In javase">javase</a>
+</div>
+
+    <span><a href="/2023/07/06/computer-science/java/javase/JavaSE_Day2/" title="java泛型">java泛型</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/" title="In java">java</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/Spring/" title="In Spring">Spring</a>
+</div>
+
+    <span><a href="/2023/07/18/computer-science/java/spring/SpringDay2/" title="Spring">Spring</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/web/" title="In web">web</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/web/Typescript/" title="In Typescript">Typescript</a>
+</div>
+
+    <span><a href="/2023/02/02/computer-science/webLearning/typescript%E6%96%87%E4%BB%B6/basic/" title="Typescript 基本类型">Typescript 基本类型</a></span>
   </li>
 
       
@@ -517,10 +574,10 @@ BLOG = Luk's Blog</title>
 <i class="ic i-angle-right"></i>
 <a href="/categories/computer-science/java/" title="In java">java</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/java/javase/" title="In javase">javase</a>
+<a href="/categories/computer-science/java/SpringBoot/" title="In SpringBoot">SpringBoot</a>
 </div>
 
-    <span><a href="/2023/07/09/computer-science/java/javase/JavaSE_Day5/" title="java网络通信、测试">java网络通信、测试</a></span>
+    <span><a href="/2023/07/14/computer-science/java/springboot/Day2/" title="SpringBoot">SpringBoot</a></span>
   </li>
 
       
@@ -531,48 +588,10 @@ BLOG = Luk's Blog</title>
 <i class="ic i-angle-right"></i>
 <a href="/categories/computer-science/java/" title="In java">java</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/java/Spring/" title="In Spring">Spring</a>
+<a href="/categories/computer-science/java/SpringBoot/" title="In SpringBoot">SpringBoot</a>
 </div>
 
-    <span><a href="/2023/07/17/computer-science/java/spring/SpringDay1/" title="Spring">Spring</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/spring/" title="In spring">spring</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/spring/ruoyi%E6%A1%86%E6%9E%B6/" title="In ruoyi框架">ruoyi框架</a>
-</div>
-
-    <span><a href="/2023/08/22/computer-science/java/rouyi/Day1/" title="RuoYi框架">RuoYi框架</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/java/" title="In java">java</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/java/javase/" title="In javase">javase</a>
-</div>
-
-    <span><a href="/2023/07/06/computer-science/java/javase/JavaSE_Day2/" title="java泛型">java泛型</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/Life/" title="In Life">Life</a>
-</div>
-
-    <span><a href="/2023/11/17/Life/%E5%AE%9E%E4%B9%A0%E6%97%A5%E8%AE%B0/" title="实习日记">实习日记</a></span>
+    <span><a href="/2023/08/01/computer-science/java/springboot/Day3/" title="SpringBoot">SpringBoot</a></span>
   </li>
 
   </ul>
@@ -587,7 +606,7 @@ BLOG = Luk's Blog</title>
   <div class="copyright">
     
     &copy; 2010 – 
-    <span itemprop="copyrightYear">2023</span>
+    <span itemprop="copyrightYear">2024</span>
     <span class="with-love">
       <i class="ic i-sakura rotate"></i>
     </span>
@@ -597,13 +616,13 @@ BLOG = Luk's Blog</title>
     <span class="post-meta-item-icon">
       <i class="ic i-chart-area"></i>
     </span>
-    <span title="Symbols count total">107k words</span>
+    <span title="Symbols count total">131k words</span>
 
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="ic i-coffee"></i>
     </span>
-    <span title="Reading time total">1:37</span>
+    <span title="Reading time total">1:59</span>
   </div>
   <div class="powered-by">
     Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>

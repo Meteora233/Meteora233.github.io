@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://Vereatorm.github.io</id>
+    <id>https://Meteora233.github.io</id>
     <title>Luk&#39;s Blog • Posts by &#34;javase&#34; category</title>
-    <link href="https://Vereatorm.github.io" />
+    <link href="https://Meteora233.github.io" />
     <updated>2023-07-08T16:00:00.000Z</updated>
     <category term="JAVA" />
     <category term="JAVASE" />
@@ -12,10 +12,13 @@
     <category term="mybatis" />
     <category term="事务" />
     <category term="javaScript" />
+    <category term="Security框架" />
+    <category term="security框架" />
+    <category term="小程序" />
     <entry>
-        <id>https://vereatorm.github.io/2023/07/09/computer-science/java/javase/JavaSE_Day5/</id>
+        <id>https://meteora233.github.io/2023/07/09/computer-science/java/javase/JavaSE_Day5/</id>
         <title>java网络通信、测试</title>
-        <link rel="alternate" href="https://vereatorm.github.io/2023/07/09/computer-science/java/javase/JavaSE_Day5/"/>
+        <link rel="alternate" href="https://meteora233.github.io/2023/07/09/computer-science/java/javase/JavaSE_Day5/"/>
         <content type="html">&lt;p&gt;note info:&lt;strong&gt;查漏补缺&lt;/strong&gt;&lt;br&gt;第五天复习 课程：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMUN2NDExMzcybT9wPTExMSZ2ZF9zb3VyY2U9ZWU3NjBiZjdhNGQ4OWQzZWU5MmY0ZjgzZjNhNjgyYzk=&#34;&gt;JAVA 入门基础&lt;/span&gt;&lt;br&gt;JAVA 网络通信&lt;br&gt;Welcome to this note, which covers some basic syntax of javaSE.&lt;/p&gt;
 &lt;h1 id=&#34;TCP-通信&#34;&gt;&lt;a href=&#34;#TCP-通信&#34; class=&#34;headerlink&#34; title=&#34;TCP 通信&#34;&gt;&lt;/a&gt;TCP 通信&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;Client&lt;/strong&gt;&lt;br&gt;多手多发&lt;/p&gt;
 &lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;22&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;23&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;static&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;title function_&#34;&gt;main&lt;/span&gt;&lt;span class=&#34;params&#34;&gt;(String[] args)&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;throws&lt;/span&gt; IOException &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      &lt;span class=&#34;comment&#34;&gt;//Client 程序&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      System.out.println(&lt;span class=&#34;string&#34;&gt;&amp;quot;客户端启动成功&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      &lt;span class=&#34;type&#34;&gt;Socket&lt;/span&gt; &lt;span class=&#34;variable&#34;&gt;socket&lt;/span&gt; &lt;span class=&#34;operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;title class_&#34;&gt;Socket&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;quot;127.0.0.1&amp;quot;&lt;/span&gt;, &lt;span class=&#34;number&#34;&gt;8888&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      &lt;span class=&#34;type&#34;&gt;DataOutputStream&lt;/span&gt; &lt;span class=&#34;variable&#34;&gt;dos&lt;/span&gt; &lt;span class=&#34;operator&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;title class_&#34;&gt;DataOutputStream&lt;/span&gt;(socket.getOutputStream());&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      &lt;span class=&#34;comment&#34;&gt;//TCP 协议&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      &lt;span class=&#34;comment&#34;&gt;// 1发，1收，一发&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      &lt;span class=&#34;comment&#34;&gt;// C-&amp;gt;S,C&amp;lt;-S,C-&amp;gt;S&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      Scanner sc=&lt;span class=&#34;keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;title class_&#34;&gt;Scanner&lt;/span&gt;(System.in);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      &lt;span class=&#34;type&#34;&gt;boolean&lt;/span&gt; FLAG=&lt;span class=&#34;literal&#34;&gt;true&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      &lt;span class=&#34;keyword&#34;&gt;while&lt;/span&gt; (FLAG)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;          &lt;span class=&#34;type&#34;&gt;String&lt;/span&gt; &lt;span class=&#34;variable&#34;&gt;content&lt;/span&gt; &lt;span class=&#34;operator&#34;&gt;=&lt;/span&gt; sc.nextLine();&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;          &lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt; (content.equalsIgnoreCase(&lt;span class=&#34;string&#34;&gt;&amp;quot;Exit&amp;quot;&lt;/span&gt;))&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;              FLAG=&lt;span class=&#34;literal&#34;&gt;false&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;              System.out.println(&lt;span class=&#34;string&#34;&gt;&amp;quot;退出成功&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;          &amp;#125;&lt;span class=&#34;keyword&#34;&gt;else&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;              dos.writeUTF(content);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;              dos.flush();&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;          &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      dos.close();&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;      socket.close();&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;  &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
@@ -61,9 +64,9 @@
         <updated>2023-07-08T16:00:00.000Z</updated>
     </entry>
     <entry>
-        <id>https://vereatorm.github.io/2023/07/07/computer-science/java/javase/JavaSE_Day3/</id>
+        <id>https://meteora233.github.io/2023/07/07/computer-science/java/javase/JavaSE_Day3/</id>
         <title>javaIO流</title>
-        <link rel="alternate" href="https://vereatorm.github.io/2023/07/07/computer-science/java/javase/JavaSE_Day3/"/>
+        <link rel="alternate" href="https://meteora233.github.io/2023/07/07/computer-science/java/javase/JavaSE_Day3/"/>
         <content type="html">&lt;p&gt;note info:&lt;strong&gt;查漏补缺&lt;/strong&gt;&lt;br&gt;第三天复习 课程：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMUN2NDExMzcybT9wPTExMSZ2ZF9zb3VyY2U9ZWU3NjBiZjdhNGQ4OWQzZWU5MmY0ZjgzZjNhNjgyYzk=&#34;&gt;JAVA入门基础&lt;/span&gt;&lt;br&gt;JAVA IO流&lt;br&gt;Welcome to this note, which covers some basic syntax of javaSE.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;课堂笔记&lt;/strong&gt;&lt;/p&gt;
 &lt;h1 id=&#34;IO流&#34;&gt;&lt;a href=&#34;#IO流&#34; class=&#34;headerlink&#34; title=&#34;IO流&#34;&gt;&lt;/a&gt;IO流&lt;/h1&gt;&lt;p&gt;Input称为输入流：&lt;strong&gt;负责把数据读到内存中去&lt;/strong&gt;&lt;br&gt;Output称为输出流：&lt;strong&gt;负责把数据写出去&lt;/strong&gt;&lt;/p&gt;
@@ -129,9 +132,9 @@
         <updated>2023-07-06T16:00:00.000Z</updated>
     </entry>
     <entry>
-        <id>https://vereatorm.github.io/2023/07/07/computer-science/java/javase/JavaSE_Day4/</id>
+        <id>https://meteora233.github.io/2023/07/07/computer-science/java/javase/JavaSE_Day4/</id>
         <title>java多线程</title>
-        <link rel="alternate" href="https://vereatorm.github.io/2023/07/07/computer-science/java/javase/JavaSE_Day4/"/>
+        <link rel="alternate" href="https://meteora233.github.io/2023/07/07/computer-science/java/javase/JavaSE_Day4/"/>
         <content type="html">&lt;p&gt;note info:&lt;strong&gt;查漏补缺&lt;/strong&gt;&lt;br&gt;第四天复习 课程：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMUN2NDExMzcybT9wPTExMSZ2ZF9zb3VyY2U9ZWU3NjBiZjdhNGQ4OWQzZWU5MmY0ZjgzZjNhNjgyYzk=&#34;&gt;JAVA 入门基础&lt;/span&gt;&lt;br&gt;JAVA 多线程&lt;br&gt;Welcome to this note, which covers some basic syntax of javaSE.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;课堂笔记&lt;/strong&gt;&lt;/p&gt;
 &lt;h1 id=&#34;多线程&#34;&gt;&lt;a href=&#34;#多线程&#34; class=&#34;headerlink&#34; title=&#34;多线程&#34;&gt;&lt;/a&gt;多线程&lt;/h1&gt;&lt;p&gt;多条线程由 cpu 负责调度&lt;/p&gt;
@@ -276,9 +279,9 @@
         <updated>2023-07-06T16:00:00.000Z</updated>
     </entry>
     <entry>
-        <id>https://vereatorm.github.io/2023/07/06/computer-science/java/javase/JavaSE_Day2/</id>
+        <id>https://meteora233.github.io/2023/07/06/computer-science/java/javase/JavaSE_Day2/</id>
         <title>java泛型</title>
-        <link rel="alternate" href="https://vereatorm.github.io/2023/07/06/computer-science/java/javase/JavaSE_Day2/"/>
+        <link rel="alternate" href="https://meteora233.github.io/2023/07/06/computer-science/java/javase/JavaSE_Day2/"/>
         <content type="html">&lt;p&gt;note info:&lt;strong&gt;查漏补缺&lt;/strong&gt;&lt;br&gt;第二天复习 课程：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMUN2NDExMzcybT9wPTExMSZ2ZF9zb3VyY2U9ZWU3NjBiZjdhNGQ4OWQzZWU5MmY0ZjgzZjNhNjgyYzk=&#34;&gt;JAVA入门基础&lt;/span&gt;&lt;br&gt;JAVA Generic Content and Common Method&lt;br&gt;Welcome to this note, which covers some basic syntax of javaSE.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;课堂笔记&lt;/strong&gt;&lt;/p&gt;
 &lt;h1 id=&#34;泛型&#34;&gt;&lt;a href=&#34;#泛型&#34; class=&#34;headerlink&#34; title=&#34;泛型&#34;&gt;&lt;/a&gt;泛型&lt;/h1&gt;&lt;h2 id=&#34;泛型接口&#34;&gt;&lt;a href=&#34;#泛型接口&#34; class=&#34;headerlink&#34; title=&#34;泛型接口&#34;&gt;&lt;/a&gt;泛型接口&lt;/h2&gt;&lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;interface&lt;/span&gt; &lt;span class=&#34;title class_&#34;&gt;Data&lt;/span&gt;&amp;lt;T&amp;gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    ArrayList&amp;lt;T&amp;gt; &lt;span class=&#34;title function_&#34;&gt;getByName&lt;/span&gt;&lt;span class=&#34;params&#34;&gt;(String name)&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;void&lt;/span&gt; &lt;span class=&#34;title function_&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;params&#34;&gt;(T t)&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
@@ -339,9 +342,9 @@
         <updated>2023-07-05T16:00:00.000Z</updated>
     </entry>
     <entry>
-        <id>https://vereatorm.github.io/2023/07/05/computer-science/java/javase/JavaSE_Day1/</id>
+        <id>https://meteora233.github.io/2023/07/05/computer-science/java/javase/JavaSE_Day1/</id>
         <title>java面向对象</title>
-        <link rel="alternate" href="https://vereatorm.github.io/2023/07/05/computer-science/java/javase/JavaSE_Day1/"/>
+        <link rel="alternate" href="https://meteora233.github.io/2023/07/05/computer-science/java/javase/JavaSE_Day1/"/>
         <content type="html">&lt;p&gt;note info:&lt;strong&gt;查漏补缺&lt;/strong&gt;&lt;br&gt;第一天复习 课程：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMUN2NDExMzcybT9wPTExMSZ2ZF9zb3VyY2U9ZWU3NjBiZjdhNGQ4OWQzZWU5MmY0ZjgzZjNhNjgyYzk=&#34;&gt;JAVA 入门基础&lt;/span&gt;&lt;br&gt;JAVA Object-Oriented Content&lt;br&gt;Welcome to this note, which covers some basic syntax of javaSE.&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;课堂笔记&lt;/strong&gt;&lt;/p&gt;
 &lt;h1 id=&#34;内部类&#34;&gt;&lt;a href=&#34;#内部类&#34; class=&#34;headerlink&#34; title=&#34;内部类&#34;&gt;&lt;/a&gt;内部类&lt;/h1&gt;&lt;h2 id=&#34;普通的内部类&#34;&gt;&lt;a href=&#34;#普通的内部类&#34; class=&#34;headerlink&#34; title=&#34;普通的内部类&#34;&gt;&lt;/a&gt;普通的内部类&lt;/h2&gt;&lt;p&gt;可以直接访问外部类的实例成员、静态成员&lt;/p&gt;

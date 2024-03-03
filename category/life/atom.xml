@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://Vereatorm.github.io</id>
+    <id>https://Meteora233.github.io</id>
     <title>Luk&#39;s Blog • Posts by &#34;life&#34; category</title>
-    <link href="https://Vereatorm.github.io" />
+    <link href="https://Meteora233.github.io" />
     <updated>2023-11-16T16:00:00.000Z</updated>
     <category term="JAVA" />
     <category term="JAVASE" />
@@ -12,14 +12,24 @@
     <category term="mybatis" />
     <category term="事务" />
     <category term="javaScript" />
+    <category term="Security框架" />
+    <category term="security框架" />
+    <category term="小程序" />
     <entry>
-        <id>https://vereatorm.github.io/2023/11/17/Life/%E5%AE%9E%E4%B9%A0%E6%97%A5%E8%AE%B0/</id>
+        <id>https://meteora233.github.io/2023/11/17/Life/%E5%AE%9E%E4%B9%A0%E6%97%A5%E8%AE%B0/</id>
         <title>实习日记</title>
-        <link rel="alternate" href="https://vereatorm.github.io/2023/11/17/Life/%E5%AE%9E%E4%B9%A0%E6%97%A5%E8%AE%B0/"/>
+        <link rel="alternate" href="https://meteora233.github.io/2023/11/17/Life/%E5%AE%9E%E4%B9%A0%E6%97%A5%E8%AE%B0/"/>
         <content type="html">&lt;h1 id=&#34;11-14&#34;&gt;&lt;a href=&#34;#11-14&#34; class=&#34;headerlink&#34; title=&#34;11.14&#34;&gt;&lt;/a&gt;11.14&lt;/h1&gt;&lt;p&gt;创建奖品，抽奖记录实体类，创建增删改查接口&lt;/p&gt;
 &lt;h1 id=&#34;11-15-11-16&#34;&gt;&lt;a href=&#34;#11-15-11-16&#34; class=&#34;headerlink&#34; title=&#34;11.15-11.16&#34;&gt;&lt;/a&gt;11.15-11.16&lt;/h1&gt;&lt;p&gt;实现使用了 java 的 lock 完成了避免并发的问题&lt;br&gt;完成了增删改查功能&lt;/p&gt;
 &lt;h1 id=&#34;11-17&#34;&gt;&lt;a href=&#34;#11-17&#34; class=&#34;headerlink&#34; title=&#34;11.17&#34;&gt;&lt;/a&gt;11.17&lt;/h1&gt;&lt;p&gt;问题:&lt;br&gt;你研究下 redis 锁，把现在抽奖的锁换成 redis 锁&lt;br&gt;然后项目里面加上全局异常&lt;br&gt;实际：学习 redis，String 类型&lt;/p&gt;
 &lt;h1 id=&#34;11-18&#34;&gt;&lt;a href=&#34;#11-18&#34; class=&#34;headerlink&#34; title=&#34;11.18&#34;&gt;&lt;/a&gt;11.18&lt;/h1&gt;&lt;p&gt;预期：看完 redis 基础的网课&lt;br&gt;实际：看完基于 redis 本身的操作&lt;br&gt;目标：明天看完关于 spring 和 java 关联的操作，以及 redis 的分布式锁&lt;/p&gt;
+&lt;h1 id=&#34;11-19&#34;&gt;&lt;a href=&#34;#11-19&#34; class=&#34;headerlink&#34; title=&#34;11.19&#34;&gt;&lt;/a&gt;11.19&lt;/h1&gt;&lt;p&gt;预期：看完 redis 进阶的网课&lt;br&gt;实际：了解 springboot 连接 redis 的流程&lt;/p&gt;
+&lt;h1 id=&#34;11-20&#34;&gt;&lt;a href=&#34;#11-20&#34; class=&#34;headerlink&#34; title=&#34;11.20&#34;&gt;&lt;/a&gt;11.20&lt;/h1&gt;&lt;p&gt;预期：从多线程的 lock 到完成 redis 分布式锁的改造&lt;br&gt;实际：完成了，一个新项目的大致逻辑的了解&lt;/p&gt;
+&lt;h1 id=&#34;11-30&#34;&gt;&lt;a href=&#34;#11-30&#34; class=&#34;headerlink&#34; title=&#34;11.30&#34;&gt;&lt;/a&gt;11.30&lt;/h1&gt;&lt;p&gt;完成字典接口的添加父级列表&lt;br&gt;自己项目的 security filter，影院播放厅接口&lt;/p&gt;
+&lt;h1 id=&#34;2-20&#34;&gt;&lt;a href=&#34;#2-20&#34; class=&#34;headerlink&#34; title=&#34;2.20&#34;&gt;&lt;/a&gt;2.20&lt;/h1&gt;&lt;p&gt;定下小程序的原型图&lt;/p&gt;
+&lt;h1 id=&#34;2-21&#34;&gt;&lt;a href=&#34;#2-21&#34; class=&#34;headerlink&#34; title=&#34;2.21&#34;&gt;&lt;/a&gt;2.21&lt;/h1&gt;&lt;p&gt;完成小程序的my页面&lt;/p&gt;
+&lt;h1 id=&#34;2-22&#34;&gt;&lt;a href=&#34;#2-22&#34; class=&#34;headerlink&#34; title=&#34;2.22&#34;&gt;&lt;/a&gt;2.22&lt;/h1&gt;&lt;p&gt;完成小程序的题库页面，全局监听 &lt;/p&gt;
+&lt;h1 id=&#34;2-23&#34;&gt;&lt;a href=&#34;#2-23&#34; class=&#34;headerlink&#34; title=&#34;2.23&#34;&gt;&lt;/a&gt;2.23&lt;/h1&gt;&lt;p&gt;详情页面 ts的索引签名&lt;/p&gt;
 </content>
         <updated>2023-11-16T16:00:00.000Z</updated>
     </entry>

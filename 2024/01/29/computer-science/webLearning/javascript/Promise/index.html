@@ -1,0 +1,627 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Luk's Blog" href="https://meteora233.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Luk's Blog" href="https://meteora233.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="Luk's Blog" href="https://meteora233.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="web,javaScript" />
+
+
+<link rel="canonical" href="https://meteora233.github.io/2024/01/29/computer-science/webLearning/javascript/Promise/">
+
+
+
+  <title>
+JavaSrcipt - 同步异步 - javaScript - web - 计算机科学 |
+BLOG = Luk's Blog</title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">JavaSrcipt
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="Created: 2024-01-29 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">Posted on</span>
+    <time itemprop="dateCreated datePublished" datetime="2024-01-29T00:00:00+08:00">2024-01-29</time>
+  </span>
+  <span class="item" title="Symbols count in article">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">Symbols count in article</span>
+    <span>1.9k</span>
+    <span class="text">words</span>
+  </span>
+  <span class="item" title="Reading time">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">Reading time</span>
+    <span>2 mins.</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="Toggle navigation bar">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">BLOG</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+          <img src="https://imgs.aixifan.com/content/2020_8_28/1.5986274719333217E9.jpeg">
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">Home</a></span><i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/computer-science/" itemprop="item" rel="index" title="In 计算机科学"><span itemprop="name">计算机科学</span></a>
+<meta itemprop="position" content="1" /></span>
+<i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/computer-science/web/" itemprop="item" rel="index" title="In web"><span itemprop="name">web</span></a>
+<meta itemprop="position" content="2" /></span>
+<i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/computer-science/web/javaScript/" itemprop="item" rel="index" title="In javaScript"><span itemprop="name">javaScript</span></a>
+<meta itemprop="position" content="3" /></span>
+<i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/computer-science/web/javaScript/%E5%90%8C%E6%AD%A5%E5%BC%82%E6%AD%A5/" itemprop="item" rel="index" title="In 同步异步"><span itemprop="name">同步异步</span></a>
+<meta itemprop="position" content="4" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
+  <link itemprop="mainEntityOfPage" href="https://meteora233.github.io/2024/01/29/computer-science/webLearning/javascript/Promise/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="LukMeteor">
+    <meta itemprop="description" content=", ">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Luk's Blog">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="并发"><a href="#并发" class="headerlink" title="并发"></a>并发</h1><p>单纯代表计算机可以同时执行多项任务</p>
+<ul>
+<li>对于一个单核处理器,计算机可以使用分配时间片的方式，让一个任务执行一段时间，切换到另一个任务再执行一段时间，不同的任务会交替往复的一直执行下去。这个过程被称为进程或上下文切换。</li>
+<li>对于多核处理器，可以不同的核心上处理不同的任务，达到<strong>并行</strong>的效果</li>
+</ul>
+<h1 id="同步-synchronous"><a href="#同步-synchronous" class="headerlink" title="同步 (synchronous)"></a>同步 (synchronous)</h1><p>同步指的是必须等到前一个任务完成之后，才能执行下一个任务.在同步中没有并发的概念</p>
+<h1 id="异步-asynchronous"><a href="#异步-asynchronous" class="headerlink" title="异步(asynchronous)"></a>异步(asynchronous)</h1><p>不同任务之间不会相互等待，在执行任务 a 的时候也能执行任务 b。典型使用异步的方式是多线程编程，在多核的情况下，每个线程都会被分配到独立的核心上运行。实现真正的”并行”,单核处理器，操作系统会使用分配时间片的方式来执行线程</p>
+<h1 id="选择单线程与多线程"><a href="#选择单线程与多线程" class="headerlink" title="选择单线程与多线程"></a>选择单线程与多线程</h1><p>简而言之，对于 io 密集的应用程序 比如 web 应用经常使用数据库访问，这类应用就比较适合使用异步编程的方式。多线程编程适合计算量密集的应用，比如视频图像处理，科学计算，能让没一个 cpu 核心起到最大的作用。</p>
+<h1 id="JavaScript-中的异步同步"><a href="#JavaScript-中的异步同步" class="headerlink" title="JavaScript 中的异步同步"></a>JavaScript 中的异步同步</h1><h2 id="回调函数"><a href="#回调函数" class="headerlink" title="回调函数"></a>回调函数</h2><h3 id="fetch"><a href="#fetch" class="headerlink" title="fetch"></a>fetch</h3><p>用来发起一个请求来获取服务器数据，用来动态的更新页面内容<br>链式调用</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">fetch</span>(<span class="string">&quot;http://....&quot;</span>)</span><br><span class="line">    .<span class="title function_">then</span>(..)</span><br><span class="line">    .<span class="title function_">then</span>(..)</span><br><span class="line">    .<span class="title function_">then</span>(..)</span><br><span class="line">    .<span class="title function_">then</span>(..)</span><br><span class="line">    .<span class="title function_">catch</span>(..)</span><br><span class="line">    .<span class="title function_">finally</span>(..)</span><br></pre></td></tr></table></figure>
+
+<h3 id="async"><a href="#async" class="headerlink" title="async"></a>async</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 异步函数 表示返回值为promise对象的函数</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">f</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="comment">// await 会等待Promise完成之后直接返回最终的结果（这个时候不需要使用then的链式调用了）</span></span><br><span class="line">  <span class="keyword">const</span> response = <span class="keyword">await</span> <span class="title function_">fetch</span>(<span class="string">&quot;http://...&quot;</span>); <span class="comment">// response 是服务器返回的响应数据</span></span><br><span class="line">  <span class="comment">// await看上去会暂停函数执行 在等待的过程中javascript还是可以进行其他的更新操作</span></span><br><span class="line">  <span class="keyword">const</span> json = <span class="keyword">await</span> response.<span class="title function_">json</span>();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">f</span>();</span><br><span class="line">返回值为promise;</span><br></pre></td></tr></table></figure>
+
+<h3 id="await"><a href="#await" class="headerlink" title="await"></a>await</h3><p>await 只能在异步函数中有效，不能在普通函数中使用。</p>
+<ol>
+<li></li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 若代码是 这么调用,那么将会是执行完promiseA再执行promiseB</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">f</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> promiseA = <span class="keyword">await</span> <span class="title function_">fetch</span>(<span class="string">&quot;http://.../post/1&quot;</span>);</span><br><span class="line">  <span class="keyword">const</span> promiseB = <span class="keyword">await</span> <span class="title function_">fetch</span>(<span class="string">&quot;http://.../post/2&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 应该直接使用Promise.all(),修改后的执行效率会提升一倍</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">f</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> promiseA = <span class="title function_">fetch</span>(<span class="string">&quot;http://.../post/1&quot;</span>);</span><br><span class="line">  <span class="keyword">const</span> promiseB = <span class="title function_">fetch</span>(<span class="string">&quot;http://.../post/2&quot;</span>);</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> [a, b] = <span class="keyword">await</span> <span class="title class_">Promise</span>.<span class="title function_">all</span>([promiseA, promiseB]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>再循环中执行异步操作<br>❌ 错误 👇</li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 不可以直接调用forEach或者map之类的操作，这里的foreach会立刻返回，不会暂停等到所有的异步操作都执行完毕</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">f</span>(<span class="params"></span>) &#123;</span><br><span class="line">  [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>].<span class="title function_">forEach</span>(<span class="keyword">async</span> (i) =&gt; &#123;</span><br><span class="line">    <span class="keyword">await</span> <span class="title function_">someAsyncOperation</span>();</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;done&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">f</span>();</span><br></pre></td></tr></table></figure>
+
+<p>✔ 正确写法如下:↓</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">f</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i <span class="keyword">of</span> [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]) &#123;</span><br><span class="line">    <span class="keyword">await</span> <span class="title function_">someAsyncOperation</span>();</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;done&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">f</span>();</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 这里的for循环依旧会等到所有的异步操作执行完成之后再向后执行</span></span><br><span class="line"><span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">f</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> promises=[</span><br><span class="line">        <span class="title function_">someAsyncOperation</span>();</span><br><span class="line">        <span class="title function_">someAsyncOperation</span>();</span><br><span class="line">        <span class="title function_">someAsyncOperation</span>();</span><br><span class="line">    ]</span><br><span class="line">  <span class="keyword">for</span> <span class="keyword">await</span> (<span class="keyword">let</span> result <span class="keyword">of</span> promises) &#123;</span><br><span class="line">    <span class="comment">// ..</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;done&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">f</span>();</span><br></pre></td></tr></table></figure>
+
+<p>3.不能再全局函数中写 await 只能在异步函数中使用</p>
+
+      <div class="tags">
+          <a href="/tags/web/" rel="tag"><i class="ic i-tag"></i> web</a>
+          <a href="/tags/javaScript/" rel="tag"><i class="ic i-tag"></i> javaScript</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">Edited on</span>
+    <time title="Modified: 2024-01-29 20:56:42" itemprop="dateModified" datetime="2024-01-29T20:56:42+08:00">2024-01-29</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> Donate</button>
+  <p>Give me a cup of [coffee]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="LukMeteor WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="LukMeteor Alipay">
+        <p>Alipay</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="LukMeteor PayPal">
+        <p>PayPal</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>Post author:  </strong>LukMeteor <i class="ic i-at"><em>@</em></i>Luk's Blog
+  </li>
+  <li class="link">
+    <strong>Post link: </strong>
+    <a href="https://meteora233.github.io/2024/01/29/computer-science/webLearning/javascript/Promise/" title="JavaSrcipt">https://meteora233.github.io/2024/01/29/computer-science/webLearning/javascript/Promise/</a>
+  </li>
+  <li class="license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2023/11/30/computer-science/java/springboot/SpringSecurity%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;img.win3000.com&#x2F;m00&#x2F;ff&#x2F;18&#x2F;b346b3d86cafe5bee8be826289fdef2f.jpg" title="SpringBoot Security">
+  <span class="type">Previous Post</span>
+  <span class="category"><i class="ic i-flag"></i> SpringBoot</span>
+  <h3>SpringBoot Security</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2024/03/01/computer-science/%E4%B8%93%E5%8D%87%E6%9C%AC%E9%94%99%E9%A2%98%E6%95%B4%E7%90%86/c%E8%AF%AD%E8%A8%80/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;upload-bbs.miyoushe.com&#x2F;upload&#x2F;2023&#x2F;09&#x2F;29&#x2F;285958508&#x2F;845271667fd2e4a3238cded594b0e59c_7303988158448651070.jpg?x-oss-process&#x3D;image&#x2F;&#x2F;resize,s_600&#x2F;quality,q_80&#x2F;auto-orient,0&#x2F;interlace,1&#x2F;format,jpg" title="C语言专升本错题整理">
+  <span class="type">Next Post</span>
+  <span class="category"><i class="ic i-flag"></i> C语言</span>
+  <h3>C语言专升本错题整理</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="Contents">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B9%B6%E5%8F%91"><span class="toc-number">1.</span> <span class="toc-text">并发</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%90%8C%E6%AD%A5-synchronous"><span class="toc-number">2.</span> <span class="toc-text">同步 (synchronous)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BC%82%E6%AD%A5-asynchronous"><span class="toc-number">3.</span> <span class="toc-text">异步(asynchronous)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E5%8D%95%E7%BA%BF%E7%A8%8B%E4%B8%8E%E5%A4%9A%E7%BA%BF%E7%A8%8B"><span class="toc-number">4.</span> <span class="toc-text">选择单线程与多线程</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#JavaScript-%E4%B8%AD%E7%9A%84%E5%BC%82%E6%AD%A5%E5%90%8C%E6%AD%A5"><span class="toc-number">5.</span> <span class="toc-text">JavaScript 中的异步同步</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0"><span class="toc-number">5.1.</span> <span class="toc-text">回调函数</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#fetch"><span class="toc-number">5.1.1.</span> <span class="toc-text">fetch</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#async"><span class="toc-number">5.1.2.</span> <span class="toc-text">async</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#await"><span class="toc-number">5.1.3.</span> <span class="toc-text">await</span></a></li></ol></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="Related">
+        <ul>
+          <li class="active"><a href="/2024/01/29/computer-science/webLearning/javascript/Promise/" rel="bookmark" title="JavaSrcipt">JavaSrcipt</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="Overview">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="LukMeteor"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">LukMeteor</p>
+  <div class="description" itemprop="description"></div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">26</span>
+        <span class="name">posts</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">17</span>
+        <span class="name">categories</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">11</span>
+        <span class="name">tags</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>Home</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>Posts</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>Archives</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>Categories</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>Tags</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>friends</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/links/" rel="section"><i class="ic i-magic"></i>links</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2023/11/30/computer-science/java/springboot/SpringSecurity%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB/" rel="prev" title="Previous Post"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2024/03/01/computer-science/%E4%B8%93%E5%8D%87%E6%9C%AC%E9%94%99%E9%A2%98%E6%95%B4%E7%90%86/c%E8%AF%AD%E8%A8%80/" rel="next" title="Next Post"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>Random Posts</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/" title="In java">java</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/SpringBoot/" title="In SpringBoot">SpringBoot</a>
+</div>
+
+    <span><a href="/2023/08/01/computer-science/java/springboot/Day3/" title="SpringBoot">SpringBoot</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/" title="In java">java</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/javase/" title="In javase">javase</a>
+</div>
+
+    <span><a href="/2023/07/07/computer-science/java/javase/JavaSE_Day4/" title="java多线程">java多线程</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/web/" title="In web">web</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/web/Typescript/" title="In Typescript">Typescript</a>
+</div>
+
+    <span><a href="/2023/02/02/computer-science/webLearning/typescript%E6%96%87%E4%BB%B6/module/" title="Typescript 管理">Typescript 管理</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/" title="In java">java</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/javase/" title="In javase">javase</a>
+</div>
+
+    <span><a href="/2023/07/06/computer-science/java/javase/JavaSE_Day2/" title="java泛型">java泛型</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/" title="In java">java</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/javase/" title="In javase">javase</a>
+</div>
+
+    <span><a href="/2023/07/05/computer-science/java/javase/JavaSE_Day1/" title="java面向对象">java面向对象</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/" title="In java">java</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/javase/" title="In javase">javase</a>
+</div>
+
+    <span><a href="/2023/07/09/computer-science/java/javase/JavaSE_Day5/" title="java网络通信、测试">java网络通信、测试</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/" title="In java">java</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/SpringBoot/" title="In SpringBoot">SpringBoot</a>
+</div>
+
+    <span><a href="/2023/07/14/computer-science/java/springboot/Day1/" title="SpringBoot">SpringBoot</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/" title="In java">java</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/javase/" title="In javase">javase</a>
+</div>
+
+    <span><a href="/2023/07/07/computer-science/java/javase/JavaSE_Day3/" title="javaIO流">javaIO流</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/web/" title="In web">web</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/web/vue/" title="In vue">vue</a>
+</div>
+
+    <span><a href="/2023/08/18/computer-science/webLearning/vue/Day1/" title="VUE">VUE</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/" title="In java">java</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/Spring/" title="In Spring">Spring</a>
+</div>
+
+    <span><a href="/2023/07/17/computer-science/java/spring/SpringDay1/" title="Spring">Spring</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>Recent Comments</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">LukMeteor @ BLOG</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="Symbols count total">131k words</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="Reading time total">1:59</span>
+  </div>
+  <div class="powered-by">
+    Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2024/01/29/computer-science/webLearning/javascript/Promise/',
+    favicon: {
+      show: "（●´3｀●）Goooood",
+      hide: "(´Д｀)Booooom"
+    },
+    search : {
+      placeholder: "Search for Posts",
+      empty: "We didn't find any results for the search: ${query}",
+      stats: "${hits} results found in ${time} ms"
+    },
+    valine: true,fancybox: true,
+    copyright: 'Copied to clipboard successfully! <br> All articles in this blog are licensed under <i class="ic i-creative-commons"></i>BY-NC-SA.',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

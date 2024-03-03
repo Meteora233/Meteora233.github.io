@@ -2,14 +2,14 @@
     "version": "https://jsonfeed.org/version/1",
     "title": "Luk's Blog • All posts by \"life\" category",
     "description": "",
-    "home_page_url": "https://Vereatorm.github.io",
+    "home_page_url": "https://Meteora233.github.io",
     "items": [
         {
-            "id": "https://vereatorm.github.io/2023/11/17/Life/%E5%AE%9E%E4%B9%A0%E6%97%A5%E8%AE%B0/",
-            "url": "https://vereatorm.github.io/2023/11/17/Life/%E5%AE%9E%E4%B9%A0%E6%97%A5%E8%AE%B0/",
+            "id": "https://meteora233.github.io/2023/11/17/Life/%E5%AE%9E%E4%B9%A0%E6%97%A5%E8%AE%B0/",
+            "url": "https://meteora233.github.io/2023/11/17/Life/%E5%AE%9E%E4%B9%A0%E6%97%A5%E8%AE%B0/",
             "title": "实习日记",
             "date_published": "2023-11-16T16:00:00.000Z",
-            "content_html": "<h1 id=\"11-14\"><a href=\"#11-14\" class=\"headerlink\" title=\"11.14\"></a>11.14</h1><p>创建奖品，抽奖记录实体类，创建增删改查接口</p>\n<h1 id=\"11-15-11-16\"><a href=\"#11-15-11-16\" class=\"headerlink\" title=\"11.15-11.16\"></a>11.15-11.16</h1><p>实现使用了 java 的 lock 完成了避免并发的问题<br>完成了增删改查功能</p>\n<h1 id=\"11-17\"><a href=\"#11-17\" class=\"headerlink\" title=\"11.17\"></a>11.17</h1><p>问题:<br>你研究下 redis 锁，把现在抽奖的锁换成 redis 锁<br>然后项目里面加上全局异常<br>实际：学习 redis，String 类型</p>\n<h1 id=\"11-18\"><a href=\"#11-18\" class=\"headerlink\" title=\"11.18\"></a>11.18</h1><p>预期：看完 redis 基础的网课<br>实际：看完基于 redis 本身的操作<br>目标：明天看完关于 spring 和 java 关联的操作，以及 redis 的分布式锁</p>\n",
+            "content_html": "<h1 id=\"11-14\"><a href=\"#11-14\" class=\"headerlink\" title=\"11.14\"></a>11.14</h1><p>创建奖品，抽奖记录实体类，创建增删改查接口</p>\n<h1 id=\"11-15-11-16\"><a href=\"#11-15-11-16\" class=\"headerlink\" title=\"11.15-11.16\"></a>11.15-11.16</h1><p>实现使用了 java 的 lock 完成了避免并发的问题<br>完成了增删改查功能</p>\n<h1 id=\"11-17\"><a href=\"#11-17\" class=\"headerlink\" title=\"11.17\"></a>11.17</h1><p>问题:<br>你研究下 redis 锁，把现在抽奖的锁换成 redis 锁<br>然后项目里面加上全局异常<br>实际：学习 redis，String 类型</p>\n<h1 id=\"11-18\"><a href=\"#11-18\" class=\"headerlink\" title=\"11.18\"></a>11.18</h1><p>预期：看完 redis 基础的网课<br>实际：看完基于 redis 本身的操作<br>目标：明天看完关于 spring 和 java 关联的操作，以及 redis 的分布式锁</p>\n<h1 id=\"11-19\"><a href=\"#11-19\" class=\"headerlink\" title=\"11.19\"></a>11.19</h1><p>预期：看完 redis 进阶的网课<br>实际：了解 springboot 连接 redis 的流程</p>\n<h1 id=\"11-20\"><a href=\"#11-20\" class=\"headerlink\" title=\"11.20\"></a>11.20</h1><p>预期：从多线程的 lock 到完成 redis 分布式锁的改造<br>实际：完成了，一个新项目的大致逻辑的了解</p>\n<h1 id=\"11-30\"><a href=\"#11-30\" class=\"headerlink\" title=\"11.30\"></a>11.30</h1><p>完成字典接口的添加父级列表<br>自己项目的 security filter，影院播放厅接口</p>\n<h1 id=\"2-20\"><a href=\"#2-20\" class=\"headerlink\" title=\"2.20\"></a>2.20</h1><p>定下小程序的原型图</p>\n<h1 id=\"2-21\"><a href=\"#2-21\" class=\"headerlink\" title=\"2.21\"></a>2.21</h1><p>完成小程序的my页面</p>\n<h1 id=\"2-22\"><a href=\"#2-22\" class=\"headerlink\" title=\"2.22\"></a>2.22</h1><p>完成小程序的题库页面，全局监听 </p>\n<h1 id=\"2-23\"><a href=\"#2-23\" class=\"headerlink\" title=\"2.23\"></a>2.23</h1><p>详情页面 ts的索引签名</p>\n",
             "tags": []
         }
     ]

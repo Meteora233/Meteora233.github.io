@@ -1,0 +1,627 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Luk's Blog" href="https://meteora233.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Luk's Blog" href="https://meteora233.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="Luk's Blog" href="https://meteora233.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+  <meta name="keywords" content="web,javaScript,小程序" />
+
+
+<link rel="canonical" href="https://meteora233.github.io/2023/02/20/computer-science/webLearning/uniapp/%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/">
+
+
+
+  <title>
+uniapp 遇到的问题 - vue - web - 计算机科学 |
+BLOG = Luk's Blog</title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">uniapp 遇到的问题
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="Created: 2023-02-20 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">Posted on</span>
+    <time itemprop="dateCreated datePublished" datetime="2023-02-20T00:00:00+08:00">2023-02-20</time>
+  </span>
+  <span class="item" title="Symbols count in article">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">Symbols count in article</span>
+    <span>4.3k</span>
+    <span class="text">words</span>
+  </span>
+  <span class="item" title="Reading time">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">Reading time</span>
+    <span>4 mins.</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="Toggle navigation bar">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">BLOG</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+          <img src="https://imgs.aixifan.com/content/2020_8_28/1.5986274719333217E9.jpeg">
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">Home</a></span><i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/computer-science/" itemprop="item" rel="index" title="In 计算机科学"><span itemprop="name">计算机科学</span></a>
+<meta itemprop="position" content="1" /></span>
+<i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/computer-science/web/" itemprop="item" rel="index" title="In web"><span itemprop="name">web</span></a>
+<meta itemprop="position" content="2" /></span>
+<i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/computer-science/web/vue/" itemprop="item" rel="index" title="In vue"><span itemprop="name">vue</span></a>
+<meta itemprop="position" content="3" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
+  <link itemprop="mainEntityOfPage" href="https://meteora233.github.io/2023/02/20/computer-science/webLearning/uniapp/%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="LukMeteor">
+    <meta itemprop="description" content=", ">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Luk's Blog">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="登录模块"><a href="#登录模块" class="headerlink" title="登录模块"></a>登录模块</h1><p>好多问题啊….f**k</p>
+<p>\b<br> !! 这个方法已经不能用了<br>在实际开发的过程中，很多同学会选择在uni.login中包裹uni.getUserProfile，来保证获取code和获取的encryptedData顺序，从而避免解密失败</p>
+<p>但实际上在调用uni.login获取code后，再调用uni.getUserProfile，可能会失败，触发fail函数，error msg: ‘’getUserProfile:fail can only be invoked by user TAP gesture”。所以正确的调用顺序是先调用uni.getUserProfile在其中包裹uni.login</p>
+<p><span class="exturl" data-url="aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2h1aXNvdWwvYXJ0aWNsZS9kZXRhaWxzLzEyMDQxMzE2NA==">原文链接</span></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;userInfo-container&quot;</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;avatar-wrapper nav-userInfo&quot;</span> <span class="attr">open-type</span>=<span class="string">&quot;chooseAvatar&quot;</span> @<span class="attr">chooseavatar</span>=<span class="string">&quot;onChooseAvatar&quot;</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;view-userInfo-profile centered&quot;</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">image</span> <span class="attr">class</span>=<span class="string">&quot;img_profile &quot;</span> <span class="attr">:src</span>=<span class="string">&quot;avatarUrl&quot;</span> <span class="attr">mode</span>=<span class="string">&quot;scaleToFill&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">image</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">view</span> <span class="attr">class</span>=<span class="string">&quot;view-userInfo-name centered&quot;</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">input</span> <span class="attr">name</span>=<span class="string">&quot;nickname&quot;</span> <span class="attr">type</span>=<span class="string">&quot;nickname&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;请输入昵称&quot;</span> <span class="attr">:value</span>=<span class="string">&quot;nickName&quot;</span> <span class="attr">class</span>=<span class="string">&quot;nickname-input&quot;</span> /&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">view</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">onChooseAvatar</span>(<span class="params">e</span>) &#123;</span><br><span class="line">			<span class="keyword">let</span> avatarUrl = <span class="string">&#x27;data:image/jpeg;base64,&#x27;</span> + uni.<span class="title function_">getFileSystemManager</span>().<span class="title function_">readFileSync</span>(e.<span class="property">detail</span>.<span class="property">avatarUrl</span>,</span><br><span class="line">				<span class="string">&#x27;base64&#x27;</span>)</span><br><span class="line">			<span class="variable language_">this</span>.<span class="property">avatarUrl</span> = avatarUrl;</span><br><span class="line">			uni.<span class="title function_">setStorageSync</span>(<span class="string">&#x27;avatarUrl&#x27;</span>, avatarUrl);</span><br><span class="line">			<span class="comment">// this.userInfo.avatar = avatarUrl</span></span><br><span class="line">			<span class="comment">// let data = &#123;</span></span><br><span class="line">			<span class="comment">// 	name: this.userInfo.name,</span></span><br><span class="line">			<span class="comment">// 	avatar: avatarUrl</span></span><br><span class="line">			<span class="comment">// &#125;</span></span><br><span class="line">			<span class="comment">// // getUserInfo(data).then(res =&gt; &#123;&#125;).catch(err =&gt; &#123;&#125;)</span></span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<p>来源-()[<span class="exturl" data-url="aHR0cHM6Ly9qdWVqaW4uY24vcG9zdC83MjQ0MDk4MjI4MjQ4NDQ0OTg5P3NlYXJjaElkPTIwMjQwMjIxMDA0NzQ0N0MxOTdBMDE2RThFQTdENzVENTMlNUQ=">https://juejin.cn/post/7244098228248444989?searchId=202402210047447C197A016E8EA7D75D53]</span></p>
+<h1 id="Vuex和localStorage的区别"><a href="#Vuex和localStorage的区别" class="headerlink" title="Vuex和localStorage的区别"></a>Vuex和localStorage的区别</h1><p>这两个工具被设计为不同的目的：Vuex旨在管理Vue.js应用程序中的状态，而localStorage则提供了一种简单的本地存储机制。</p>
+<h2 id="生命周期不同"><a href="#生命周期不同" class="headerlink" title="生命周期不同"></a>生命周期不同</h2><ul>
+<li>localStorage中保存的数据可以长期存在，除非明确清除</li>
+<li>而Vuex存储的数据仅在Vuex实例存在的生命周期内存在</li>
+</ul>
+<h2 id="不同"><a href="#不同" class="headerlink" title="不同"></a>不同</h2><p>面向的对象不同：localStorage面向键&#x2F;值对，而Vuex面向状态（状态是可以作为字典键的对象）。</p>
+<p>对于数据量较大的情况， localStorage性能上可能会有问题。<br>而Vuex由于是专门维护状态的库，所以无论是数据量还是读写操作都比localStorage更为高效、快速。</p>
+<h1 id="小程序button的边框去不掉"><a href="#小程序button的边框去不掉" class="headerlink" title="小程序button的边框去不掉"></a>小程序button的边框去不掉</h1><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">//如果仅仅是&lt;<span class="selector-tag">Button</span> /&gt;</span><br><span class="line">  <span class="selector-tag">button</span><span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">      <span class="attribute">border-style</span>: none;</span><br><span class="line">  &#125;</span><br><span class="line">  //如果给<span class="selector-tag">Button</span>添加了type=primary属性</span><br><span class="line">  <span class="selector-tag">button</span><span class="selector-attr">[type=primary]</span>&#123;</span><br><span class="line">      <span class="attribute">border-style</span>: none;</span><br><span class="line">  &#125;</span><br><span class="line">  //如果给<span class="selector-tag">Button</span>添加了 plain 的属性</span><br><span class="line">  <span class="selector-tag">button</span><span class="selector-attr">[plain]</span>&#123;</span><br><span class="line">      <span class="attribute">border-style</span>: none;</span><br><span class="line">  &#125;</span><br><span class="line">  //如果给<span class="selector-tag">Button</span>添加了 type=primary 和 plain</span><br><span class="line">  <span class="selector-tag">button</span><span class="selector-attr">[type=primary]</span><span class="selector-attr">[plain]</span>&#123;</span><br><span class="line">      <span class="attribute">border-style</span>: none;</span><br><span class="line">  &#125;</span><br><span class="line">	<span class="selector-tag">button</span><span class="selector-pseudo">::after</span> &#123;</span><br><span class="line">		<span class="attribute">border</span>: none;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="伪类选择器学习"><a href="#伪类选择器学习" class="headerlink" title="伪类选择器学习"></a>伪类选择器学习</h1><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 奇数 */</span></span><br><span class="line"><span class="selector-class">.view-class-item</span><span class="selector-pseudo">:nth-child</span>(odd) &#123;</span><br><span class="line">	<span class="attribute">border-top</span>: <span class="number">1px</span> solid <span class="number">#bbb</span>;</span><br><span class="line">	<span class="attribute">border-left</span>: <span class="number">1px</span> solid <span class="number">#bbb</span>;</span><br><span class="line">	<span class="attribute">border-right</span>: <span class="number">1px</span> solid <span class="number">#bbb</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.view-class-item</span><span class="selector-pseudo">:last-child</span> &#123;</span><br><span class="line">	<span class="attribute">border-bottom</span>: <span class="number">1px</span> solid <span class="number">#bbb</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 偶数 */</span></span><br><span class="line"><span class="selector-class">.view-class-item</span><span class="selector-pseudo">:nth-child</span>(even) &#123;</span><br><span class="line">	<span class="attribute">border-top</span>: <span class="number">1px</span> solid <span class="number">#bbb</span>;</span><br><span class="line">	<span class="attribute">border-right</span>: <span class="number">1px</span> solid <span class="number">#bbb</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<h1 id="图片来源"><a href="#图片来源" class="headerlink" title="图片来源"></a>图片来源</h1><h1 id="页面传值"><a href="#页面传值" class="headerlink" title="页面传值"></a>页面传值</h1><p><span class="exturl" data-url="aHR0cHM6Ly9qdWVqaW4uY24vcG9zdC82OTk1MDgxMjA2Njc3MTEwODIwP3NlYXJjaElkPTIwMjQwMjIyMjIxNTI4RkU3NDM1QzFGOTNFQkI1NDcyRkE=">emit</span><br><span class="exturl" data-url="aHR0cHM6Ly9qdWVqaW4uY24vcG9zdC82ODkwNzgzODk4NDUyNjIzMzY3P3NlYXJjaElkPTIwMjQwMjIyMjM0NTU4RTJFREI1RDE3MkU5MDY1RERFNTgjaGVhZGluZy0y">emit 全局通信的问题</span><br>煞笔一样的emit，函数名传参不能用emit</p>
+<h2 id="父页面"><a href="#父页面" class="headerlink" title="父页面"></a>父页面</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">submit</span>(<span class="params"></span>) &#123;</span><br><span class="line">	<span class="keyword">let</span> dt = &#123;</span><br><span class="line">		<span class="attr">checkBoxs</span>: <span class="variable language_">this</span>.<span class="property">curCheckBoxOptions</span>,</span><br><span class="line">		<span class="attr">radioOption</span>: <span class="variable language_">this</span>.<span class="property">optionValue</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="variable language_">console</span>.<span class="title function_">log</span>(dt);</span><br><span class="line">	<span class="comment">// 得做个延时 否则传递不过去</span></span><br><span class="line">	<span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">		uni.$emit(<span class="string">&quot;send-Data&quot;</span>, dt);</span><br><span class="line">	&#125;, <span class="number">500</span>)</span><br><span class="line">	<span class="comment">// 提交确认有点击</span></span><br><span class="line">	uni.<span class="title function_">navigateTo</span>(&#123;</span><br><span class="line">		<span class="attr">url</span>: <span class="string">&quot;/pages/questionDetail/questionDetail&quot;</span>,</span><br><span class="line">		<span class="comment">// success: () =&gt; &#123;</span></span><br><span class="line">		<span class="comment">// 	console.log(&quot;成功的&quot;);</span></span><br><span class="line">		<span class="comment">// &#125;</span></span><br><span class="line">	&#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="子页面"><a href="#子页面" class="headerlink" title="子页面"></a>子页面</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">onLoad</span>(<span class="params"></span>) &#123;</span><br><span class="line">		<span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;我想要监听时间&#x27;</span>);</span><br><span class="line">		<span class="comment">// 监听事件</span></span><br><span class="line">		uni.$on(<span class="string">&quot;send-Data&quot;</span>, <span class="function">(<span class="params">dt</span>) =&gt;</span> &#123;</span><br><span class="line">			<span class="variable language_">console</span>.<span class="title function_">log</span>(dt);</span><br><span class="line">			<span class="variable language_">this</span>.<span class="property">sendData</span> = dt;</span><br><span class="line">			<span class="comment">// console.log(dt);</span></span><br><span class="line">		&#125;);</span><br><span class="line"></span><br><span class="line">	&#125;,</span><br><span class="line">	<span class="title function_">onUnload</span>(<span class="params"></span>) &#123;</span><br><span class="line">		<span class="comment">// 销毁</span></span><br><span class="line">		uni.$off(<span class="string">&quot;sendData&quot;</span>);</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="v-model的作用"><a href="#v-model的作用" class="headerlink" title="v-model的作用"></a>v-model的作用</h1><p>v-model 是 Vue.js 提供的一个语法糖，用于在表单元素和组件上实现双向数据绑定。它结合了 :value 属性和 @input 事件的绑定，简化了处理表单输入的代码。</p>
+<h1 id="绝对定位和相对定位"><a href="#绝对定位和相对定位" class="headerlink" title="绝对定位和相对定位"></a>绝对定位和相对定位</h1><p><span class="exturl" data-url="aHR0cHM6Ly9qdWVqaW4uY24vcG9zdC83MjIyNjU2MzkwNTQ3NzAxODE3P3NlYXJjaElkPTIwMjQwMjIyMTI1OTQ4RERDNEQyQjMxRTg2MjUwRTA2Q0Y=">绝对定位和相对定位</span></p>
+<h2 id="relative"><a href="#relative" class="headerlink" title="relative"></a>relative</h2><p>relative 表示：相对于默认位置（即 static 时的位置）进行偏移，即定位基点是元素的默认位置。</p>
+<p>它必须搭配 top、bottom、left、right 这四个属性一起使用，用来指定偏移的方向和距离。</p>
+<h2 id="absolute"><a href="#absolute" class="headerlink" title="absolute"></a>absolute</h2><p>absolute表示，相对于上级元素（一般是父元素）进行偏移，即定位基点是父元素。<br>它有一个重要的限制条件：定位基点（一般是父元素）不能是static定位，否则定位基点就会变成整个网页的根元素html。另外，absolute定位也必须搭配top、bottom、left、right这四个属性一起使用。</p>
+<h1 id="mysql-jsonArray查询"><a href="#mysql-jsonArray查询" class="headerlink" title="mysql jsonArray查询"></a>mysql jsonArray查询</h1><h2 id="JSON-CONTAINS"><a href="#JSON-CONTAINS" class="headerlink" title="JSON_CONTAINS"></a>JSON_CONTAINS</h2><p><strong>同时JSON_CONTAINS()不支持对嵌套JSON文档进行递归搜索，它只针对JSON路径指定的位置进行比较。</strong></p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">JSON_CONTAINS</span>(json_doc, candidate[, path])</span><br><span class="line">其中json_doc是要检查的JSON文档，通常是一个列名或者JSON字符串表达式。candidate是要查找的值。而path（可选）指定在 JSON 文档中的路径，用于更精确地定位要检查的元素，如果没有指定路径，则在整个JSON文档中搜索给定的候选值。</span><br><span class="line">JSON_CONTAINS函数返回<span class="number">1</span>表示包含，返回<span class="number">0</span>表示不包含。</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">SELECT</span> JSON_CONTAINS(<span class="string">&#x27;[ &quot;apple&quot;, &quot;banana&quot;, &quot;cherry&quot; ]&#x27;</span>, <span class="string">&#x27;&quot;apple&quot;&#x27;</span>) <span class="keyword">AS</span> contains_apple;</span><br><span class="line"><span class="operator">+</span><span class="comment">----------------+</span></span><br><span class="line"><span class="operator">|</span> contains_apple <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">----------------+</span></span><br><span class="line"><span class="operator">|</span>              <span class="number">1</span> <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">----------------+</span></span><br><span class="line"><span class="number">1</span> <span class="type">row</span> <span class="keyword">in</span> <span class="keyword">set</span> (<span class="number">0.00</span> sec)</span><br></pre></td></tr></table></figure>
+
+<h2 id="JSON-EXTRACT"><a href="#JSON-EXTRACT" class="headerlink" title="JSON_EXTRACT"></a>JSON_EXTRACT</h2><p>从JSON字段中提取指定路径的值。语法格式：</p>
+<h2 id="Path-规则"><a href="#Path-规则" class="headerlink" title="Path 规则"></a>Path 规则</h2><p>点.运算符<br>用于访问嵌套的对象属性。例如：$.name 表示访问顶级对象的 “name” 属性。<br>方括号[]运算符<br>用于访问数组元素。对于数组索引，使用数字表示位置，从0开始。例如：$.hobbies[0] 表示访问顶级对象 “hobbies” 数组的第一个元素。<br>多路径查询<br>在一个函数调用中可以指定多个路径，每个路径之间用逗号分隔。例如：JSON_EXTRACT(json_column, ‘$.path1’, ‘$.path2’)。</p>
+
+      <div class="tags">
+          <a href="/tags/web/" rel="tag"><i class="ic i-tag"></i> web</a>
+          <a href="/tags/javaScript/" rel="tag"><i class="ic i-tag"></i> javaScript</a>
+          <a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" rel="tag"><i class="ic i-tag"></i> 小程序</a>
+      </div>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">Edited on</span>
+    <time title="Modified: 2024-02-28 15:38:42" itemprop="dateModified" datetime="2024-02-28T15:38:42+08:00">2024-02-28</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> Donate</button>
+  <p>Give me a cup of [coffee]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="LukMeteor WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="LukMeteor Alipay">
+        <p>Alipay</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="LukMeteor PayPal">
+        <p>PayPal</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>Post author:  </strong>LukMeteor <i class="ic i-at"><em>@</em></i>Luk's Blog
+  </li>
+  <li class="link">
+    <strong>Post link: </strong>
+    <a href="https://meteora233.github.io/2023/02/20/computer-science/webLearning/uniapp/%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/" title="uniapp 遇到的问题">https://meteora233.github.io/2023/02/20/computer-science/webLearning/uniapp/遇到的问题/</a>
+  </li>
+  <li class="license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2023/02/02/computer-science/webLearning/typescript%E6%96%87%E4%BB%B6/basic/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;imgs.aixifan.com&#x2F;content&#x2F;2020_8_28&#x2F;1.5986274719333217E9.jpeg" title="Typescript 基本类型">
+  <span class="type">Previous Post</span>
+  <span class="category"><i class="ic i-flag"></i> Typescript</span>
+  <h3>Typescript 基本类型</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2023/07/05/computer-science/java/javase/JavaSE_Day1/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;upload-bbs.miyoushe.com&#x2F;upload&#x2F;2023&#x2F;11&#x2F;05&#x2F;225644501&#x2F;4fab260565e6dfe0b72611454048546e_6120571394003156236.jpg?x-oss-process&#x3D;image&#x2F;&#x2F;resize,s_500&#x2F;quality,q_80&#x2F;auto-orient,0&#x2F;interlace,1&#x2F;format,jpg" title="java面向对象">
+  <span class="type">Next Post</span>
+  <span class="category"><i class="ic i-flag"></i> javase</span>
+  <h3>java面向对象</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="Contents">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%99%BB%E5%BD%95%E6%A8%A1%E5%9D%97"><span class="toc-number">1.</span> <span class="toc-text">登录模块</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Vuex%E5%92%8ClocalStorage%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="toc-number">2.</span> <span class="toc-text">Vuex和localStorage的区别</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E4%B8%8D%E5%90%8C"><span class="toc-number">2.1.</span> <span class="toc-text">生命周期不同</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8D%E5%90%8C"><span class="toc-number">2.2.</span> <span class="toc-text">不同</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B0%8F%E7%A8%8B%E5%BA%8Fbutton%E7%9A%84%E8%BE%B9%E6%A1%86%E5%8E%BB%E4%B8%8D%E6%8E%89"><span class="toc-number">3.</span> <span class="toc-text">小程序button的边框去不掉</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8%E5%AD%A6%E4%B9%A0"><span class="toc-number">4.</span> <span class="toc-text">伪类选择器学习</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9B%BE%E7%89%87%E6%9D%A5%E6%BA%90"><span class="toc-number">5.</span> <span class="toc-text">图片来源</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%A1%B5%E9%9D%A2%E4%BC%A0%E5%80%BC"><span class="toc-number">6.</span> <span class="toc-text">页面传值</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%88%B6%E9%A1%B5%E9%9D%A2"><span class="toc-number">6.1.</span> <span class="toc-text">父页面</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%90%E9%A1%B5%E9%9D%A2"><span class="toc-number">6.2.</span> <span class="toc-text">子页面</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#v-model%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="toc-number">7.</span> <span class="toc-text">v-model的作用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BB%9D%E5%AF%B9%E5%AE%9A%E4%BD%8D%E5%92%8C%E7%9B%B8%E5%AF%B9%E5%AE%9A%E4%BD%8D"><span class="toc-number">8.</span> <span class="toc-text">绝对定位和相对定位</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#relative"><span class="toc-number">8.1.</span> <span class="toc-text">relative</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#absolute"><span class="toc-number">8.2.</span> <span class="toc-text">absolute</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#mysql-jsonArray%E6%9F%A5%E8%AF%A2"><span class="toc-number">9.</span> <span class="toc-text">mysql jsonArray查询</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#JSON-CONTAINS"><span class="toc-number">9.1.</span> <span class="toc-text">JSON_CONTAINS</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JSON-EXTRACT"><span class="toc-number">9.2.</span> <span class="toc-text">JSON_EXTRACT</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Path-%E8%A7%84%E5%88%99"><span class="toc-number">9.3.</span> <span class="toc-text">Path 规则</span></a></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="Related">
+        <ul>
+          <li class="active"><a href="/2023/02/20/computer-science/webLearning/uniapp/%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/" rel="bookmark" title="uniapp 遇到的问题">uniapp 遇到的问题</a></li><li><a href="/2023/08/18/computer-science/webLearning/vue/Day1/" rel="bookmark" title="VUE">VUE</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="Overview">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="LukMeteor"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">LukMeteor</p>
+  <div class="description" itemprop="description"></div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">26</span>
+        <span class="name">posts</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">17</span>
+        <span class="name">categories</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">11</span>
+        <span class="name">tags</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>Home</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>Posts</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>Archives</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>Categories</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>Tags</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>friends</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/links/" rel="section"><i class="ic i-magic"></i>links</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2023/02/02/computer-science/webLearning/typescript%E6%96%87%E4%BB%B6/basic/" rel="prev" title="Previous Post"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2023/07/05/computer-science/java/javase/JavaSE_Day1/" rel="next" title="Next Post"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>Random Posts</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/Life/" title="In Life">Life</a>
+</div>
+
+    <span><a href="/2023/11/17/Life/%E5%AE%9E%E4%B9%A0%E6%97%A5%E8%AE%B0/" title="实习日记">实习日记</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/" title="In java">java</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/javase/" title="In javase">javase</a>
+</div>
+
+    <span><a href="/2023/07/05/computer-science/java/javase/JavaSE_Day1/" title="java面向对象">java面向对象</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/web/" title="In web">web</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/web/Typescript/" title="In Typescript">Typescript</a>
+</div>
+
+    <span><a href="/2023/02/02/computer-science/webLearning/typescript%E6%96%87%E4%BB%B6/function/" title="Typescript 方法中的应用">Typescript 方法中的应用</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/" title="In java">java</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/SpringBoot/" title="In SpringBoot">SpringBoot</a>
+</div>
+
+    <span><a href="/2023/11/30/computer-science/java/springboot/SpringSecurity%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB/" title="SpringBoot Security">SpringBoot Security</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/web/" title="In web">web</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/web/vue/" title="In vue">vue</a>
+</div>
+
+    <span><a href="/2023/02/20/computer-science/webLearning/uniapp/%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/" title="uniapp 遇到的问题">uniapp 遇到的问题</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/" title="In java">java</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/javase/" title="In javase">javase</a>
+</div>
+
+    <span><a href="/2023/07/07/computer-science/java/javase/JavaSE_Day3/" title="javaIO流">javaIO流</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/Redis/" title="In Redis">Redis</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/Redis/%E4%B8%AD%E9%97%B4%E4%BB%B6/" title="In 中间件">中间件</a>
+</div>
+
+    <span><a href="/2023/11/17/computer-science/%E4%B8%AD%E9%97%B4%E4%BB%B6/redis%E5%AD%A6%E4%B9%A0/redisAPI%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/" title="redisAPI基本使用">redisAPI基本使用</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/" title="In java">java</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/SpringBoot/" title="In SpringBoot">SpringBoot</a>
+</div>
+
+    <span><a href="/2023/08/01/computer-science/java/springboot/Day3/" title="SpringBoot">SpringBoot</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/" title="In java">java</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/Spring/" title="In Spring">Spring</a>
+</div>
+
+    <span><a href="/2023/07/18/computer-science/java/spring/SpringDay2/" title="Spring">Spring</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/web/" title="In web">web</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/web/Typescript/" title="In Typescript">Typescript</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/web/Typescript/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" title="In 面向对象">面向对象</a>
+</div>
+
+    <span><a href="/2023/02/02/computer-science/webLearning/typescript%E6%96%87%E4%BB%B6/oop/" title="Typescript 面向对象">Typescript 面向对象</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>Recent Comments</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">LukMeteor @ BLOG</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="Symbols count total">131k words</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="Reading time total">1:59</span>
+  </div>
+  <div class="powered-by">
+    Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2023/02/20/computer-science/webLearning/uniapp/遇到的问题/',
+    favicon: {
+      show: "（●´3｀●）Goooood",
+      hide: "(´Д｀)Booooom"
+    },
+    search : {
+      placeholder: "Search for Posts",
+      empty: "We didn't find any results for the search: ${query}",
+      stats: "${hits} results found in ${time} ms"
+    },
+    valine: true,fancybox: true,
+    copyright: 'Copied to clipboard successfully! <br> All articles in this blog are licensed under <i class="ic i-creative-commons"></i>BY-NC-SA.',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

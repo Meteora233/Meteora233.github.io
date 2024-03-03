@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://Vereatorm.github.io</id>
+    <id>https://Meteora233.github.io</id>
     <title>Luk&#39;s Blog • Posts by &#34;ruoyi框架&#34; category</title>
-    <link href="https://Vereatorm.github.io" />
+    <link href="https://Meteora233.github.io" />
     <updated>2023-08-21T16:00:00.000Z</updated>
     <category term="JAVA" />
     <category term="JAVASE" />
@@ -12,10 +12,13 @@
     <category term="mybatis" />
     <category term="事务" />
     <category term="javaScript" />
+    <category term="Security框架" />
+    <category term="security框架" />
+    <category term="小程序" />
     <entry>
-        <id>https://vereatorm.github.io/2023/08/22/computer-science/java/rouyi/Day1/</id>
+        <id>https://meteora233.github.io/2023/08/22/computer-science/java/rouyi/Day1/</id>
         <title>RuoYi框架</title>
-        <link rel="alternate" href="https://vereatorm.github.io/2023/08/22/computer-science/java/rouyi/Day1/"/>
+        <link rel="alternate" href="https://meteora233.github.io/2023/08/22/computer-science/java/rouyi/Day1/"/>
         <content type="html">&lt;p&gt;note info:&lt;br&gt;第一天 课程：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMUhUNHkxZDdvQT9wPTImdmRfc291cmNlPWVlNzYwYmY3YTRkODlkM2VlOTJmNGY4M2YzYTY4MmM5&#34;&gt;若依&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;登录&#34;&gt;&lt;a href=&#34;#登录&#34; class=&#34;headerlink&#34; title=&#34;登录&#34;&gt;&lt;/a&gt;登录&lt;/h1&gt;&lt;h2 id=&#34;生成验证码&#34;&gt;&lt;a href=&#34;#生成验证码&#34; class=&#34;headerlink&#34; title=&#34;生成验证码&#34;&gt;&lt;/a&gt;生成验证码&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;后端生成一个表达式，1+1&amp;#x3D;2&lt;/li&gt;
