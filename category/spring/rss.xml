@@ -15,7 +15,6 @@
         <category>mybatis</category>
         <category>事务</category>
         <category>javaScript</category>
-        <category>Security框架</category>
         <category>security框架</category>
         <category>小程序</category>
         <item>
@@ -43,9 +42,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://meteora233.github.io/2023/07/18/computer-science/java/spring/SpringDay2/</guid>
+            <guid isPermalink="true">https://meteora233.github.io/2023/07/18/computer-science/java/springboot/spring/SpringDay2/</guid>
             <title>Spring</title>
-            <link>https://meteora233.github.io/2023/07/18/computer-science/java/spring/SpringDay2/</link>
+            <link>https://meteora233.github.io/2023/07/18/computer-science/java/springboot/spring/SpringDay2/</link>
             <category>JAVA</category>
             <category>Spring</category>
             <pubDate>Tue, 18 Jul 2023 00:00:00 +0800</pubDate>
@@ -63,9 +62,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://meteora233.github.io/2023/07/17/computer-science/java/spring/SpringDay1/</guid>
+            <guid isPermalink="true">https://meteora233.github.io/2023/07/17/computer-science/java/springboot/spring/SpringDay1/</guid>
             <title>Spring</title>
-            <link>https://meteora233.github.io/2023/07/17/computer-science/java/spring/SpringDay1/</link>
+            <link>https://meteora233.github.io/2023/07/17/computer-science/java/springboot/spring/SpringDay1/</link>
             <category>JAVA</category>
             <category>Spring</category>
             <pubDate>Mon, 17 Jul 2023 00:00:00 +0800</pubDate>

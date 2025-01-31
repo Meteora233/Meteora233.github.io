@@ -5,8 +5,8 @@
         <link>https://Meteora233.github.io</link>
         <description></description>
         <language>en</language>
-        <pubDate>Thu, 30 Nov 2023 00:00:00 +0800</pubDate>
-        <lastBuildDate>Thu, 30 Nov 2023 00:00:00 +0800</lastBuildDate>
+        <pubDate>Fri, 06 Oct 2023 00:00:00 +0800</pubDate>
+        <lastBuildDate>Fri, 06 Oct 2023 00:00:00 +0800</lastBuildDate>
         <category>JAVA</category>
         <category>JAVASE</category>
         <category>Vue</category>
@@ -15,28 +15,19 @@
         <category>mybatis</category>
         <category>事务</category>
         <category>javaScript</category>
-        <category>Security框架</category>
         <category>security框架</category>
         <category>小程序</category>
         <item>
-            <guid isPermalink="true">https://meteora233.github.io/2023/11/30/computer-science/java/springboot/SpringSecurity%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB/</guid>
-            <title>SpringBoot Security</title>
-            <link>https://meteora233.github.io/2023/11/30/computer-science/java/springboot/SpringSecurity%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB/</link>
-            <category>JAVA</category>
-            <category>Security框架</category>
-            <pubDate>Thu, 30 Nov 2023 00:00:00 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;note info&lt;br&gt;课程：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMXo0NHkxajdXWi8/cD00JnZkX3NvdXJjZT1lZTc2MGJmN2E0ZDg5ZDNlZTkyZjRmODNmM2E2ODJjOQ==&#34;&gt;SpringBootSecurity&lt;/span&gt;&lt;/p&gt;
-&lt;h1 id=&#34;SpringBoot-Security-框架&#34;&gt;&lt;a href=&#34;#SpringBoot-Security-框架&#34; class=&#34;headerlink&#34; title=&#34;SpringBoot Security 框架&#34;&gt;&lt;/a&gt;SpringBoot Security 框架&lt;/h1&gt; ]]></description>
-        </item>
-        <item>
             <guid isPermalink="true">https://meteora233.github.io/2023/10/06/computer-science/java/springboot/SpringbootSecurity/</guid>
-            <title>SpringBoot Security</title>
+            <title>SpringBoot Security框架</title>
             <link>https://meteora233.github.io/2023/10/06/computer-science/java/springboot/SpringbootSecurity/</link>
             <category>JAVA</category>
             <category>security框架</category>
             <pubDate>Fri, 06 Oct 2023 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;note info&lt;br&gt;课程：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMXo0NHkxajdXWi8/cD00JnZkX3NvdXJjZT1lZTc2MGJmN2E0ZDg5ZDNlZTkyZjRmODNmM2E2ODJjOQ==&#34;&gt;SpringBootSecurity&lt;/span&gt;&lt;/p&gt;
-&lt;h1 id=&#34;SpringBoot-Security-框架&#34;&gt;&lt;a href=&#34;#SpringBoot-Security-框架&#34; class=&#34;headerlink&#34; title=&#34;SpringBoot Security 框架&#34;&gt;&lt;/a&gt;SpringBoot Security 框架&lt;/h1&gt;&lt;h1 id=&#34;整体架构&#34;&gt;&lt;a href=&#34;#整体架构&#34; class=&#34;headerlink&#34; title=&#34;整体架构&#34;&gt;&lt;/a&gt;整体架构&lt;/h1&gt;&lt;p&gt;在&lt;strong&gt;Spring Security&lt;/strong&gt;的架构设计中，认证&lt;em&gt;Authentication&lt;/em&gt;和&lt;strong&gt;授权 Authorization&lt;/strong&gt;是分开的，无论使用什么样的认证方式。都不会影响授权，这是两个独立的存在，这种独立带来的好处之一，就是可以非常方便地整合一些外部的解决方案。&lt;br&gt;&lt;img data-src=&#34;/assets/SpringBootSecurity%E6%9E%B6%E6%9E%84.jpg&#34; alt=&#34;&amp;quot;会话跟踪技术&amp;quot;&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;SpringBoot-Security-框架&#34;&gt;&lt;a href=&#34;#SpringBoot-Security-框架&#34; class=&#34;headerlink&#34; title=&#34;SpringBoot Security 框架&#34;&gt;&lt;/a&gt;SpringBoot Security 框架&lt;/h1&gt;&lt;h1 id=&#34;整体架构&#34;&gt;&lt;a href=&#34;#整体架构&#34; class=&#34;headerlink&#34; title=&#34;整体架构&#34;&gt;&lt;/a&gt;整体架构&lt;/h1&gt;&lt;p&gt;在&lt;strong&gt;Spring Security&lt;/strong&gt;的架构设计中，认证&lt;em&gt;Authentication&lt;/em&gt;和&lt;strong&gt;授权 Authorization&lt;/strong&gt;是分开的，无论使用什么样的认证方式。都不会影响授权，这是两个独立的存在，这种独立带来的好处之一，就是可以非常方便地整合一些外部的解决方案。&lt;/p&gt;
+&lt;!-- ![&#34;会话跟踪技术&#34;](./assets/SpringBootSecurity架构.jpg) --&gt;
+&lt;p&gt;&lt;img data-src=&#34;/assets/img5.jpg&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;引入依赖&#34;&gt;&lt;a href=&#34;#引入依赖&#34; class=&#34;headerlink&#34; title=&#34;引入依赖&#34;&gt;&lt;/a&gt;引入依赖&lt;/h1&gt;&lt;figure class=&#34;highlight xml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;tag&#34;&gt;&amp;lt;&lt;span class=&#34;name&#34;&gt;dependency&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;     &lt;span class=&#34;tag&#34;&gt;&amp;lt;&lt;span class=&#34;name&#34;&gt;groupId&lt;/span&gt;&amp;gt;&lt;/span&gt;org.springframework.boot&lt;span class=&#34;tag&#34;&gt;&amp;lt;/&lt;span class=&#34;name&#34;&gt;groupId&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;     &lt;span class=&#34;tag&#34;&gt;&amp;lt;&lt;span class=&#34;name&#34;&gt;artifactId&lt;/span&gt;&amp;gt;&lt;/span&gt;spring-boot-starter-security&lt;span class=&#34;tag&#34;&gt;&amp;lt;/&lt;span class=&#34;name&#34;&gt;artifactId&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; &lt;span class=&#34;tag&#34;&gt;&amp;lt;/&lt;span class=&#34;name&#34;&gt;dependency&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 
 &lt;h2 id=&#34;认证&#34;&gt;&lt;a href=&#34;#认证&#34; class=&#34;headerlink&#34; title=&#34;认证&#34;&gt;&lt;/a&gt;认证&lt;/h2&gt;&lt;p&gt;在 Spring Seourity 中认证是由 AuthenticationManager 接口来负责的，接口定义为:&lt;/p&gt;
@@ -132,7 +123,7 @@
             <link>https://meteora233.github.io/2023/08/01/computer-science/java/springboot/Day3/</link>
             <category>JAVA</category>
             <category>事务</category>
-            <pubDate>Tue, 01 Aug 2023 22:38:57 +0800</pubDate>
+            <pubDate>Tue, 01 Aug 2023 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;h1 id=&#34;Spring-事务管理&#34;&gt;&lt;a href=&#34;#Spring-事务管理&#34; class=&#34;headerlink&#34; title=&#34;Spring 事务管理&#34;&gt;&lt;/a&gt;Spring 事务管理&lt;/h1&gt;&lt;h2 id=&#34;rollbackFor&#34;&gt;&lt;a href=&#34;#rollbackFor&#34; class=&#34;headerlink&#34; title=&#34;rollbackFor&#34;&gt;&lt;/a&gt;rollbackFor&lt;/h2&gt;&lt;p&gt;默认情况下，只有出现 RuntimeException 才回滚异常。rollbackFor 属性用于控制出现何种异常类型&lt;/p&gt;
 &lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;@Override&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;@Transactional(rollbackFor = Exception.class)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;type&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;title function_&#34;&gt;deleteDept&lt;/span&gt;&lt;span class=&#34;params&#34;&gt;(Integer id)&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;throws&lt;/span&gt; Exception &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;type&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;variable&#34;&gt;res&lt;/span&gt; &lt;span class=&#34;operator&#34;&gt;=&lt;/span&gt; deptMapper.deleteById(id);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;if&lt;/span&gt; (&lt;span class=&#34;literal&#34;&gt;true&lt;/span&gt;)&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;       &lt;span class=&#34;keyword&#34;&gt;throw&lt;/span&gt;  &lt;span class=&#34;keyword&#34;&gt;new&lt;/span&gt; &lt;span class=&#34;title class_&#34;&gt;Exception&lt;/span&gt;(&lt;span class=&#34;string&#34;&gt;&amp;quot;错误&amp;quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;type&#34;&gt;int&lt;/span&gt; &lt;span class=&#34;variable&#34;&gt;res1&lt;/span&gt; &lt;span class=&#34;operator&#34;&gt;=&lt;/span&gt; empMapper.deleteEmpByDept(id);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt;  res!=&lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;&amp;amp;&amp;amp;res1!=&lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;?&lt;span class=&#34;number&#34;&gt;1&lt;/span&gt;:&lt;span class=&#34;number&#34;&gt;0&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;//设置日志&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;logging.level.org.springframework.jdbc.core.JdbcTemplate=debug&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 
@@ -273,14 +264,19 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://meteora233.github.io/2023/07/14/computer-science/java/springboot/Day1/</guid>
+            <guid isPermalink="true">https://meteora233.github.io/2023/07/14/computer-science/java/springboot/MybatisDay1/</guid>
             <title>SpringBoot</title>
-            <link>https://meteora233.github.io/2023/07/14/computer-science/java/springboot/Day1/</link>
+            <link>https://meteora233.github.io/2023/07/14/computer-science/java/springboot/MybatisDay1/</link>
             <category>JAVA</category>
             <category>JAVASE</category>
             <pubDate>Fri, 14 Jul 2023 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;note info:&lt;strong&gt;查漏补缺&lt;/strong&gt;&lt;br&gt;第一天复习 课程：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMW04NHkxdzdUYj9wPTExOCZzcG1faWRfZnJvbT1wYWdlRHJpdmVyJnZkX3NvdXJjZT1lZTc2MGJmN2E0ZDg5ZDNlZTkyZjRmODNmM2E2ODJjOQ==&#34;&gt;SpringBoot&lt;/span&gt;  &lt;/p&gt;
-&lt;h1 id=&#34;mybatis-快速入门&#34;&gt;&lt;a href=&#34;#mybatis-快速入门&#34; class=&#34;headerlink&#34; title=&#34;mybatis 快速入门&#34;&gt;&lt;/a&gt;mybatis 快速入门&lt;/h1&gt;&lt;p&gt;在创建时需要&lt;br&gt;&lt;img data-src=&#34;/assets/springboot%E9%A1%B9%E7%9B%AE%E9%85%8D%E7%BD%AE.jpg&#34; alt=&#34;项目依赖&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;mybatis-快速入门&#34;&gt;&lt;a href=&#34;#mybatis-快速入门&#34; class=&#34;headerlink&#34; title=&#34;mybatis 快速入门&#34;&gt;&lt;/a&gt;mybatis 快速入门&lt;/h1&gt;&lt;p&gt;在创建时需要&lt;/p&gt;
+&lt;!-- ![项目依赖](assets/springboot项目配置.jpg) --&gt;
+
+
+
+
 &lt;figure class=&#34;highlight java&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;15&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;16&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;17&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;18&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;19&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;20&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;21&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;@Mapper&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;comment&#34;&gt;// 在运行时，会自动生成该接口的实现类对象(代理对象),并且讲该对象交给IOC容器管理&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;interface&lt;/span&gt; &lt;span class=&#34;title class_&#34;&gt;UserMapper&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;meta&#34;&gt;@Select(&amp;quot;select id as ID,username,password,gender,addr from tb_user&amp;quot;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    List&amp;lt;Users&amp;gt; &lt;span class=&#34;title function_&#34;&gt;selectAll&lt;/span&gt;&lt;span class=&#34;params&#34;&gt;()&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;@RequestMapping(&amp;quot;/User&amp;quot;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;meta&#34;&gt;@RestController&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;keyword&#34;&gt;public&lt;/span&gt; &lt;span class=&#34;keyword&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;title class_&#34;&gt;UserController&lt;/span&gt; &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;meta&#34;&gt;@Autowired&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;private&lt;/span&gt; UserMapper mapper;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;meta&#34;&gt;@RequestMapping(&amp;quot;/index&amp;quot;)&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &lt;span class=&#34;keyword&#34;&gt;public&lt;/span&gt; String &lt;span class=&#34;title function_&#34;&gt;index&lt;/span&gt;&lt;span class=&#34;params&#34;&gt;()&lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        List&amp;lt;Users&amp;gt; users = mapper.selectAll();&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        System.out.println(users);&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;        &lt;span class=&#34;keyword&#34;&gt;return&lt;/span&gt;  users.toString();&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;h1 id=&#34;数据库连接池&#34;&gt;&lt;a href=&#34;#数据库连接池&#34; class=&#34;headerlink&#34; title=&#34;数据库连接池&#34;&gt;&lt;/a&gt;数据库连接池&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;特点&lt;/li&gt;
@@ -333,9 +329,9 @@
  ]]></description>
         </item>
         <item>
-            <guid isPermalink="true">https://meteora233.github.io/2023/07/14/computer-science/java/springboot/Day2/</guid>
+            <guid isPermalink="true">https://meteora233.github.io/2023/07/14/computer-science/java/springboot/MybatisDay2/</guid>
             <title>SpringBoot</title>
-            <link>https://meteora233.github.io/2023/07/14/computer-science/java/springboot/Day2/</link>
+            <link>https://meteora233.github.io/2023/07/14/computer-science/java/springboot/MybatisDay2/</link>
             <category>JAVA</category>
             <category>mybatis</category>
             <pubDate>Fri, 14 Jul 2023 00:00:00 +0800</pubDate>
@@ -375,7 +371,7 @@
 &lt;h2 id=&#34;会话技术&#34;&gt;&lt;a href=&#34;#会话技术&#34; class=&#34;headerlink&#34; title=&#34;会话技术&#34;&gt;&lt;/a&gt;会话技术&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;cookies&lt;/li&gt;
 &lt;li&gt;session&lt;/li&gt;
-&lt;li&gt;令牌&lt;br&gt;&lt;img data-src=&#34;/assets/%E4%BC%9A%E8%AF%9D%E8%B7%9F%E8%B8%AA%E6%8A%80%E6%9C%AF.jpg&#34; alt=&#34;&amp;quot;会话跟踪技术&amp;quot;&#34;&gt;&lt;/li&gt;
+&lt;li&gt;令牌&lt;br&gt;&lt;img data-src=&#34;https://s21.ax1x.com/2025/01/30/pEVjIIO.jpg&#34; alt=&#34;会话跟踪技术&#34;&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3 id=&#34;jwt-json-web-token&#34;&gt;&lt;a href=&#34;#jwt-json-web-token&#34; class=&#34;headerlink&#34; title=&#34;jwt (json web token)&#34;&gt;&lt;/a&gt;jwt (json web token)&lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;登陆成功后生成令牌，（返回给浏览器存储）&lt;/li&gt;

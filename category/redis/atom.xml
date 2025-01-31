@@ -12,7 +12,6 @@
     <category term="mybatis" />
     <category term="事务" />
     <category term="javaScript" />
-    <category term="Security框架" />
     <category term="security框架" />
     <category term="小程序" />
     <entry>
@@ -187,13 +186,6 @@
 &lt;li&gt;排行榜应用实现，取 Top N 测试&lt;/li&gt;
 &lt;/ul&gt;
 </content>
-        <updated>2023-11-16T16:00:00.000Z</updated>
-    </entry>
-    <entry>
-        <id>https://meteora233.github.io/2023/11/17/computer-science/%E4%B8%AD%E9%97%B4%E4%BB%B6/redis%E5%AD%A6%E4%B9%A0/redis%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81/</id>
-        <title>redis</title>
-        <link rel="alternate" href="https://meteora233.github.io/2023/11/17/computer-science/%E4%B8%AD%E9%97%B4%E4%BB%B6/redis%E5%AD%A6%E4%B9%A0/redis%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81/"/>
-        <content type="html"></content>
         <updated>2023-11-16T16:00:00.000Z</updated>
     </entry>
 </feed>

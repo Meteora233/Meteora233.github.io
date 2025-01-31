@@ -1,0 +1,685 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Luk's Blog" href="https://meteora233.github.io/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Luk's Blog" href="https://meteora233.github.io/atom.xml" />
+<link rel="alternate" type="application/json" title="Luk's Blog" href="https://meteora233.github.io/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+
+<link rel="canonical" href="https://meteora233.github.io/2024/03/01/computer-science/%E4%B8%93%E5%8D%87%E6%9C%AC%E9%94%99%E9%A2%98%E6%95%B4%E7%90%86/c/">
+
+
+
+  <title>
+C语言专升本错题整理 - C语言 - 计算机科学 |
+BLOG = Luk's Blog</title>
+<meta name="generator" content="Hexo 6.3.0"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">C语言专升本错题整理
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="Created: 2024-03-01 00:00:00">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">Posted on</span>
+    <time itemprop="dateCreated datePublished" datetime="2024-03-01T00:00:00+08:00">2024-03-01</time>
+  </span>
+  <span class="item" title="Symbols count in article">
+    <span class="icon">
+      <i class="ic i-pen"></i>
+    </span>
+    <span class="text">Symbols count in article</span>
+    <span>2.9k</span>
+    <span class="text">words</span>
+  </span>
+  <span class="item" title="Reading time">
+    <span class="icon">
+      <i class="ic i-clock"></i>
+    </span>
+    <span class="text">Reading time</span>
+    <span>3 mins.</span>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="Toggle navigation bar">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">BLOG</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+          <img src="https://upload-bbs.miyoushe.com/upload/2023/09/29/285958508/845271667fd2e4a3238cded594b0e59c_7303988158448651070.jpg?x-oss-process=image//resize,s_600/quality,q_80/auto-orient,0/interlace,1/format,jpg">
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">Home</a></span><i class="ic i-angle-right"></i>
+<span  itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/computer-science/" itemprop="item" rel="index" title="In 计算机科学"><span itemprop="name">计算机科学</span></a>
+<meta itemprop="position" content="1" /></span>
+<i class="ic i-angle-right"></i>
+<span  class="current" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"><a href="/categories/computer-science/C%E8%AF%AD%E8%A8%80/" itemprop="item" rel="index" title="In C语言"><span itemprop="name">C语言</span></a>
+<meta itemprop="position" content="2" /></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="en">
+  <link itemprop="mainEntityOfPage" href="https://meteora233.github.io/2024/03/01/computer-science/%E4%B8%93%E5%8D%87%E6%9C%AC%E9%94%99%E9%A2%98%E6%95%B4%E7%90%86/c/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="LukMeteor">
+    <meta itemprop="description" content=", ">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Luk's Blog">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="指针"><a href="#指针" class="headerlink" title="指针"></a>指针</h1><h2 id="数组指针-行指针"><a href="#数组指针-行指针" class="headerlink" title="数组指针(行指针)"></a>数组指针(行指针)</h2><p>本质是一个指针，这个指针指向一个数组，如下定义了一个指向数组的指针。这里的[3]可以理解为是，定死了指向的数组大小</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"> <span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="type">int</span> (*p)[<span class="number">3</span>];</span><br><span class="line">    <span class="comment">// p is pointer to array of 3 int </span></span><br><span class="line"> &#125;</span><br><span class="line"> <span class="comment">// 数组指针</span></span><br><span class="line"><span class="type">void</span> <span class="title function_">printPointerToArray</span><span class="params">()</span> &#123;</span><br><span class="line">	<span class="type">int</span> a[<span class="number">2</span>][<span class="number">3</span>] = &#123;</span><br><span class="line">	   &#123;<span class="number">123</span>, <span class="number">43</span>, <span class="number">23</span>&#125;,</span><br><span class="line">	   &#123;<span class="number">231</span>, <span class="number">123</span>, <span class="number">43</span>&#125;</span><br><span class="line">	&#125;;</span><br><span class="line">	<span class="type">int</span> (*q)[<span class="number">3</span>] = a;</span><br><span class="line">	<span class="comment">/*</span></span><br><span class="line"><span class="comment">	p-&gt;  &#123;123, 43, 23&#125;,</span></span><br><span class="line"><span class="comment">	p++-&gt;&#123; 231, 123, 43 &#125;</span></span><br><span class="line"><span class="comment">	&#123;0,0,0&#125;</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="number">2</span>; i++) &#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> j = <span class="number">0</span>; j &lt; <span class="number">3</span>; j++) &#123;</span><br><span class="line">            <span class="comment">// 需要先解引用</span></span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">&quot;%d &quot;</span>, *(*q + i * <span class="number">3</span> + j));</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>含义</th>
+<th>等价形式</th>
+<th>类型</th>
+<th>数组元素</th>
+<th>值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>首行</td>
+<td>a[0]、q[0]、* q</td>
+<td>int[3]</td>
+<td>{1, 2, 3}</td>
+<td>0x19AFFC40</td>
+</tr>
+<tr>
+<td>首行的地址</td>
+<td>&amp; a[0]、a、 &amp; q[0]、q</td>
+<td>int(*)[3]</td>
+<td></td>
+<td>0x19AFFC40</td>
+</tr>
+<tr>
+<td>第i行</td>
+<td>a[i]、q[i]、 * (q + i)</td>
+<td>int[3]</td>
+<td>{4, 5, 6} (i &#x3D; 1)</td>
+<td>0x19AFFC4C (i &#x3D; 1)</td>
+</tr>
+<tr>
+<td>第i行的地址</td>
+<td>&amp; a[i]、 &amp; q[i]、q + i</td>
+<td>int(*)[3]</td>
+<td></td>
+<td>0x19AFFC4C (i &#x3D; 1)</td>
+</tr>
+</tbody></table>
+<h3 id="转换"><a href="#转换" class="headerlink" title="转换"></a>转换</h3><p>两个重要概念：行指针和列指针。<br>行指针：指的是一整行，不指向具体元素。<br>列指针：指的是一行中某个具体元素。</p>
+<p>可以将列指针理解为行指针的具体元素，行指针理解为列指针的地址。<br>那么两个概念之间的具体转换是：<br>*行指针—-列指针<br>&amp;列指针—-行指针</p>
+<h2 id="指针数组"><a href="#指针数组" class="headerlink" title="指针数组"></a>指针数组</h2><p>在c中[] 的优先级大于*,所以先计算p[3],是一个数组，而 把int* 放一起看作为一个类型，是一个整形指针，说明这是一个存放整形指针的数组。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">    <span class="type">int</span> *p[<span class="number">3</span>]; </span><br><span class="line">    <span class="comment">// p is array of 3 pointer to int </span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="结构体"><a href="#结构体" class="headerlink" title="结构体"></a>结构体</h1><h2 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h2><ol>
+<li>结构体名: 用户自己构造的结构体类型</li>
+<li>成员：可以是基本类型，或已经创建好的类型<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">   <span class="comment">// struct 结构体名&#123;</span></span><br><span class="line">	<span class="comment">//类型名称 成员名称;</span></span><br><span class="line">	<span class="comment">//类型名称 成员名称;</span></span><br><span class="line">	<span class="comment">//类型名称 成员名称;</span></span><br><span class="line">	<span class="comment">// ....</span></span><br><span class="line"><span class="comment">//&#125;变量名,变量名 </span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="结构体变量定义"><a href="#结构体变量定义" class="headerlink" title="结构体变量定义"></a>结构体变量定义</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">void</span> <span class="title function_">main</span><span class="params">()</span>&#123;</span><br><span class="line">   	<span class="class"><span class="keyword">struct</span> <span class="title">date</span></span></span><br><span class="line"><span class="class">	&#123;</span></span><br><span class="line">		<span class="type">int</span> month;</span><br><span class="line">		<span class="type">int</span> day;</span><br><span class="line">	&#125;;</span><br><span class="line">	<span class="class"><span class="keyword">struct</span>  <span class="title">stu</span></span></span><br><span class="line"><span class="class">	&#123;</span></span><br><span class="line">		<span class="type">char</span> nums[<span class="number">10</span>];</span><br><span class="line">		<span class="type">char</span> name[<span class="number">20</span>];</span><br><span class="line">		<span class="type">char</span> sex;</span><br><span class="line">		<span class="class"><span class="keyword">struct</span> <span class="title">date</span> <span class="title">birdthday</span>;</span></span><br><span class="line">	&#125;;</span><br><span class="line">	<span class="comment">// 定义方式</span></span><br><span class="line">	<span class="class"><span class="keyword">struct</span> <span class="title">stu</span> <span class="title">boy</span>, <span class="title">girl</span>;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="存储变量"><a href="#存储变量" class="headerlink" title="存储变量"></a>存储变量</h2><p>计算机要求所有的存放都要从偶数开始，会直接多开内存</p>
+<h2 id="结构体成员的引用"><a href="#结构体成员的引用" class="headerlink" title="结构体成员的引用"></a>结构体成员的引用</h2><ol>
+<li>结构体变量名.成员名   .被称为成员运算符</li>
+</ol>
+<h1 id="类型定义符-typedef"><a href="#类型定义符-typedef" class="headerlink" title="类型定义符 typedef"></a>类型定义符 typedef</h1><p>作用：为已有的数据类型取别名</p>
+<h2 id="用typedef为结构体类型取别名"><a href="#用typedef为结构体类型取别名" class="headerlink" title="用typedef为结构体类型取别名"></a>用typedef为结构体类型取别名</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// typedef 原类型名 新类型名;</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">stu</span>&#123;</span></span><br><span class="line">    <span class="type">char</span> nums[<span class="number">10</span>];</span><br><span class="line">    <span class="type">char</span> sex;</span><br><span class="line">&#125;STU;</span><br><span class="line">STU boy1,boy2;</span><br></pre></td></tr></table></figure>
+
+<h2 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h2><p>只是为了已有数据类型取了名字，没有构成新的数据类型。只是用为了编码方便。</p>
+<h2 id="结构体指针"><a href="#结构体指针" class="headerlink" title="结构体指针"></a>结构体指针</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// （*结构体变量指针变量).成员名</span></span><br><span class="line">(*pstu).num  括号不能少</span><br><span class="line"><span class="comment">// 结构体指针变量-&gt; 成员名  -&gt;为指向运算符</span></span><br><span class="line">pstu-&gt;name;</span><br><span class="line">   <span class="class"><span class="keyword">struct</span> <span class="title">stu</span> <span class="title">boy</span>[5],*<span class="title">ps</span>;</span></span><br><span class="line">   ps=boy;</span><br><span class="line">  <span class="comment">// ps-&gt;num 与boy[0].num 等效</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="结构体与函数"><a href="#结构体与函数" class="headerlink" title="结构体与函数"></a>结构体与函数</h2><ol>
+<li>结构体作函数参数的形式有两种:</li>
+</ol>
+<ul>
+<li>结构体变量作函数参数，是<strong>值传递</strong>，执行效率低。如: void Print1( struct stu s ); （传递副本）</li>
+<li>结构体指针变量作函数参数，是<strong>地址传递</strong>，可以减少结构体数据向函数传递时引起的时间和空间开销。 （无需传递副本）</li>
+</ul>
+<h2 id="动态内存管理"><a href="#动态内存管理" class="headerlink" title="动态内存管理"></a>动态内存管理</h2><p>C语言标准库提供了四个函数用于动态内存管理</p>
+<ol>
+<li>malloc():分配新的内存空间，但不对内存空间进行初始化</li>
+<li>calloc():分配新的内存空间，并对内存空间进行清零</li>
+<li>realloc():调整已分配的内存空间大小</li>
+<li>free():释放已分配的内存空间</li>
+</ol>
+<p>#include&lt;stdlib.h&gt;<br>动态内存管理函数都声明在头文件&lt;stdlib.h&gt;中，</p>
+<h3 id="malloc-函数"><a href="#malloc-函数" class="headerlink" title="malloc()函数"></a>malloc()函数</h3><p>函数的原型:<br>void *malloc( unsigned int size );</p>
+<blockquote>
+<p>功能:申请分配一块大小为size字节的内存空间&gt;返回值:若分配成功，则返回分配到的内存空间首地址，该地址类型为“void <em>”类型，即不确定的指针类型;若分配失败，返回NULL。<br>调用形式:(类型说明符</em>)malloc( size );</p>
+</blockquote>
+<h3 id="calloc"><a href="#calloc" class="headerlink" title="calloc()"></a>calloc()</h3><p>函数函数的原型为:<br>void *calloc(unsigned int n , unsigned int size );</p>
+<blockquote>
+<p>功能:申请连续的n块内存空间，每块大小为size字节<br>返回值:若申请成功，则返回申请到的内存空间首地址，该地址类型为“void <em>”类型;若申请失败，返回NULL。<br>调用形式:(类型说明符</em>)calloc( n, size );</p>
+</blockquote>
+<h3 id="free"><a href="#free" class="headerlink" title="free()"></a>free()</h3><p>函数函数的原型:<br>void free( void *ptr);</p>
+<blockquote>
+<p>函数的调用形式:<br>free(ptr);<br>功能:释放指针变量ptr所指向的内存空间<br>注意: free()释放的内存空间是由malloc()或calloc()函数分配</p>
+</blockquote>
+<h3 id="realloc-函数"><a href="#realloc-函数" class="headerlink" title="realloc()函数"></a>realloc()函数</h3><p>函数的原型为:<br>void *realloc( void *ptr, unsigned int size );</p>
+<blockquote>
+<p>函数的调用形式: realloc(ptr,size);<br>功能:释放ptr所指向的内存空间，并分配大小为size字节的新内存区域,并返回该地址。新内存块size可以比原来分配的空间大或小。<br>增大内存空间，原来内存块中的数据不会改变<br>如果第一个参数为空指针,realloc()就被当作malloc()使用</p>
+</blockquote>
+<h2 id="共用体"><a href="#共用体" class="headerlink" title="共用体"></a>共用体</h2><h3 id="什么是共用体"><a href="#什么是共用体" class="headerlink" title="什么是共用体"></a>什么是共用体</h3><ol>
+<li>与结构体的不同类型定义关键字不同</li>
+<li>所占内存空间不同，共用体所占空间取决于所有成员中占内存空间最多的那个成员</li>
+<li>同一时刻，共用体的空间只能被一个 成员使用<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">   d.num = <span class="number">1</span>;  </span><br><span class="line">d.sc = <span class="number">2323.32</span>;   <span class="comment">//最后一条语句生效</span></span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, d.num);  </span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;%lf&quot;</span>, d.sc);  </span><br><span class="line"></span><br><span class="line">   <span class="number">-687194767</span></span><br><span class="line">   <span class="number">2323.320000</span> <span class="comment">// 只有这个生效</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><blockquote>
+<p>不能把共用体变量作为参数，也不能从函数带回共用体变量<br>结构体类型可与共用体类型互相引用</p>
+</blockquote>
+<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><h1 id="局部变量"><a href="#局部变量" class="headerlink" title="局部变量"></a>局部变量</h1><h1 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h1>
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">Edited on</span>
+    <time title="Modified: 2024-03-10 23:20:42" itemprop="dateModified" datetime="2024-03-10T23:20:42+08:00">2024-03-10</time>
+  </span>
+</div>
+
+      
+<div class="reward">
+  <button><i class="ic i-heartbeat"></i> Donate</button>
+  <p>Give me a cup of [coffee]~(￣▽￣)~*</p>
+  <div id="qr">
+      
+      <div>
+        <img data-src="/images/wechatpay.png" alt="LukMeteor WeChat Pay">
+        <p>WeChat Pay</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/alipay.png" alt="LukMeteor Alipay">
+        <p>Alipay</p>
+      </div>
+      
+      <div>
+        <img data-src="/images/paypal.png" alt="LukMeteor PayPal">
+        <p>PayPal</p>
+      </div>
+  </div>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>Post author:  </strong>LukMeteor <i class="ic i-at"><em>@</em></i>Luk's Blog
+  </li>
+  <li class="link">
+    <strong>Post link: </strong>
+    <a href="https://meteora233.github.io/2024/03/01/computer-science/%E4%B8%93%E5%8D%87%E6%9C%AC%E9%94%99%E9%A2%98%E6%95%B4%E7%90%86/c/" title="C语言专升本错题整理">https://meteora233.github.io/2024/03/01/computer-science/专升本错题整理/c/</a>
+  </li>
+  <li class="license">
+    <strong>Copyright Notice:  </strong>All articles in this blog are licensed under <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> unless stating additionally.
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+      
+
+  <a href="/2024/03/01/computer-science/%E4%B8%93%E5%8D%87%E6%9C%AC%E9%94%99%E9%A2%98%E6%95%B4%E7%90%86/c%E8%AF%AD%E8%A8%80%E9%94%99%E9%A2%98/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;upload-bbs.miyoushe.com&#x2F;upload&#x2F;2024&#x2F;09&#x2F;14&#x2F;288909600&#x2F;43968a882f0301438371ab79b7fe529c_2753819315407434761.png?x-oss-process&#x3D;image&#x2F;&#x2F;resize,s_600&#x2F;quality,q_80&#x2F;auto-orient,0&#x2F;interlace,1&#x2F;format,png" title="C语言错题整理">
+  <span class="type">Previous Post</span>
+  <span class="category"><i class="ic i-flag"></i> C语言</span>
+  <h3>C语言错题整理</h3>
+  </a>
+
+    </div>
+    <div class="item right">
+      
+
+  <a href="/2024/04/20/Electronic-information/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;upload-bbs.miyoushe.com&#x2F;upload&#x2F;2023&#x2F;10&#x2F;18&#x2F;75276539&#x2F;decde675d83a1b5b78fe05b2382b30ae_7178032464788362671.jpg?x-oss-process&#x3D;image&#x2F;&#x2F;resize,s_600&#x2F;quality,q_80&#x2F;auto-orient,0&#x2F;interlace,1&#x2F;format,jpg" title="一些考研相关的碎碎念">
+  <span class="type">Next Post</span>
+  <span class="category"><i class="ic i-flag"></i> 电子信息工程</span>
+  <h3>一些考研相关的碎碎念</h3>
+  </a>
+
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="Contents">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8C%87%E9%92%88"><span class="toc-number">1.</span> <span class="toc-text">指针</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E6%8C%87%E9%92%88-%E8%A1%8C%E6%8C%87%E9%92%88"><span class="toc-number">1.1.</span> <span class="toc-text">数组指针(行指针)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AC%E6%8D%A2"><span class="toc-number">1.1.1.</span> <span class="toc-text">转换</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%87%E9%92%88%E6%95%B0%E7%BB%84"><span class="toc-number">1.2.</span> <span class="toc-text">指针数组</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BB%93%E6%9E%84%E4%BD%93"><span class="toc-number">2.</span> <span class="toc-text">结构体</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%9A%E4%B9%89"><span class="toc-number">2.1.</span> <span class="toc-text">定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E6%9E%84%E4%BD%93%E5%8F%98%E9%87%8F%E5%AE%9A%E4%B9%89"><span class="toc-number">2.2.</span> <span class="toc-text">结构体变量定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%98%E5%82%A8%E5%8F%98%E9%87%8F"><span class="toc-number">2.3.</span> <span class="toc-text">存储变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E6%9E%84%E4%BD%93%E6%88%90%E5%91%98%E7%9A%84%E5%BC%95%E7%94%A8"><span class="toc-number">2.4.</span> <span class="toc-text">结构体成员的引用</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%B1%BB%E5%9E%8B%E5%AE%9A%E4%B9%89%E7%AC%A6-typedef"><span class="toc-number">3.</span> <span class="toc-text">类型定义符 typedef</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%94%A8typedef%E4%B8%BA%E7%BB%93%E6%9E%84%E4%BD%93%E7%B1%BB%E5%9E%8B%E5%8F%96%E5%88%AB%E5%90%8D"><span class="toc-number">3.1.</span> <span class="toc-text">用typedef为结构体类型取别名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9B%AE%E7%9A%84"><span class="toc-number">3.2.</span> <span class="toc-text">目的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E6%9E%84%E4%BD%93%E6%8C%87%E9%92%88"><span class="toc-number">3.3.</span> <span class="toc-text">结构体指针</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%93%E6%9E%84%E4%BD%93%E4%B8%8E%E5%87%BD%E6%95%B0"><span class="toc-number">3.4.</span> <span class="toc-text">结构体与函数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E5%86%85%E5%AD%98%E7%AE%A1%E7%90%86"><span class="toc-number">3.5.</span> <span class="toc-text">动态内存管理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#malloc-%E5%87%BD%E6%95%B0"><span class="toc-number">3.5.1.</span> <span class="toc-text">malloc()函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#calloc"><span class="toc-number">3.5.2.</span> <span class="toc-text">calloc()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#free"><span class="toc-number">3.5.3.</span> <span class="toc-text">free()</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#realloc-%E5%87%BD%E6%95%B0"><span class="toc-number">3.5.4.</span> <span class="toc-text">realloc()函数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B1%E7%94%A8%E4%BD%93"><span class="toc-number">3.6.</span> <span class="toc-text">共用体</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%85%B1%E7%94%A8%E4%BD%93"><span class="toc-number">3.6.1.</span> <span class="toc-text">什么是共用体</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A8%E6%84%8F"><span class="toc-number">3.6.2.</span> <span class="toc-text">注意</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%87%BD%E6%95%B0"><span class="toc-number">4.</span> <span class="toc-text">函数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F"><span class="toc-number">5.</span> <span class="toc-text">局部变量</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%A8%E5%B1%80%E5%8F%98%E9%87%8F"><span class="toc-number">6.</span> <span class="toc-text">全局变量</span></a></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="Related">
+        <ul>
+          <li class="active"><a href="/2024/03/01/computer-science/%E4%B8%93%E5%8D%87%E6%9C%AC%E9%94%99%E9%A2%98%E6%95%B4%E7%90%86/c/" rel="bookmark" title="C语言专升本错题整理">C语言专升本错题整理</a></li><li><a href="/2024/03/01/computer-science/%E4%B8%93%E5%8D%87%E6%9C%AC%E9%94%99%E9%A2%98%E6%95%B4%E7%90%86/c%E8%AF%AD%E8%A8%80%E9%94%99%E9%A2%98/" rel="bookmark" title="C语言错题整理">C语言错题整理</a></li>
+        </ul>
+      </div>
+      <div class="overview panel" data-title="Overview">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="LukMeteor"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">LukMeteor</p>
+  <div class="description" itemprop="description"></div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">27</span>
+        <span class="name">posts</span>
+      </a>
+    </div>
+    <div class="item categories">
+      <a href="/categories/">
+        <span class="count">19</span>
+        <span class="name">categories</span>
+      </a>
+    </div>
+    <div class="item tags">
+      <a href="/tags/">
+        <span class="count">10</span>
+        <span class="name">tags</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>Home</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>Posts</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>Archives</a>
+  </li>
+
+  </ul>
+    
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>Categories</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>Tags</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/friends/" rel="section"><i class="ic i-heart"></i>friends</a>
+  </li>
+
+    
+  <li class="item">
+    <a href="/links/" rel="section"><i class="ic i-magic"></i>links</a>
+  </li>
+
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+        <a href="/2024/03/01/computer-science/%E4%B8%93%E5%8D%87%E6%9C%AC%E9%94%99%E9%A2%98%E6%95%B4%E7%90%86/c%E8%AF%AD%E8%A8%80%E9%94%99%E9%A2%98/" rel="prev" title="Previous Post"><i class="ic i-chevron-left"></i></a>
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+        <a href="/2024/04/20/Electronic-information/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/" rel="next" title="Next Post"><i class="ic i-chevron-right"></i></a>
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+<div class="rpost pjax">
+  <h2>Random Posts</h2>
+  <ul>
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/" title="In java">java</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/SpringBoot/" title="In SpringBoot">SpringBoot</a>
+</div>
+
+    <span><a href="/2023/10/06/computer-science/java/springboot/SpringbootSecurity/" title="SpringBoot Security框架">SpringBoot Security框架</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/Redis/" title="In Redis">Redis</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/Redis/%E4%B8%AD%E9%97%B4%E4%BB%B6/" title="In 中间件">中间件</a>
+</div>
+
+    <span><a href="/2023/11/17/computer-science/%E4%B8%AD%E9%97%B4%E4%BB%B6/redis%E5%AD%A6%E4%B9%A0/redisAPI%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/" title="redisAPI基本使用">redisAPI基本使用</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/web/" title="In web">web</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/web/javaScript/" title="In javaScript">javaScript</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/web/javaScript/%E5%90%8C%E6%AD%A5%E5%BC%82%E6%AD%A5/" title="In 同步异步">同步异步</a>
+</div>
+
+    <span><a href="/2024/01/29/computer-science/webLearning/javascript/Promise/" title="JavaSrcipt">JavaSrcipt</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/" title="In java">java</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/SpringBoot/" title="In SpringBoot">SpringBoot</a>
+</div>
+
+    <span><a href="/2023/08/01/computer-science/java/springboot/Day3/" title="SpringBoot">SpringBoot</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/" title="In java">java</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/javase/" title="In javase">javase</a>
+</div>
+
+    <span><a href="/2023/07/05/computer-science/java/javase/JavaSE_Day1/" title="java面向对象">java面向对象</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/C%E8%AF%AD%E8%A8%80/" title="In C语言">C语言</a>
+</div>
+
+    <span><a href="/2024/03/01/computer-science/%E4%B8%93%E5%8D%87%E6%9C%AC%E9%94%99%E9%A2%98%E6%95%B4%E7%90%86/c%E8%AF%AD%E8%A8%80%E9%94%99%E9%A2%98/" title="C语言错题整理">C语言错题整理</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/web/" title="In web">web</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/web/Typescript/" title="In Typescript">Typescript</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/web/Typescript/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" title="In 面向对象">面向对象</a>
+</div>
+
+    <span><a href="/2023/02/02/computer-science/webLearning/typescript%E6%96%87%E4%BB%B6/oop/" title="Typescript 面向对象">Typescript 面向对象</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/" title="In java">java</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/Spring/" title="In Spring">Spring</a>
+</div>
+
+    <span><a href="/2023/07/18/computer-science/java/springboot/spring/SpringDay2/" title="Spring">Spring</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/web/" title="In web">web</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/web/javaScript/" title="In javaScript">javaScript</a>
+</div>
+
+    <span><a href="/2023/08/18/computer-science/webLearning/javascript/Day1/" title="JavaSrcipt">JavaSrcipt</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/" title="In java">java</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/javase/" title="In javase">javase</a>
+</div>
+
+    <span><a href="/2023/07/07/computer-science/java/javase/JavaSE_Day4/" title="java多线程">java多线程</a></span>
+  </li>
+
+  </ul>
+</div>
+<div>
+  <h2>Recent Comments</h2>
+  <ul class="leancloud-recent-comment"></ul>
+</div>
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 2010 – 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">LukMeteor @ BLOG</span>
+  </div>
+  <div class="count">
+    <span class="post-meta-item-icon">
+      <i class="ic i-chart-area"></i>
+    </span>
+    <span title="Symbols count total">142k words</span>
+
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="ic i-coffee"></i>
+    </span>
+    <span title="Reading time total">2:09</span>
+  </div>
+  <div class="powered-by">
+    Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2024/03/01/computer-science/专升本错题整理/c/',
+    favicon: {
+      show: "（●´3｀●）Goooood",
+      hide: "(´Д｀)Booooom"
+    },
+    search : {
+      placeholder: "Search for Posts",
+      empty: "We didn't find any results for the search: ${query}",
+      stats: "${hits} results found in ${time} ms"
+    },
+    valine: true,fancybox: true,
+    copyright: 'Copied to clipboard successfully! <br> All articles in this blog are licensed under <i class="ic i-creative-commons"></i>BY-NC-SA.',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>

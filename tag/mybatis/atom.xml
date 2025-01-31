@@ -12,13 +12,12 @@
     <category term="mybatis" />
     <category term="事务" />
     <category term="javaScript" />
-    <category term="Security框架" />
     <category term="security框架" />
     <category term="小程序" />
     <entry>
-        <id>https://meteora233.github.io/2023/07/14/computer-science/java/springboot/Day2/</id>
+        <id>https://meteora233.github.io/2023/07/14/computer-science/java/springboot/MybatisDay2/</id>
         <title>SpringBoot</title>
-        <link rel="alternate" href="https://meteora233.github.io/2023/07/14/computer-science/java/springboot/Day2/"/>
+        <link rel="alternate" href="https://meteora233.github.io/2023/07/14/computer-science/java/springboot/MybatisDay2/"/>
         <content type="html">&lt;p&gt;note info:&lt;strong&gt;查漏补缺&lt;/strong&gt;&lt;br&gt;课程：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMW04NHkxdzdUYj9wPTExOCZzcG1faWRfZnJvbT1wYWdlRHJpdmVyJnZkX3NvdXJjZT1lZTc2MGJmN2E0ZDg5ZDNlZTkyZjRmODNmM2E2ODJjOQ==&#34;&gt;SpringBoot&lt;/span&gt;&lt;/p&gt;
 &lt;h1 id=&#34;Mybatis&#34;&gt;&lt;a href=&#34;#Mybatis&#34; class=&#34;headerlink&#34; title=&#34;Mybatis&#34;&gt;&lt;/a&gt;Mybatis&lt;/h1&gt;&lt;h2 id=&#34;一级缓存&#34;&gt;&lt;a href=&#34;#一级缓存&#34; class=&#34;headerlink&#34; title=&#34;一级缓存&#34;&gt;&lt;/a&gt;一级缓存&lt;/h2&gt;&lt;p&gt;解决数据库的压力&lt;br&gt;client -&amp;gt; executor &amp;lt;–&amp;gt; cache &amp;lt;–&amp;gt;DB&lt;br&gt;一级缓存是 SqlSession 级别的，通过同一个 SqlSession 查询的数据会被缓存，下次查询相同的数据，就会从缓存中直接获取，不会从数据库重新访问&lt;br&gt;使—级缓存失效的四种情况:&lt;/p&gt;
 &lt;ol&gt;
@@ -55,7 +54,7 @@
 &lt;h2 id=&#34;会话技术&#34;&gt;&lt;a href=&#34;#会话技术&#34; class=&#34;headerlink&#34; title=&#34;会话技术&#34;&gt;&lt;/a&gt;会话技术&lt;/h2&gt;&lt;ol&gt;
 &lt;li&gt;cookies&lt;/li&gt;
 &lt;li&gt;session&lt;/li&gt;
-&lt;li&gt;令牌&lt;br&gt;&lt;img data-src=&#34;/assets/%E4%BC%9A%E8%AF%9D%E8%B7%9F%E8%B8%AA%E6%8A%80%E6%9C%AF.jpg&#34; alt=&#34;&amp;quot;会话跟踪技术&amp;quot;&#34;&gt;&lt;/li&gt;
+&lt;li&gt;令牌&lt;br&gt;&lt;img data-src=&#34;https://s21.ax1x.com/2025/01/30/pEVjIIO.jpg&#34; alt=&#34;会话跟踪技术&#34;&gt;&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3 id=&#34;jwt-json-web-token&#34;&gt;&lt;a href=&#34;#jwt-json-web-token&#34; class=&#34;headerlink&#34; title=&#34;jwt (json web token)&#34;&gt;&lt;/a&gt;jwt (json web token)&lt;/h3&gt;&lt;ol&gt;
 &lt;li&gt;登陆成功后生成令牌，（返回给浏览器存储）&lt;/li&gt;

@@ -5,8 +5,8 @@
         <link>https://Meteora233.github.io</link>
         <description></description>
         <language>en</language>
-        <pubDate>Thu, 30 Nov 2023 00:00:00 +0800</pubDate>
-        <lastBuildDate>Thu, 30 Nov 2023 00:00:00 +0800</lastBuildDate>
+        <pubDate>Fri, 06 Oct 2023 00:00:00 +0800</pubDate>
+        <lastBuildDate>Fri, 06 Oct 2023 00:00:00 +0800</lastBuildDate>
         <category>JAVA</category>
         <category>JAVASE</category>
         <category>Vue</category>
@@ -15,28 +15,19 @@
         <category>mybatis</category>
         <category>事务</category>
         <category>javaScript</category>
-        <category>Security框架</category>
         <category>security框架</category>
         <category>小程序</category>
         <item>
-            <guid isPermalink="true">https://meteora233.github.io/2023/11/30/computer-science/java/springboot/SpringSecurity%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB/</guid>
-            <title>SpringBoot Security</title>
-            <link>https://meteora233.github.io/2023/11/30/computer-science/java/springboot/SpringSecurity%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB/</link>
-            <category>JAVA</category>
-            <category>Security框架</category>
-            <pubDate>Thu, 30 Nov 2023 00:00:00 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;note info&lt;br&gt;课程：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMXo0NHkxajdXWi8/cD00JnZkX3NvdXJjZT1lZTc2MGJmN2E0ZDg5ZDNlZTkyZjRmODNmM2E2ODJjOQ==&#34;&gt;SpringBootSecurity&lt;/span&gt;&lt;/p&gt;
-&lt;h1 id=&#34;SpringBoot-Security-框架&#34;&gt;&lt;a href=&#34;#SpringBoot-Security-框架&#34; class=&#34;headerlink&#34; title=&#34;SpringBoot Security 框架&#34;&gt;&lt;/a&gt;SpringBoot Security 框架&lt;/h1&gt; ]]></description>
-        </item>
-        <item>
             <guid isPermalink="true">https://meteora233.github.io/2023/10/06/computer-science/java/springboot/SpringbootSecurity/</guid>
-            <title>SpringBoot Security</title>
+            <title>SpringBoot Security框架</title>
             <link>https://meteora233.github.io/2023/10/06/computer-science/java/springboot/SpringbootSecurity/</link>
             <category>JAVA</category>
             <category>security框架</category>
             <pubDate>Fri, 06 Oct 2023 00:00:00 +0800</pubDate>
             <description><![CDATA[ &lt;p&gt;note info&lt;br&gt;课程：&lt;span class=&#34;exturl&#34; data-url=&#34;aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMXo0NHkxajdXWi8/cD00JnZkX3NvdXJjZT1lZTc2MGJmN2E0ZDg5ZDNlZTkyZjRmODNmM2E2ODJjOQ==&#34;&gt;SpringBootSecurity&lt;/span&gt;&lt;/p&gt;
-&lt;h1 id=&#34;SpringBoot-Security-框架&#34;&gt;&lt;a href=&#34;#SpringBoot-Security-框架&#34; class=&#34;headerlink&#34; title=&#34;SpringBoot Security 框架&#34;&gt;&lt;/a&gt;SpringBoot Security 框架&lt;/h1&gt;&lt;h1 id=&#34;整体架构&#34;&gt;&lt;a href=&#34;#整体架构&#34; class=&#34;headerlink&#34; title=&#34;整体架构&#34;&gt;&lt;/a&gt;整体架构&lt;/h1&gt;&lt;p&gt;在&lt;strong&gt;Spring Security&lt;/strong&gt;的架构设计中，认证&lt;em&gt;Authentication&lt;/em&gt;和&lt;strong&gt;授权 Authorization&lt;/strong&gt;是分开的，无论使用什么样的认证方式。都不会影响授权，这是两个独立的存在，这种独立带来的好处之一，就是可以非常方便地整合一些外部的解决方案。&lt;br&gt;&lt;img data-src=&#34;/assets/SpringBootSecurity%E6%9E%B6%E6%9E%84.jpg&#34; alt=&#34;&amp;quot;会话跟踪技术&amp;quot;&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;SpringBoot-Security-框架&#34;&gt;&lt;a href=&#34;#SpringBoot-Security-框架&#34; class=&#34;headerlink&#34; title=&#34;SpringBoot Security 框架&#34;&gt;&lt;/a&gt;SpringBoot Security 框架&lt;/h1&gt;&lt;h1 id=&#34;整体架构&#34;&gt;&lt;a href=&#34;#整体架构&#34; class=&#34;headerlink&#34; title=&#34;整体架构&#34;&gt;&lt;/a&gt;整体架构&lt;/h1&gt;&lt;p&gt;在&lt;strong&gt;Spring Security&lt;/strong&gt;的架构设计中，认证&lt;em&gt;Authentication&lt;/em&gt;和&lt;strong&gt;授权 Authorization&lt;/strong&gt;是分开的，无论使用什么样的认证方式。都不会影响授权，这是两个独立的存在，这种独立带来的好处之一，就是可以非常方便地整合一些外部的解决方案。&lt;/p&gt;
+&lt;!-- ![&#34;会话跟踪技术&#34;](./assets/SpringBootSecurity架构.jpg) --&gt;
+&lt;p&gt;&lt;img data-src=&#34;/assets/img5.jpg&#34;&gt;&lt;/p&gt;
 &lt;h1 id=&#34;引入依赖&#34;&gt;&lt;a href=&#34;#引入依赖&#34; class=&#34;headerlink&#34; title=&#34;引入依赖&#34;&gt;&lt;/a&gt;引入依赖&lt;/h1&gt;&lt;figure class=&#34;highlight xml&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;tag&#34;&gt;&amp;lt;&lt;span class=&#34;name&#34;&gt;dependency&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;     &lt;span class=&#34;tag&#34;&gt;&amp;lt;&lt;span class=&#34;name&#34;&gt;groupId&lt;/span&gt;&amp;gt;&lt;/span&gt;org.springframework.boot&lt;span class=&#34;tag&#34;&gt;&amp;lt;/&lt;span class=&#34;name&#34;&gt;groupId&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;     &lt;span class=&#34;tag&#34;&gt;&amp;lt;&lt;span class=&#34;name&#34;&gt;artifactId&lt;/span&gt;&amp;gt;&lt;/span&gt;spring-boot-starter-security&lt;span class=&#34;tag&#34;&gt;&amp;lt;/&lt;span class=&#34;name&#34;&gt;artifactId&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt; &lt;span class=&#34;tag&#34;&gt;&amp;lt;/&lt;span class=&#34;name&#34;&gt;dependency&lt;/span&gt;&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 
 &lt;h2 id=&#34;认证&#34;&gt;&lt;a href=&#34;#认证&#34; class=&#34;headerlink&#34; title=&#34;认证&#34;&gt;&lt;/a&gt;认证&lt;/h2&gt;&lt;p&gt;在 Spring Seourity 中认证是由 AuthenticationManager 接口来负责的，接口定义为:&lt;/p&gt;

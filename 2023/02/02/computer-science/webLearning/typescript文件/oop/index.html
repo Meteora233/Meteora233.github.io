@@ -116,7 +116,7 @@ BLOG = Luk's Blog</title>
 
       </div>
       <div id="imgs" class="pjax">
-          <img src="https://imgs.aixifan.com/content/2020_8_28/1.5986274719333217E9.jpeg">
+          <img src="https://upload-bbs.miyoushe.com/upload/2024/12/25/288909600/8c5c88fed269c6fba3a71912fb9a1023_4789493258617839856.jpg?x-oss-process=image//resize,s_600/quality,q_80/auto-orient,0/interlace,1/format,jpg">
       </div>
     </header>
     <div id="waves">
@@ -208,6 +208,7 @@ BLOG = Luk's Blog</title>
 <h2 id="装饰器工厂"><a href="#装饰器工厂" class="headerlink" title="装饰器工厂"></a>装饰器工厂</h2><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">WithTemplate</span>(<span class="params">template: <span class="built_in">string</span>, hookId: <span class="built_in">string</span></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params">constructor: <span class="built_in">Function</span></span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> hookEl = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(hookId)!;</span><br><span class="line">    <span class="keyword">const</span> p = <span class="title function_">constructor</span>(<span class="params"></span>);</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(p.<span class="property">name</span>);</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(hookEl);</span><br><span class="line">    <span class="keyword">if</span> (hookEl) &#123;</span><br><span class="line">      hookEl.<span class="property">innerHTML</span> = template;</span><br><span class="line">      hookEl.<span class="title function_">querySelector</span>(<span class="string">&quot;h1&quot;</span>)!.<span class="property">textContent</span> = p.<span class="property">name</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@WithTemplate</span>(<span class="string">&quot;&lt;h1&gt;My person Object&lt;/h1&gt;&quot;</span>, <span class="string">&quot;hook&quot;</span>)</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span> &#123;</span><br><span class="line">  name = <span class="string">&quot;Max&quot;</span>;</span><br><span class="line"></span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Creating Person&quot;</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> pers = <span class="keyword">new</span> <span class="title class_">Person</span>();</span><br></pre></td></tr></table></figure>
 
 <h1 id="命名空间"><a href="#命名空间" class="headerlink" title="命名空间"></a>命名空间</h1><h2 id="es-module"><a href="#es-module" class="headerlink" title="es module"></a>es module</h2><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">interface</span> <span class="title class_">Draggable</span> &#123;</span><br><span class="line">  <span class="title function_">dragStartHandler</span>(<span class="attr">event</span>: <span class="title class_">DragEvent</span>): <span class="built_in">void</span>;</span><br><span class="line">  <span class="title function_">dragEndHandler</span>(<span class="attr">event</span>: <span class="title class_">DragEvent</span>): <span class="built_in">void</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">DragTarget</span> &#123;</span><br><span class="line">  <span class="title function_">dragOverHandler</span>(<span class="attr">event</span>: <span class="title class_">DragEvent</span>): <span class="built_in">void</span>;</span><br><span class="line">  <span class="title function_">dropHandler</span>(<span class="attr">event</span>: <span class="title class_">DragEvent</span>): <span class="built_in">void</span>;</span><br><span class="line">  <span class="title function_">dragLeaveHandler</span>(<span class="attr">event</span>: <span class="title class_">DragEvent</span>): <span class="built_in">void</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">DragTarget</span>, <span class="title class_">Draggable</span> &#125; <span class="keyword">from</span> <span class="string">&quot;./drag-drop-interface&quot;</span>;</span><br></pre></td></tr></table></figure>
+<h1 id="脚本管理"><a href="#脚本管理" class="headerlink" title="脚本管理"></a>脚本管理</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 初始化</span></span><br><span class="line">tsc --init</span><br><span class="line"><span class="comment"># 整体监视</span></span><br><span class="line">tsc --w</span><br></pre></td></tr></table></figure>
 
       <div class="tags">
           <a href="/tags/web/" rel="tag"><i class="ic i-tag"></i> web</a>
@@ -223,7 +224,7 @@ BLOG = Luk's Blog</title>
       <i class="ic i-calendar-check"></i>
     </span>
     <span class="text">Edited on</span>
-    <time title="Modified: 2024-02-06 19:32:09" itemprop="dateModified" datetime="2024-02-06T19:32:09+08:00">2024-02-06</time>
+    <time title="Modified: 2025-01-31 19:36:11" itemprop="dateModified" datetime="2025-01-31T19:36:11+08:00">2025-01-31</time>
   </span>
 </div>
 
@@ -278,7 +279,7 @@ BLOG = Luk's Blog</title>
     <div class="item left">
       
 
-  <a href="/2023/02/02/computer-science/webLearning/typescript%E6%96%87%E4%BB%B6/function/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;imgs.aixifan.com&#x2F;content&#x2F;2020_8_28&#x2F;1.5986274719333217E9.jpeg" title="Typescript 方法中的应用">
+  <a href="/2023/02/02/computer-science/webLearning/typescript%E6%96%87%E4%BB%B6/function/" itemprop="url" rel="prev" data-background-image="https:&#x2F;&#x2F;pic3.zhimg.com&#x2F;v2-a6f0db9230a0e4b67e70524217e009fe_1440w.jpg" title="Typescript 方法中的应用">
   <span class="type">Previous Post</span>
   <span class="category"><i class="ic i-flag"></i> Typescript</span>
   <h3>Typescript 方法中的应用</h3>
@@ -288,10 +289,10 @@ BLOG = Luk's Blog</title>
     <div class="item right">
       
 
-  <a href="/2023/02/02/computer-science/webLearning/typescript%E6%96%87%E4%BB%B6/module/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;imgs.aixifan.com&#x2F;content&#x2F;2020_8_28&#x2F;1.5986274719333217E9.jpeg" title="Typescript 管理">
+  <a href="/2023/02/02/computer-science/webLearning/typescript%E6%96%87%E4%BB%B6/basic/" itemprop="url" rel="next" data-background-image="https:&#x2F;&#x2F;picx.zhimg.com&#x2F;v2-bff66d41439fa060aab6dd07a4246b0b_1440w.jpg" title="Typescript 基本类型">
   <span class="type">Next Post</span>
   <span class="category"><i class="ic i-flag"></i> Typescript</span>
-  <h3>Typescript 管理</h3>
+  <h3>Typescript 基本类型</h3>
   </a>
 
     </div>
@@ -310,7 +311,7 @@ BLOG = Luk's Blog</title>
   <div class="panels">
     <div class="inner">
       <div class="contents panel pjax" data-title="Contents">
-          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%B1%BB"><span class="toc-number">1.</span> <span class="toc-text">类</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BB%A7%E6%89%BF"><span class="toc-number">2.</span> <span class="toc-text">继承</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#getter-setter"><span class="toc-number">3.</span> <span class="toc-text">getter &amp; setter</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95"><span class="toc-number">4.</span> <span class="toc-text">静态方法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8A%BD%E8%B1%A1%E7%B1%BB-%E6%8A%BD%E8%B1%A1%E6%96%B9%E6%B3%95"><span class="toc-number">5.</span> <span class="toc-text">抽象类 抽象方法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%95%E4%BE%8B%E6%96%B9%E6%B3%95"><span class="toc-number">6.</span> <span class="toc-text">单例方法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3"><span class="toc-number">7.</span> <span class="toc-text">接口</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%A4%E5%8F%89%E5%8F%A3%E7%B1%BB%E5%9E%8B-Intersection-Type"><span class="toc-number">7.1.</span> <span class="toc-text">交叉口类型(Intersection Type)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B4%A2%E5%BC%95%E5%B1%9E%E6%80%A7-Index-properties"><span class="toc-number">7.2.</span> <span class="toc-text">索引属性 Index properties</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%93%BE%E5%BC%8F%E6%9F%A5%E8%AF%A2"><span class="toc-number">7.3.</span> <span class="toc-text">链式查询</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B3%9B%E5%9E%8B"><span class="toc-number">8.</span> <span class="toc-text">泛型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%9B%E5%9E%8B%E6%96%B9%E6%B3%95"><span class="toc-number">8.1.</span> <span class="toc-text">泛型方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#keyof"><span class="toc-number">8.2.</span> <span class="toc-text">keyof</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%9B%E5%9E%8B%E7%B1%BB"><span class="toc-number">8.3.</span> <span class="toc-text">泛型类</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A3%85%E9%A5%B0%E5%99%A8"><span class="toc-number">9.</span> <span class="toc-text">装饰器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A3%85%E9%A5%B0%E5%99%A8%E5%B7%A5%E5%8E%82"><span class="toc-number">9.1.</span> <span class="toc-text">装饰器工厂</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4"><span class="toc-number">10.</span> <span class="toc-text">命名空间</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#es-module"><span class="toc-number">10.1.</span> <span class="toc-text">es module</span></a></li></ol></li></ol>
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%B1%BB"><span class="toc-number">1.</span> <span class="toc-text">类</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BB%A7%E6%89%BF"><span class="toc-number">2.</span> <span class="toc-text">继承</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#getter-setter"><span class="toc-number">3.</span> <span class="toc-text">getter &amp; setter</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95"><span class="toc-number">4.</span> <span class="toc-text">静态方法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8A%BD%E8%B1%A1%E7%B1%BB-%E6%8A%BD%E8%B1%A1%E6%96%B9%E6%B3%95"><span class="toc-number">5.</span> <span class="toc-text">抽象类 抽象方法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8D%95%E4%BE%8B%E6%96%B9%E6%B3%95"><span class="toc-number">6.</span> <span class="toc-text">单例方法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8E%A5%E5%8F%A3"><span class="toc-number">7.</span> <span class="toc-text">接口</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%A4%E5%8F%89%E5%8F%A3%E7%B1%BB%E5%9E%8B-Intersection-Type"><span class="toc-number">7.1.</span> <span class="toc-text">交叉口类型(Intersection Type)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%B4%A2%E5%BC%95%E5%B1%9E%E6%80%A7-Index-properties"><span class="toc-number">7.2.</span> <span class="toc-text">索引属性 Index properties</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%93%BE%E5%BC%8F%E6%9F%A5%E8%AF%A2"><span class="toc-number">7.3.</span> <span class="toc-text">链式查询</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B3%9B%E5%9E%8B"><span class="toc-number">8.</span> <span class="toc-text">泛型</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%9B%E5%9E%8B%E6%96%B9%E6%B3%95"><span class="toc-number">8.1.</span> <span class="toc-text">泛型方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#keyof"><span class="toc-number">8.2.</span> <span class="toc-text">keyof</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%9B%E5%9E%8B%E7%B1%BB"><span class="toc-number">8.3.</span> <span class="toc-text">泛型类</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A3%85%E9%A5%B0%E5%99%A8"><span class="toc-number">9.</span> <span class="toc-text">装饰器</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A3%85%E9%A5%B0%E5%99%A8%E5%B7%A5%E5%8E%82"><span class="toc-number">9.1.</span> <span class="toc-text">装饰器工厂</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4"><span class="toc-number">10.</span> <span class="toc-text">命名空间</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#es-module"><span class="toc-number">10.1.</span> <span class="toc-text">es module</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%84%9A%E6%9C%AC%E7%AE%A1%E7%90%86"><span class="toc-number">11.</span> <span class="toc-text">脚本管理</span></a></li></ol>
       </div>
       <div class="related panel pjax" data-title="Related">
         <ul>
@@ -328,19 +329,19 @@ BLOG = Luk's Blog</title>
 <nav class="state">
     <div class="item posts">
       <a href="/archives/">
-        <span class="count">26</span>
+        <span class="count">27</span>
         <span class="name">posts</span>
       </a>
     </div>
     <div class="item categories">
       <a href="/categories/">
-        <span class="count">17</span>
+        <span class="count">19</span>
         <span class="name">categories</span>
       </a>
     </div>
     <div class="item tags">
       <a href="/tags/">
-        <span class="count">11</span>
+        <span class="count">10</span>
         <span class="name">tags</span>
       </a>
     </div>
@@ -401,7 +402,7 @@ BLOG = Luk's Blog</title>
     <li class="up"><i class="ic i-arrow-up"></i></li>
     <li class="down"><i class="ic i-arrow-down"></i></li>
     <li class="next pjax">
-        <a href="/2023/02/02/computer-science/webLearning/typescript%E6%96%87%E4%BB%B6/module/" rel="next" title="Next Post"><i class="ic i-chevron-right"></i></a>
+        <a href="/2023/02/02/computer-science/webLearning/typescript%E6%96%87%E4%BB%B6/basic/" rel="next" title="Next Post"><i class="ic i-chevron-right"></i></a>
     </li>
     <li class="percent"></li>
   </ul>
@@ -419,48 +420,6 @@ BLOG = Luk's Blog</title>
 <div class="rpost pjax">
   <h2>Random Posts</h2>
   <ul>
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/java/" title="In java">java</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/java/SpringBoot/" title="In SpringBoot">SpringBoot</a>
-</div>
-
-    <span><a href="/2023/07/14/computer-science/java/springboot/Day1/" title="SpringBoot">SpringBoot</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/java/" title="In java">java</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/java/SpringBoot/" title="In SpringBoot">SpringBoot</a>
-</div>
-
-    <span><a href="/2023/11/30/computer-science/java/springboot/SpringSecurity%E5%89%8D%E5%90%8E%E7%AB%AF%E5%88%86%E7%A6%BB/" title="SpringBoot Security">SpringBoot Security</a></span>
-  </li>
-
-      
-  <li class="item">
-    
-<div class="breadcrumb">
-<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/java/" title="In java">java</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/java/javase/" title="In javase">javase</a>
-</div>
-
-    <span><a href="/2023/07/05/computer-science/java/javase/JavaSE_Day1/" title="java面向对象">java面向对象</a></span>
-  </li>
-
       
   <li class="item">
     
@@ -485,10 +444,10 @@ BLOG = Luk's Blog</title>
 <i class="ic i-angle-right"></i>
 <a href="/categories/computer-science/web/" title="In web">web</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/web/vue/" title="In vue">vue</a>
+<a href="/categories/computer-science/web/Typescript/" title="In Typescript">Typescript</a>
 </div>
 
-    <span><a href="/2023/02/20/computer-science/webLearning/uniapp/%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/" title="uniapp 遇到的问题">uniapp 遇到的问题</a></span>
+    <span><a href="/2023/02/02/computer-science/webLearning/typescript%E6%96%87%E4%BB%B6/function/" title="Typescript 方法中的应用">Typescript 方法中的应用</a></span>
   </li>
 
       
@@ -511,12 +470,10 @@ BLOG = Luk's Blog</title>
 <div class="breadcrumb">
 <a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
 <i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/web/" title="In web">web</a>
-<i class="ic i-angle-right"></i>
-<a href="/categories/computer-science/web/Typescript/" title="In Typescript">Typescript</a>
+<a href="/categories/computer-science/C%E8%AF%AD%E8%A8%80/" title="In C语言">C语言</a>
 </div>
 
-    <span><a href="/2023/02/02/computer-science/webLearning/typescript%E6%96%87%E4%BB%B6/module/" title="Typescript 管理">Typescript 管理</a></span>
+    <span><a href="/2024/03/01/computer-science/%E4%B8%93%E5%8D%87%E6%9C%AC%E9%94%99%E9%A2%98%E6%95%B4%E7%90%86/c/" title="C语言专升本错题整理">C语言专升本错题整理</a></span>
   </li>
 
       
@@ -530,7 +487,21 @@ BLOG = Luk's Blog</title>
 <a href="/categories/computer-science/java/SpringBoot/" title="In SpringBoot">SpringBoot</a>
 </div>
 
-    <span><a href="/2023/10/06/computer-science/java/springboot/SpringbootSecurity/" title="SpringBoot Security">SpringBoot Security</a></span>
+    <span><a href="/2023/08/01/computer-science/java/springboot/Day3/" title="SpringBoot">SpringBoot</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/" title="In java">java</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/java/javase/" title="In javase">javase</a>
+</div>
+
+    <span><a href="/2023/07/06/computer-science/java/javase/JavaSE_Day2/" title="java泛型">java泛型</a></span>
   </li>
 
       
@@ -553,12 +524,40 @@ BLOG = Luk's Blog</title>
 <div class="breadcrumb">
 <a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
 <i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/web/" title="In web">web</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/web/vue/" title="In vue">vue</a>
+</div>
+
+    <span><a href="/2023/02/20/computer-science/webLearning/uniapp/%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98/" title="uniapp 遇到的问题">uniapp 遇到的问题</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
 <a href="/categories/computer-science/java/" title="In java">java</a>
 <i class="ic i-angle-right"></i>
 <a href="/categories/computer-science/java/javase/" title="In javase">javase</a>
 </div>
 
-    <span><a href="/2023/07/07/computer-science/java/javase/JavaSE_Day4/" title="java多线程">java多线程</a></span>
+    <span><a href="/2023/07/05/computer-science/java/javase/JavaSE_Day1/" title="java面向对象">java面向对象</a></span>
+  </li>
+
+      
+  <li class="item">
+    
+<div class="breadcrumb">
+<a href="/categories/computer-science/" title="In 计算机科学">计算机科学</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/web/" title="In web">web</a>
+<i class="ic i-angle-right"></i>
+<a href="/categories/computer-science/web/vue/" title="In vue">vue</a>
+</div>
+
+    <span><a href="/2023/08/18/computer-science/webLearning/vue/Day1/" title="VUE">VUE</a></span>
   </li>
 
   </ul>
@@ -573,7 +572,7 @@ BLOG = Luk's Blog</title>
   <div class="copyright">
     
     &copy; 2010 – 
-    <span itemprop="copyrightYear">2024</span>
+    <span itemprop="copyrightYear">2025</span>
     <span class="with-love">
       <i class="ic i-sakura rotate"></i>
     </span>
@@ -583,13 +582,13 @@ BLOG = Luk's Blog</title>
     <span class="post-meta-item-icon">
       <i class="ic i-chart-area"></i>
     </span>
-    <span title="Symbols count total">131k words</span>
+    <span title="Symbols count total">142k words</span>
 
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="ic i-coffee"></i>
     </span>
-    <span title="Reading time total">1:59</span>
+    <span title="Reading time total">2:09</span>
   </div>
   <div class="powered-by">
     Powered by <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
